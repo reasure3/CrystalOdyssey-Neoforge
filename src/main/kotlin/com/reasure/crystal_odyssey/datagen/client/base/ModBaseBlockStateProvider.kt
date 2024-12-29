@@ -1,0 +1,13 @@
+package com.reasure.crystal_odyssey.datagen.client.base
+
+import com.reasure.crystal_odyssey.CrystalOdyssey
+import net.minecraft.data.PackOutput
+import net.minecraft.world.level.block.Block
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider
+import net.neoforged.neoforge.common.data.ExistingFileHelper
+
+abstract class ModBaseBlockStateProvider(output: PackOutput, exFileHelper: ExistingFileHelper) :
+    BlockStateProvider(output, CrystalOdyssey.ID, exFileHelper) {
+
+    fun simpleBlockWithItem(block: Block) = simpleBlockWithItem(block, cubeAll(block))
+}

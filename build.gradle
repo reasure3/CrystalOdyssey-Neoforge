@@ -35,7 +35,15 @@ repositories {
     maven {
         // location of the maven for Curios Continuation file
         name = "OctoStudios"
-        url = uri("https://maven.octo-studios.com/releases")
+        url = "https://maven.octo-studios.com/releases"
+    }
+    maven {
+        // location of the maven for Jade file and ect.
+        name = "Curse Forge Maven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
     }
 }
 
@@ -108,6 +116,9 @@ dependencies {
 
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
     localRuntime "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
+
+    compileOnly "curse.maven:jade-324717:${jade_id}"
+    localRuntime "curse.maven:jade-324717:${jade_id}"
 }
 
 tasks.withType(ProcessResources).configureEach {

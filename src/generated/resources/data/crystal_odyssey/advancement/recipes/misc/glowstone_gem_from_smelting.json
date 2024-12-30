@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glowstone_gem_from_blasting"
+        "recipe": "crystal_odyssey:glowstone_gem_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glowstone_gem_from_blasting"
+      "crystal_odyssey:glowstone_gem_from_smelting"
     ]
   }
 }

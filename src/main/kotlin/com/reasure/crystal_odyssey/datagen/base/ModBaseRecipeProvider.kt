@@ -1,12 +1,10 @@
 package com.reasure.crystal_odyssey.datagen.base
 
+import com.reasure.crystal_odyssey.CrystalOdyssey
 import net.minecraft.advancements.Criterion
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
-import net.minecraft.data.recipes.RecipeCategory
-import net.minecraft.data.recipes.RecipeOutput
-import net.minecraft.data.recipes.RecipeProvider
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder
+import net.minecraft.data.recipes.*
 import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.ItemLike
 import java.util.concurrent.CompletableFuture
@@ -23,7 +21,8 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         packedGroup: String? = null,
     ) = nineBlockStorageRecipes(
         recipeOutput, unpackedCategory, unpacked, packedCategory, packed,
-        packedName, packedGroup, unpackedName, unpackedGroup
+        "${CrystalOdyssey.ID}:$packedName", packedGroup,
+        "${CrystalOdyssey.ID}:$unpackedName", unpackedGroup
     )
 
     fun smelting(
@@ -37,7 +36,7 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
     ) = SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredient), category, result, experience, cookingTime)
         .unlockedBy(getHasName(ingredient), criterion)
         .group(group)
-        .save(recipeOutput, name)
+        .save(recipeOutput, CrystalOdyssey.modLoc(name))
 
     fun blasting(
         recipeOutput: RecipeOutput, result: ItemLike, ingredient: ItemLike,
@@ -50,7 +49,7 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
     ) = SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredient), category, result, experience, cookingTime)
         .unlockedBy(getHasName(ingredient), criterion)
         .group(group)
-        .save(recipeOutput, name)
+        .save(recipeOutput, CrystalOdyssey.modLoc(name))
 
     fun smeltingAndBlasting(
         recipeOutput: RecipeOutput, result: ItemLike, ingredient: ItemLike,
@@ -67,4 +66,7 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
             recipeOutput, result, ingredient, category, experience, cookingTime / 2, blastingName, criterion, group
         )
     }
+
+    fun ShapedRecipeBuilder.unlockedBy(ingredient: ItemLike): ShapedRecipeBuilder =
+        unlockedBy(getHasName(ingredient), has(ingredient))
 }

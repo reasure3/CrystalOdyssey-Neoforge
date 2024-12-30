@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glowstone_gem": {
+    "has_glowstone_gem_block": {
       "conditions": {
         "items": [
           {
-            "items": "crystal_odyssey:glowstone_gem"
+            "items": "crystal_odyssey:glowstone_gem_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glowstone_gem_block"
+        "recipe": "crystal_odyssey:glowstone_gem_from_glowstone_gem_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glowstone_gem"
+      "has_glowstone_gem_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glowstone_gem_block"
+      "crystal_odyssey:glowstone_gem_from_glowstone_gem_block"
     ]
   }
 }

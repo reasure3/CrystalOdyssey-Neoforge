@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.datagen
+package com.reasure.crystal_odyssey.datagen.server
 
 import com.reasure.crystal_odyssey.block.ModBlocks
 import net.minecraft.core.HolderLookup
@@ -14,6 +14,7 @@ class ModBlockLootProvider(registries: HolderLookup.Provider) :
     BlockLootSubProvider(setOf(), FeatureFlags.REGISTRY.allFlags(), registries) {
     override fun generate() {
         dropSelf(ModBlocks.GLOWSTONE_GEM_BLOCK)
+        dropSelf(ModBlocks.GLOWSTONE_GEM_LANTERN)
     }
 
     override fun getKnownBlocks(): MutableIterable<Block> =

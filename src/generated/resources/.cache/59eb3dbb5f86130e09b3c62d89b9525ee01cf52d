@@ -1,2 +1,3 @@
-// 1.21.1	2024-12-29T22:01:06.4737213	Loot Tables
+// 1.21.1	2024-12-30T22:46:42.9188822	Loot Tables
 7a6bdd30b8ce687dfe2fab33f75e856b14ea2855 data/crystal_odyssey/loot_table/blocks/glowstone_gem_block.json
+e028ba2b97080358c6ccf93402de0c25e349a215 data/crystal_odyssey/loot_table/blocks/glowstone_gem_lantern.json

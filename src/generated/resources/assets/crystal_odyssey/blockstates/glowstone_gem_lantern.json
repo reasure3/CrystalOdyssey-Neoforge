@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern"
+    },
+    "hanging=true": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern_hanging"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.datagen.base
+package com.reasure.crystal_odyssey.datagen.server.base
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import net.minecraft.advancements.Criterion

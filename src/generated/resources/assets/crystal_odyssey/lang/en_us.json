@@ -1,5 +1,11 @@
 {
   "block.crystal_odyssey.glowstone_gem_block": "Block of Glowstone Gem",
+  "block.crystal_odyssey.glowstone_gem_lantern": "Glowstone Gem Lantern",
+  "effect.crystal_odyssey.lantern_vision": "Lantern Vision",
   "item.crystal_odyssey.glowstone_gem": "Glowstone Gem",
+  "item.minecraft.lingering_potion.effect.effect.crystal_odyssey.lantern_vision": "Lingering Potion of Lantern Vision",
+  "item.minecraft.potion.effect.effect.crystal_odyssey.lantern_vision": "Potion of Lantern Vision",
+  "item.minecraft.splash_potion.effect.effect.crystal_odyssey.lantern_vision": "Splash Potion of Lantern Vision",
+  "item.minecraft.tipped_arrow.effect.effect.crystal_odyssey.lantern_vision": "Arrow of Lantern Vision",
   "itemGroup.crystal_odyssey": "Crystal Odyssey"
 }

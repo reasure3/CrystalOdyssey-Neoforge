@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.datagen
+package com.reasure.crystal_odyssey.datagen.server
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
@@ -18,6 +18,7 @@ class ModBlockTagsProvider(
     override fun addTags(provider: HolderLookup.Provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .add(ModBlocks.GLOWSTONE_GEM_BLOCK)
+            .add(ModBlocks.GLOWSTONE_GEM_LANTERN)
 
         tag(Tags.Blocks.STORAGE_BLOCKS)
             .add(ModBlocks.GLOWSTONE_GEM_BLOCK)

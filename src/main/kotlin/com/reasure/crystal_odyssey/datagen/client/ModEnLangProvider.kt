@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.datagen.client
 
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.client.base.ModBaseLangProvider
+import com.reasure.crystal_odyssey.effect.ModMobEffects
 import com.reasure.crystal_odyssey.item.ModItems
 import net.minecraft.data.PackOutput
 
@@ -11,5 +12,11 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
 
         add(ModItems.GLOWSTONE_GEM, "Glowstone Gem")
         add(ModBlocks.GLOWSTONE_GEM_BLOCK, "Block of Glowstone Gem")
+        add(ModBlocks.GLOWSTONE_GEM_LANTERN, "Glowstone Gem Lantern")
+        addEffect(ModMobEffects.LANTERN_VISION, "Lantern Vision")
+        addTippedArrow(ModMobEffects.LANTERN_VISION, "Arrow of Lantern Vision")
+        addPotion(ModMobEffects.LANTERN_VISION, "Potion of Lantern Vision")
+        addSplashPotion(ModMobEffects.LANTERN_VISION, "Splash Potion of Lantern Vision")
+        addLingeringPotion(ModMobEffects.LANTERN_VISION, "Lingering Potion of Lantern Vision")
     }
 }

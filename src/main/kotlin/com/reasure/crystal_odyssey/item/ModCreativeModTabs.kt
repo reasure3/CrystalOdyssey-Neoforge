@@ -7,7 +7,6 @@ import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 import net.neoforged.neoforge.registries.DeferredRegister
-
 import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 
 object ModCreativeModTabs {
@@ -23,6 +22,7 @@ object ModCreativeModTabs {
                 with(output) {
                     accept(ModItems.GLOWSTONE_GEM)
                     accept(ModBlocks.GLOWSTONE_GEM_BLOCK)
+                    accept(ModItems.GLOWSTONE_GEM_LANTERN)
                 }
             }
             .build()

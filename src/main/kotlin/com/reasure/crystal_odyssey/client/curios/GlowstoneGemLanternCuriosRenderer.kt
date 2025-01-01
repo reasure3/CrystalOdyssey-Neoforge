@@ -7,6 +7,7 @@ import net.minecraft.client.model.EntityModel
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.entity.RenderLayerParent
 import net.minecraft.client.renderer.texture.OverlayTexture
+import net.minecraft.util.Mth
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ItemDisplayContext
@@ -31,7 +32,7 @@ class GlowstoneGemLanternCuriosRenderer : ICurioRenderer {
     ) {
         matrixStack.pushPose()
 
-        matrixStack.mulPose(Axis.ZP.rotationDegrees(180f))
+        matrixStack.mulPose(Axis.ZP.rotation(Mth.PI))
         matrixStack.scale(0.5f, 0.5f, 0.5f)
 
         if (slotContext.entity.getItemBySlot(EquipmentSlot.LEGS).isEmpty) {

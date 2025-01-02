@@ -1,8 +1,8 @@
 {
-  "block.crystal_odyssey.glowstone_gem_block": "발광석 보석 블록",
-  "block.crystal_odyssey.glowstone_gem_lantern": "발광석 보석 랜턴",
+  "block.crystal_odyssey.glowstone_gem_block": "발광 보석 블록",
+  "block.crystal_odyssey.glowstone_gem_lantern": "발광 보석 랜턴",
   "effect.crystal_odyssey.lantern_vision": "랜턴 불빛",
-  "item.crystal_odyssey.glowstone_gem": "발광석 보석",
+  "item.crystal_odyssey.glowstone_gem": "발광 보석",
   "item.minecraft.lingering_potion.effect.effect.crystal_odyssey.lantern_vision": "잔류형 랜턴 불빛의 물약",
   "item.minecraft.potion.effect.effect.crystal_odyssey.lantern_vision": "랜턴 불및의 물약",
   "item.minecraft.splash_potion.effect.effect.crystal_odyssey.lantern_vision": "투척용 랜턴 불빛의 물약",

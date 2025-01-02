@@ -10,9 +10,9 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
     override fun addTranslations() {
         addCreativeModeTab("크리스탈 오디세이")
 
-        add(ModItems.GLOWSTONE_GEM, "발광석 보석")
-        add(ModBlocks.GLOWSTONE_GEM_BLOCK, "발광석 보석 블록")
-        add(ModBlocks.GLOWSTONE_GEM_LANTERN, "발광석 보석 랜턴")
+        add(ModItems.GLOWSTONE_GEM, "발광 보석")
+        add(ModBlocks.GLOWSTONE_GEM_BLOCK, "발광 보석 블록")
+        add(ModBlocks.GLOWSTONE_GEM_LANTERN, "발광 보석 랜턴")
         addEffect(ModMobEffects.LANTERN_VISION, "랜턴 불빛")
         addTippedArrow(ModMobEffects.LANTERN_VISION, "랜턴 불빛의 화살")
         addPotion(ModMobEffects.LANTERN_VISION, "랜턴 불및의 물약")

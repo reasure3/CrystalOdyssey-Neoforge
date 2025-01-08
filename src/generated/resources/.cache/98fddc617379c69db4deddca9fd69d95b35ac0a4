@@ -1,3 +1,4 @@
-// 1.21.1	2024-12-30T22:46:42.9145436	Tags for minecraft:block mod id crystal_odyssey
+// 1.21.1	2025-01-08T13:18:26.6965925	Tags for minecraft:block mod id crystal_odyssey
 31436a1145a592e8277c88603a8be00cf75b28d6 data/c/tags/block/storage_blocks.json
-2585147d1519da58fd6a09f1966f5dc16df4bae4 data/minecraft/tags/block/mineable/pickaxe.json
+3787b6a5da4eb02883e9bc72d29b928db929c1fe data/minecraft/tags/block/mineable/pickaxe.json
+62d6c0df1327519fcf3a32a07d664ee5b61ffe6c data/minecraft/tags/block/needs_iron_tool.json

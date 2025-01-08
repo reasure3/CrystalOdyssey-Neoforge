@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.client.curios
+package com.reasure.crystal_odyssey.client.compat.curios
 
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.math.Axis

@@ -1,7 +1,10 @@
 {
   "block.crystal_odyssey.glowstone_gem_block": "Block of Glowstone Gem",
   "block.crystal_odyssey.glowstone_gem_lantern": "Glowstone Gem Lantern",
+  "block.crystal_odyssey.mana_injector": "Mana Injector",
+  "container.crystal_odyssey.mana_injector": "Mana Injector",
   "effect.crystal_odyssey.lantern_vision": "Lantern Vision",
+  "item.crystal_odyssey.enchanted_glowstone_gem": "Enchanted Glowstone Gem",
   "item.crystal_odyssey.glowstone_gem": "Glowstone Gem",
   "item.minecraft.lingering_potion.effect.effect.crystal_odyssey.lantern_vision": "Lingering Potion of Lantern Vision",
   "item.minecraft.potion.effect.effect.crystal_odyssey.lantern_vision": "Potion of Lantern Vision",

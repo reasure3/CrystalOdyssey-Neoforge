@@ -15,6 +15,7 @@ class ModBlockLootProvider(registries: HolderLookup.Provider) :
     override fun generate() {
         dropSelf(ModBlocks.GLOWSTONE_GEM_BLOCK)
         dropSelf(ModBlocks.GLOWSTONE_GEM_LANTERN)
+        dropSelf(ModBlocks.MANA_INJECTOR)
     }
 
     override fun getKnownBlocks(): MutableIterable<Block> =

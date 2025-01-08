@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.curios
+package com.reasure.crystal_odyssey.compat.curios
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.item.ModItems

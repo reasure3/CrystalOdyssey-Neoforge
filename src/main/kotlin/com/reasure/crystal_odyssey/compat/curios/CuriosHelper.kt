@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.curios
+package com.reasure.crystal_odyssey.compat.curios
 
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.Item

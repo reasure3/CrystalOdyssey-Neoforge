@@ -14,6 +14,8 @@ abstract class ModBaseBlockStateProvider(output: PackOutput, exFileHelper: Exist
 
     fun simpleBlockWithItem(block: Block) = simpleBlockWithItem(block, cubeAll(block))
 
+    fun simpleBlockStateWithItem(block: Block) = simpleBlockWithItem(block, ModelFile.UncheckedModelFile(blockTexture(block)))
+
     fun VariantBlockStateBuilder.PartialBlockstate.setModel(path: String): VariantBlockStateBuilder.PartialBlockstate =
         addModels(ConfiguredModel(ModelFile.UncheckedModelFile(CrystalOdyssey.modLoc("block/$path"))))
 }

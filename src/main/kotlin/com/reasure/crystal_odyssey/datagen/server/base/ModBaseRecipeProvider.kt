@@ -1,10 +1,14 @@
 package com.reasure.crystal_odyssey.datagen.server.base
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import net.minecraft.advancements.Criterion
 import net.minecraft.core.HolderLookup
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.*
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.ItemLike
 import java.util.concurrent.CompletableFuture
@@ -69,4 +73,18 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
 
     fun ShapedRecipeBuilder.unlockedBy(ingredient: ItemLike): ShapedRecipeBuilder =
         unlockedBy(getHasName(ingredient), has(ingredient))
+
+    fun ShapelessRecipeBuilder.requiredBy(ingredient: ItemLike): ShapelessRecipeBuilder =
+        unlockedBy(getHasName(ingredient), has(ingredient)).requires(ingredient)
+
+    fun manaInjecting(
+        recipeOutput: RecipeOutput,
+        input: ItemLike,
+        output: ItemLike,
+        requireLevel: Int,
+        id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.asItem())
+    ) {
+        val recipe = ManaInjectingRecipe(Ingredient.of(input), ItemStack(output), requireLevel)
+        recipeOutput.accept(id, recipe, null)
+    }
 }

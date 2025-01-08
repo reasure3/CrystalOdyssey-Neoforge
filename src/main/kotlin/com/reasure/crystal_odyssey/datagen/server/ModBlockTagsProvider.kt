@@ -19,6 +19,10 @@ class ModBlockTagsProvider(
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .add(ModBlocks.GLOWSTONE_GEM_BLOCK)
             .add(ModBlocks.GLOWSTONE_GEM_LANTERN)
+            .add(ModBlocks.MANA_INJECTOR)
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+            .add(ModBlocks.MANA_INJECTOR)
 
         tag(Tags.Blocks.STORAGE_BLOCKS)
             .add(ModBlocks.GLOWSTONE_GEM_BLOCK)

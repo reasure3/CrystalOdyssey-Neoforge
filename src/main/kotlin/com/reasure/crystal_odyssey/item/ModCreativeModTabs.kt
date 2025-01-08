@@ -21,8 +21,10 @@ object ModCreativeModTabs {
             .displayItems { _, output ->
                 with(output) {
                     accept(ModItems.GLOWSTONE_GEM)
+                    accept(ModItems.ENCHANTED_GLOWSTONE_GEM)
                     accept(ModBlocks.GLOWSTONE_GEM_BLOCK)
                     accept(ModItems.GLOWSTONE_GEM_LANTERN)
+                    accept(ModBlocks.MANA_INJECTOR)
                 }
             }
             .build()

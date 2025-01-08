@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey.block
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.block.custom.ManaInjectorBlock
 import com.reasure.crystal_odyssey.item.ModItems
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
@@ -20,6 +21,10 @@ object ModBlocks {
 
     val GLOWSTONE_GEM_LANTERN: Block by BLOCKS.register("glowstone_gem_lantern") { ->
         LanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).mapColor(MapColor.GOLD))
+    }
+
+    val MANA_INJECTOR: Block by registerBlockWithItem("mana_injector") { ->
+        ManaInjectorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEACON).requiresCorrectToolForDrops())
     }
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T): DeferredBlock<T> {

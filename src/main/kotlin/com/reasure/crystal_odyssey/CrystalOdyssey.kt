@@ -1,10 +1,13 @@
 package com.reasure.crystal_odyssey
 
 import com.reasure.crystal_odyssey.block.ModBlocks
-import com.reasure.crystal_odyssey.curios.CuriosInitializer
+import com.reasure.crystal_odyssey.compat.curios.CuriosInitializer
 import com.reasure.crystal_odyssey.effect.ModMobEffects
+import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
 import com.reasure.crystal_odyssey.item.ModCreativeModTabs
 import com.reasure.crystal_odyssey.item.ModItems
+import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
+import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import net.minecraft.resources.ResourceLocation
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.ModList
@@ -29,6 +32,9 @@ object CrystalOdyssey {
         ModBlocks.BLOCKS.register(MOD_BUS)
         ModCreativeModTabs.CREATIVE_MODE_TABS.register(MOD_BUS)
         ModMobEffects.MOB_EFFECTS.register(MOD_BUS)
+        ModMenuTypes.MENUS.register(MOD_BUS)
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(MOD_BUS)
+        ModRecipeTypes.RECIPE_TYPES.register(MOD_BUS)
     }
 
     fun modLoc(path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(ID, path)

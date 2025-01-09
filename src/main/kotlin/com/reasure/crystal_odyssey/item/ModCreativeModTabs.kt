@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.item
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
+import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -23,7 +24,9 @@ object ModCreativeModTabs {
                     accept(ModItems.GLOWSTONE_GEM)
                     accept(ModItems.ENCHANTED_GLOWSTONE_GEM)
                     accept(ModBlocks.GLOWSTONE_GEM_BLOCK)
-                    accept(ModItems.GLOWSTONE_GEM_LANTERN)
+                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) })
+                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
+                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModBlocks.MANA_INJECTOR)
                 }
             }

@@ -6,6 +6,7 @@
   "effect.crystal_odyssey.lantern_vision": "랜턴 불빛",
   "item.crystal_odyssey.enchanted_glowstone_gem": "마법이 부여된 발광 보석",
   "item.crystal_odyssey.glowstone_gem": "발광 보석",
+  "item.crystal_odyssey.tooltip.lamp_level": "§e§l불빛 강도:§r %1$s",
   "item.minecraft.lingering_potion.effect.effect.crystal_odyssey.lantern_vision": "잔류형 랜턴 불빛의 물약",
   "item.minecraft.potion.effect.effect.crystal_odyssey.lantern_vision": "랜턴 불및의 물약",
   "item.minecraft.splash_potion.effect.effect.crystal_odyssey.lantern_vision": "투척용 랜턴 불빛의 물약",

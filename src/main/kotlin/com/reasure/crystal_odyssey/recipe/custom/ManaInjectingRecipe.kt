@@ -1,6 +1,5 @@
 package com.reasure.crystal_odyssey.recipe.custom
 
-import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
@@ -9,6 +8,7 @@ import net.minecraft.core.HolderLookup
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
+import net.minecraft.util.ExtraCodecs
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.*
 import net.minecraft.world.level.Level
@@ -38,7 +38,7 @@ data class ManaInjectingRecipe(val ingredient: Ingredient, val result: ItemStack
             instance.group(
                 Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(ManaInjectingRecipe::ingredient),
                 ItemStack.STRICT_SINGLE_ITEM_CODEC.fieldOf("result").forGetter(ManaInjectingRecipe::result),
-                Codec.intRange(0, 25565).fieldOf("require_level").forGetter(ManaInjectingRecipe::requireLevel)
+                ExtraCodecs.intRange(0, 25565).fieldOf("require_level").forGetter(ManaInjectingRecipe::requireLevel)
             ).apply(instance, ::ManaInjectingRecipe)
         }
 

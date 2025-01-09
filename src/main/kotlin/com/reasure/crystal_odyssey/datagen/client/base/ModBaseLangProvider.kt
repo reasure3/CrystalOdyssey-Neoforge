@@ -23,6 +23,8 @@ abstract class ModBaseLangProvider(output: PackOutput, locale: String) :
     fun <T : MobEffect> addLingeringPotion(key: Supplier<T>, name: String) =
         add("item.minecraft.lingering_potion.effect.${key.get().descriptionId}", name)
 
+    fun addTooltip(key: String, name: String) = add("item.${CrystalOdyssey.ID}.tooltip.$key", name)
+
     fun addContainer(key: String, name: String) = add("container.${CrystalOdyssey.ID}.$key", name)
 
     fun addJeiCategory(key: String, name: String) = add("jei.category.${CrystalOdyssey.ID}.$key", name)

@@ -20,6 +20,7 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         addPotion(ModMobEffects.LANTERN_VISION, "랜턴 불및의 물약")
         addSplashPotion(ModMobEffects.LANTERN_VISION, "투척용 랜턴 불빛의 물약")
         addLingeringPotion(ModMobEffects.LANTERN_VISION, "잔류형 랜턴 불빛의 물약")
+        addTooltip("lamp_level", "§e§l불빛 강도:§r %1\$s")
         addContainer("mana_injector", "마나 주입기")
         addJeiCategory("mana_injecting", "마나 주입")
     }

@@ -1,11 +1,12 @@
 package com.reasure.crystal_odyssey.block
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.block.custom.GlowstoneLanternBlock
 import com.reasure.crystal_odyssey.block.custom.ManaInjectorBlock
+import com.reasure.crystal_odyssey.block.state.ModBlockStates
 import com.reasure.crystal_odyssey.item.ModItems
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.LanternBlock
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.MapColor
 import net.neoforged.neoforge.registries.DeferredBlock
@@ -20,7 +21,9 @@ object ModBlocks {
     }
 
     val GLOWSTONE_GEM_LANTERN: Block by BLOCKS.register("glowstone_gem_lantern") { ->
-        LanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).mapColor(MapColor.GOLD))
+        GlowstoneLanternBlock(
+            BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).mapColor(MapColor.GOLD)
+                .lightLevel { state -> (state.getValue(ModBlockStates.LANTERN_LEVEL) + 1) * 5 })
     }
 
     val MANA_INJECTOR: Block by registerBlockWithItem("mana_injector") { ->

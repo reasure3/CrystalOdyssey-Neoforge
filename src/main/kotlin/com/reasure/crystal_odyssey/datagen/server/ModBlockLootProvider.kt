@@ -1,20 +1,18 @@
 package com.reasure.crystal_odyssey.datagen.server
 
 import com.reasure.crystal_odyssey.block.ModBlocks
+import com.reasure.crystal_odyssey.datagen.server.base.ModBaseBlockLootSubProvider
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
-import net.minecraft.data.loot.BlockLootSubProvider
 import net.minecraft.data.loot.LootTableProvider
-import net.minecraft.world.flag.FeatureFlags
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets
 import java.util.concurrent.CompletableFuture
 
-class ModBlockLootProvider(registries: HolderLookup.Provider) :
-    BlockLootSubProvider(setOf(), FeatureFlags.REGISTRY.allFlags(), registries) {
+class ModBlockLootProvider(registries: HolderLookup.Provider) : ModBaseBlockLootSubProvider(registries) {
     override fun generate() {
         dropSelf(ModBlocks.GLOWSTONE_GEM_BLOCK)
-        dropSelf(ModBlocks.GLOWSTONE_GEM_LANTERN)
+        addLantern(ModBlocks.GLOWSTONE_GEM_LANTERN)
         dropSelf(ModBlocks.MANA_INJECTOR)
     }
 

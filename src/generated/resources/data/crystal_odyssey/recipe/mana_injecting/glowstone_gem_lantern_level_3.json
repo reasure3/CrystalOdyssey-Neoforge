@@ -1,0 +1,17 @@
+{
+  "type": "crystal_odyssey:mana_injecting",
+  "ingredient": {
+    "type": "neoforge:components",
+    "components": {
+      "crystal_odyssey:lantern_level": 1
+    },
+    "items": "crystal_odyssey:glowstone_gem_lantern"
+  },
+  "require_level": 14,
+  "result": {
+    "components": {
+      "crystal_odyssey:lantern_level": 2
+    },
+    "id": "crystal_odyssey:glowstone_gem_lantern"
+  }
+}

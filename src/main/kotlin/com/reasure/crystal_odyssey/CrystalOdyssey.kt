@@ -6,6 +6,7 @@ import com.reasure.crystal_odyssey.effect.ModMobEffects
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
 import com.reasure.crystal_odyssey.item.ModCreativeModTabs
 import com.reasure.crystal_odyssey.item.ModItems
+import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import net.minecraft.resources.ResourceLocation
@@ -33,6 +34,7 @@ object CrystalOdyssey {
         ModCreativeModTabs.CREATIVE_MODE_TABS.register(MOD_BUS)
         ModMobEffects.MOB_EFFECTS.register(MOD_BUS)
         ModMenuTypes.MENUS.register(MOD_BUS)
+        ModDataComponents.DATA_COMPONENTS.register(MOD_BUS)
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(MOD_BUS)
         ModRecipeTypes.RECIPE_TYPES.register(MOD_BUS)
     }

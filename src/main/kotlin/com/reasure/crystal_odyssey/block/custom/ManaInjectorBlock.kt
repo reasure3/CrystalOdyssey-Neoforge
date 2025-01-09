@@ -8,10 +8,13 @@ import net.minecraft.world.InteractionResult
 import net.minecraft.world.MenuProvider
 import net.minecraft.world.SimpleMenuProvider
 import net.minecraft.world.entity.player.Player
+import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.BlockHitResult
+import net.minecraft.world.phys.shapes.CollisionContext
+import net.minecraft.world.phys.shapes.VoxelShape
 
 class ManaInjectorBlock(properties: Properties) : Block(properties) {
     override fun useWithoutItem(
@@ -30,5 +33,16 @@ class ManaInjectorBlock(properties: Properties) : Block(properties) {
         return SimpleMenuProvider({ containerId, playerInventory, _ ->
             ManaInjectorMenu(containerId, playerInventory, pos)
         }, Component.translatable("container.${CrystalOdyssey.ID}.mana_injector"))
+    }
+
+    override fun getCollisionShape(
+        state: BlockState,
+        level: BlockGetter,
+        pos: BlockPos,
+        context: CollisionContext
+    ): VoxelShape = CORE_SHAPE
+
+    companion object {
+        val CORE_SHAPE: VoxelShape = box(4.0, 4.0, 4.0, 12.0, 12.0, 12.0)
     }
 }

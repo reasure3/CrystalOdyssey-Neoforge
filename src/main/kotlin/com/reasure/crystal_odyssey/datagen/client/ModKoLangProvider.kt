@@ -23,5 +23,6 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         addTooltip("lamp_level", "§e§l불빛 강도:§r %1\$s")
         addContainer("mana_injector", "마나 주입기")
         addJeiCategory("mana_injecting", "마나 주입")
+        addJadeConfig("glowstone_gem_lantern", "발광 보석 랜턴 강도")
     }
 }

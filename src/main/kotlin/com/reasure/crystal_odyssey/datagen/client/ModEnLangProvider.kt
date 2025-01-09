@@ -23,5 +23,6 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         addTooltip("lamp_level", "§eLight Level:§r %1\$s")
         addContainer("mana_injector", "Mana Injector")
         addJeiCategory("mana_injecting", "Mana Injecting")
+        addJadeConfig("glowstone_gem_lantern", "Glowstone Gem Lantern Level")
     }
 }

@@ -2,6 +2,7 @@
   "block.crystal_odyssey.glowstone_gem_block": "Block of Glowstone Gem",
   "block.crystal_odyssey.glowstone_gem_lantern": "Glowstone Gem Lantern",
   "block.crystal_odyssey.mana_injector": "Mana Injector",
+  "config.jade.plugin_crystal_odyssey.glowstone_gem_lantern": "Glowstone Gem Lantern Level",
   "container.crystal_odyssey.mana_injector": "Mana Injector",
   "effect.crystal_odyssey.lantern_vision": "Lantern Vision",
   "item.crystal_odyssey.enchanted_glowstone_gem": "Enchanted Glowstone Gem",

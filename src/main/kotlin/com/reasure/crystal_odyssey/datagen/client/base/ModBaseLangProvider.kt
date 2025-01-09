@@ -28,4 +28,6 @@ abstract class ModBaseLangProvider(output: PackOutput, locale: String) :
     fun addContainer(key: String, name: String) = add("container.${CrystalOdyssey.ID}.$key", name)
 
     fun addJeiCategory(key: String, name: String) = add("jei.category.${CrystalOdyssey.ID}.$key", name)
+
+    fun addJadeConfig(key: String, name: String) = add("config.jade.plugin_${CrystalOdyssey.ID}.$key", name)
 }

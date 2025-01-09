@@ -24,4 +24,6 @@ abstract class ModBaseLangProvider(output: PackOutput, locale: String) :
         add("item.minecraft.lingering_potion.effect.${key.get().descriptionId}", name)
 
     fun addContainer(key: String, name: String) = add("container.${CrystalOdyssey.ID}.$key", name)
+
+    fun addJeiCategory(key: String, name: String) = add("jei.category.${CrystalOdyssey.ID}.$key", name)
 }

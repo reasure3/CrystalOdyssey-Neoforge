@@ -28,7 +28,7 @@ object ModBlocks {
     }
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T): DeferredBlock<T> {
-        val registry = BLOCKS.register(name, block)
+        val registry: DeferredBlock<T> = BLOCKS.register(name, block)
         ModItems.ITEMS.registerSimpleBlockItem(name, registry)
         return registry
     }

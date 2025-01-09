@@ -6,7 +6,6 @@ import com.reasure.crystal_odyssey.item.custom.FoilItem
 import com.reasure.crystal_odyssey.item.custom.GlowstoneGemLanternItem
 import net.minecraft.world.item.Item
 import net.neoforged.neoforge.registries.DeferredRegister
-
 import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 
 object ModItems {

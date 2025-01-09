@@ -21,5 +21,6 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         addSplashPotion(ModMobEffects.LANTERN_VISION, "Splash Potion of Lantern Vision")
         addLingeringPotion(ModMobEffects.LANTERN_VISION, "Lingering Potion of Lantern Vision")
         addContainer("mana_injector", "Mana Injector")
+        addJeiCategory("mana_injecting", "Mana Injecting")
     }
 }

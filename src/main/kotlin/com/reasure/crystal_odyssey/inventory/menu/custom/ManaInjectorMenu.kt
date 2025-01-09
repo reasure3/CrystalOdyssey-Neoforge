@@ -120,7 +120,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
         if (!player.isAlive || (player is ServerPlayer && player.hasDisconnected())) {
             player.drop(inputHandler.getStackInSlot(0).copy(), false)
         } else {
-            val inventory = player.inventory
+            val inventory: Inventory = player.inventory
             if (player is ServerPlayer) {
                 inventory.placeItemBackInInventory(inputHandler.getStackInSlot(0))
             }
@@ -148,8 +148,8 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
     override fun quickMoveStack(player: Player, index: Int): ItemStack {
         val sourceSlot: Slot = slots[index]
         if (!sourceSlot.hasItem()) return ItemStack.EMPTY
-        val sourceStack = sourceSlot.item
-        val copyOfSourceStack = sourceStack.copy()
+        val sourceStack: ItemStack = sourceSlot.item
+        val copyOfSourceStack: ItemStack = sourceStack.copy()
 
         when (index) {
             OUTPUT_SLOT_ID -> {

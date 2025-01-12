@@ -27,7 +27,7 @@ SOFTWARE.
 This project includes modifications based on the original source code from the [Create](https://github.com/Creators-of-Create/Create) project by simibubi, which is also licensed under the MIT License.
 
 Modified files include:
-- [CuriosInitializer.kt](src/main/kotlin/compat/curios/CuriosInitializer.kt)
-- [GlowstoneGemLanternItem.kt](src/main/kotlin/item/custom/GlowstoneGemLanternItem.kt)
+- [CuriosInitializer.kt](src/main/kotlin/com/reasure/crystal_odyssey/compat/curios/CuriosInitializer.kt)
+- [GlowstoneGemLanternItem.kt](src/main/kotlin/com/reasure/crystal_odyssey/item/custom/GlowstoneGemLanternItem.kt)
 
 The original license terms are retained and apply to the modified code. See individual files for more details.

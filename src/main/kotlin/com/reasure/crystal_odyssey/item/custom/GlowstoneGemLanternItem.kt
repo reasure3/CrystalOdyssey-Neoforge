@@ -15,6 +15,20 @@ import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import java.util.function.Predicate
 
+/**
+ * This software includes modifications based on the original source code from the project "[Create](https://github.com/Creators-of-Create/Create)" by simibubi.
+ * The original project is licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2019 simibubi
+ *
+ * Modifications made:
+ * - I referred to the [GoggleItem](https://github.com/Creators-of-Create/Create/blob/mc1.20.1/dev/src/main/java/com/simibubi/create/content/equipment/goggles/GogglesItem.java)
+ * code to utilize [isHoldingPredicates] for checking Curios slots only when Curios is loaded.
+ * - The code has been adapted to conform to Kotlin syntax.
+ *
+ * The original license terms are retained and apply to this code. See the LICENSE file in the project root for license details.
+ */
+
 class GlowstoneGemLanternItem(block: Block, properties: Properties) : BlockItem(block, properties) {
     private val isHoldingPredicates: MutableList<Predicate<Player>> = mutableListOf()
 

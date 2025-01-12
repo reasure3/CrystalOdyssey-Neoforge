@@ -1,6 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/block",
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"0": "crystal_odyssey:block/glowstone_gem_lantern",
 		"particle": "crystal_odyssey:block/glowstone_gem_lantern"

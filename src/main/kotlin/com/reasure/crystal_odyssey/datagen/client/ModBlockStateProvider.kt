@@ -14,5 +14,6 @@ class ModBlockStateProvider(output: PackOutput, exFileHelper: ExistingFileHelper
             .partialState().with(LanternBlock.HANGING, false).setModel("glowstone_gem_lantern")
             .partialState().with(LanternBlock.HANGING, true).setModel("glowstone_gem_lantern_hanging")
         simpleBlockStateWithItem(ModBlocks.MANA_INJECTOR)
+        simpleBlockStateWithItem(ModBlocks.LIGHT_ORB_BLOCK)
     }
 }

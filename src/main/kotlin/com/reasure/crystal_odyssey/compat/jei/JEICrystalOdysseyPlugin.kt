@@ -10,6 +10,8 @@ import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import mezz.jei.api.IModPlugin
 import mezz.jei.api.JeiPlugin
+import mezz.jei.api.constants.RecipeTypes
+import mezz.jei.api.recipe.vanilla.IJeiAnvilRecipe
 import mezz.jei.api.registration.*
 import net.minecraft.client.Minecraft
 import net.minecraft.resources.ResourceLocation
@@ -34,6 +36,10 @@ class JEICrystalOdysseyPlugin : IModPlugin {
             recipeManager.getAllRecipesFor(ModRecipeTypes.MANA_INJECTING_RECIPE_TYPE)
                 .map { it.value }.toList()
         registration.addRecipes(ManaInjectingRecipeCategory.MANA_INJECTING_RECIPE_TYPE, manaInjectingRecipes)
+
+        val anvilRepairRecipes: List<IJeiAnvilRecipe> =
+            ModAnvilRepairRecipeMaker.getRepairRecipes(registration.vanillaRecipeFactory)
+        registration.addRecipes(RecipeTypes.ANVIL, anvilRepairRecipes)
     }
 
     override fun registerRecipeTransferHandlers(registration: IRecipeTransferRegistration) {

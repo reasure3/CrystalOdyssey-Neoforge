@@ -2,12 +2,15 @@ package com.reasure.crystal_odyssey.block
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.custom.GlowstoneLanternBlock
+import com.reasure.crystal_odyssey.block.custom.LightOrbBlock
 import com.reasure.crystal_odyssey.block.custom.ManaInjectorBlock
 import com.reasure.crystal_odyssey.block.state.ModBlockStates
 import com.reasure.crystal_odyssey.item.ModItems
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockBehaviour
+import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.level.block.state.properties.BlockStateProperties
 import net.minecraft.world.level.material.MapColor
 import net.neoforged.neoforge.registries.DeferredBlock
 import net.neoforged.neoforge.registries.DeferredRegister
@@ -30,9 +33,21 @@ object ModBlocks {
         ManaInjectorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEACON).requiresCorrectToolForDrops())
     }
 
+    val LIGHT_ORB_BLOCK: Block by BLOCKS.registerBlock("light_orb_block") { properties ->
+        LightOrbBlock(
+            properties
+                .replaceable().noCollission().noLootTable()
+                .mapColor(waterloggedMapColor(MapColor.GOLD))
+                .lightLevel { 15 }
+        )
+    }
+
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T): DeferredBlock<T> {
         val registry: DeferredBlock<T> = BLOCKS.register(name, block)
         ModItems.ITEMS.registerSimpleBlockItem(name, registry)
         return registry
     }
+
+    private fun waterloggedMapColor(unWaterloggedMapColor: MapColor): (BlockState) -> MapColor =
+        { state -> if (state.getValue(BlockStateProperties.WATERLOGGED)) MapColor.WATER else unWaterloggedMapColor }
 }

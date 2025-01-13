@@ -4,6 +4,7 @@ import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.client.base.ModBaseLangProvider
 import com.reasure.crystal_odyssey.effect.ModMobEffects
 import com.reasure.crystal_odyssey.item.ModItems
+import com.reasure.crystal_odyssey.util.ModTags
 import net.minecraft.data.PackOutput
 
 class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us") {
@@ -14,7 +15,9 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         add(ModItems.ENCHANTED_GLOWSTONE_GEM, "Enchanted Glowstone Gem")
         add(ModBlocks.GLOWSTONE_GEM_BLOCK, "Block of Glowstone Gem")
         add(ModBlocks.GLOWSTONE_GEM_LANTERN, "Glowstone Gem Lantern")
+        add(ModItems.LIGHT_STAFF, "Staff of Light")
         add(ModBlocks.MANA_INJECTOR, "Mana Injector")
+        add(ModBlocks.LIGHT_ORB_BLOCK, "Light Orb")
         addEffect(ModMobEffects.LANTERN_VISION, "Lantern Vision")
         addTippedArrow(ModMobEffects.LANTERN_VISION, "Arrow of Lantern Vision")
         addPotion(ModMobEffects.LANTERN_VISION, "Potion of Lantern Vision")
@@ -24,5 +27,6 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         addContainer("mana_injector", "Mana Injector")
         addJeiCategory("mana_injecting", "Mana Injecting")
         addJadeConfig("glowstone_gem_lantern", "Glowstone Gem Lantern Level")
+        add(ModTags.Items.LIGHT_STAFF_REPAIRABLE, "Repair Items of Staff of Light")
     }
 }

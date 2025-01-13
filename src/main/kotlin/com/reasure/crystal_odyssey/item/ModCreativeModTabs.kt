@@ -27,6 +27,7 @@ object ModCreativeModTabs {
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
+                    accept(ModItems.LIGHT_STAFF)
                     accept(ModBlocks.MANA_INJECTOR)
                 }
             }

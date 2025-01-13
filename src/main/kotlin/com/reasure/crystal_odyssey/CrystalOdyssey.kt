@@ -7,6 +7,7 @@ import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
 import com.reasure.crystal_odyssey.item.ModCreativeModTabs
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.particle.ModParticleTypes
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import net.minecraft.resources.ResourceLocation
@@ -37,6 +38,7 @@ object CrystalOdyssey {
         ModDataComponents.DATA_COMPONENTS.register(MOD_BUS)
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(MOD_BUS)
         ModRecipeTypes.RECIPE_TYPES.register(MOD_BUS)
+        ModParticleTypes.PARTICLE_TYPES.register(MOD_BUS)
     }
 
     fun modLoc(path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(ID, path)

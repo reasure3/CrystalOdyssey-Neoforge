@@ -2,8 +2,10 @@ package com.reasure.crystal_odyssey.client
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.client.compat.curios.CuriosClientInitializer
+import com.reasure.crystal_odyssey.client.particle.LightOrbParticle
 import com.reasure.crystal_odyssey.client.screen.ManaInjectorScreen
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
+import com.reasure.crystal_odyssey.particle.ModParticleTypes
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.ModList
@@ -11,6 +13,7 @@ import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
@@ -34,5 +37,10 @@ object CrystalOdysseyClient {
     @SubscribeEvent
     private fun registerScreen(event: RegisterMenuScreensEvent) {
         event.register(ModMenuTypes.MANA_INJECTOR_MENU, ::ManaInjectorScreen)
+    }
+
+    @SubscribeEvent
+    private fun registerParticleProvider(event: RegisterParticleProvidersEvent) {
+        event.registerSpriteSet(ModParticleTypes.LIGHT_ORB, LightOrbParticle::Provider)
     }
 }

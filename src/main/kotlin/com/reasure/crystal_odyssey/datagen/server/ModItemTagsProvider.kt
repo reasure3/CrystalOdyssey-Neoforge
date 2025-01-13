@@ -6,6 +6,7 @@ import com.reasure.crystal_odyssey.util.ModTags
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.ItemTagsProvider
+import net.minecraft.tags.ItemTags
 import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import java.util.concurrent.CompletableFuture
@@ -19,5 +20,12 @@ class ModItemTagsProvider(
     override fun addTags(provider: HolderLookup.Provider) {
         tag(ModTags.Items.SLOT_BELT)
             .add(ModItems.GLOWSTONE_GEM_LANTERN)
+
+        tag(ModTags.Items.LIGHT_STAFF_REPAIRABLE)
+            .add(ModItems.GLOWSTONE_GEM)
+            .add(ModItems.ENCHANTED_GLOWSTONE_GEM)
+
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+            .add(ModItems.LIGHT_STAFF)
     }
 }

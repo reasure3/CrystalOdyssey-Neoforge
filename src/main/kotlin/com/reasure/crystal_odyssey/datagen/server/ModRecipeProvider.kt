@@ -14,6 +14,7 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Blocks
+import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient
 import java.util.concurrent.CompletableFuture
 
@@ -34,20 +35,16 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
         ShapedRecipeBuilder.shaped(
             RecipeCategory.TOOLS,
             ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) }
-        ).unlockedBy(ModItems.GLOWSTONE_GEM)
-            .unlockedBy(Items.IRON_NUGGET)
-            .define('X', ModItems.GLOWSTONE_GEM)
-            .define('#', Items.IRON_NUGGET)
+        ).unlockedBy('X', ModItems.GLOWSTONE_GEM)
+            .unlockedBy('#', Items.IRON_NUGGET)
             .pattern("###")
             .pattern("#X#")
             .pattern("###")
             .save(recipeOutput)
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANA_INJECTOR)
-            .unlockedBy(Items.DIAMOND)
-            .unlockedBy(Blocks.TINTED_GLASS)
-            .define('X', Items.DIAMOND)
-            .define('#', Blocks.TINTED_GLASS)
+            .unlockedBy('X', Items.DIAMOND)
+            .unlockedBy('#', Blocks.TINTED_GLASS)
             .pattern("###")
             .pattern("#X#")
             .pattern("###")
@@ -77,5 +74,13 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWSTONE_GEM)
             .requiredBy(ModItems.ENCHANTED_GLOWSTONE_GEM)
             .save(recipeOutput, CrystalOdyssey.modLoc("glowstone_gem_by_extract_mana"))
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LIGHT_STAFF)
+            .unlockedBy('X', ModItems.ENCHANTED_GLOWSTONE_GEM)
+            .unlockedBy('#', Tags.Items.RODS)
+            .pattern("  X")
+            .pattern(" # ")
+            .pattern("#  ")
+            .save(recipeOutput)
     }
 }

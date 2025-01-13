@@ -1,2 +1,4 @@
-// 1.21.1	2024-12-30T23:12:24.3324734	Tags for minecraft:item mod id crystal_odyssey
+// 1.21.1	2025-01-13T21:41:35.6435158	Tags for minecraft:item mod id crystal_odyssey
+eaa38a2927b7ebe8eb16d31d8d3d96fd47eb2f31 data/crystal_odyssey/tags/item/light_staff_repairable.json
 20a2e42bc5df29cde183913bb3fed727271fd965 data/curios/tags/item/belt.json
+93ad157fb12a1b81355b4b6427d068ab77e5b816 data/minecraft/tags/item/enchantable/durability.json

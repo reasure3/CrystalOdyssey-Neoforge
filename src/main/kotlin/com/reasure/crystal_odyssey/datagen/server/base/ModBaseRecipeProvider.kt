@@ -8,6 +8,8 @@ import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.*
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.tags.TagKey
+import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.ItemLike
@@ -29,7 +31,7 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         "${CrystalOdyssey.ID}:$unpackedName", unpackedGroup
     )
 
-    fun smelting(
+    private fun smelting(
         recipeOutput: RecipeOutput, result: ItemLike, ingredient: ItemLike,
         category: RecipeCategory = RecipeCategory.MISC,
         experience: Float = 0.1f,
@@ -42,7 +44,7 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         .group(group)
         .save(recipeOutput, CrystalOdyssey.modLoc(name))
 
-    fun blasting(
+    private fun blasting(
         recipeOutput: RecipeOutput, result: ItemLike, ingredient: ItemLike,
         category: RecipeCategory = RecipeCategory.MISC,
         experience: Float = 0.1f,
@@ -71,8 +73,15 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         )
     }
 
-    fun ShapedRecipeBuilder.unlockedBy(ingredient: ItemLike): ShapedRecipeBuilder =
-        unlockedBy(getHasName(ingredient), has(ingredient))
+    fun ShapedRecipeBuilder.unlockedBy(symbol: Char, ingredient: ItemLike): ShapedRecipeBuilder =
+        unlockedBy(getHasName(ingredient), has(ingredient)).define(symbol, ingredient)
+
+    fun ShapedRecipeBuilder.unlockedBy(symbol: Char, tag: TagKey<Item>): ShapedRecipeBuilder =
+        unlockedBy(getHasName(tag), has(tag)).define(symbol, tag)
+
+    private fun getHasName(tag: TagKey<Item>): String {
+        return "has_" + tag.location.path.replace('/', '_')
+    }
 
     fun ShapelessRecipeBuilder.requiredBy(ingredient: ItemLike): ShapelessRecipeBuilder =
         unlockedBy(getHasName(ingredient), has(ingredient)).requires(ingredient)

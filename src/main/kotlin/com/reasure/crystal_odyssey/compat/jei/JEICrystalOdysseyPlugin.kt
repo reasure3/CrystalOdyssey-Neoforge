@@ -5,6 +5,7 @@ import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.client.screen.ManaInjectorScreen
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
 import com.reasure.crystal_odyssey.inventory.menu.custom.ManaInjectorMenu
+import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import mezz.jei.api.IModPlugin
@@ -51,5 +52,9 @@ class JEICrystalOdysseyPlugin : IModPlugin {
             73, 35, 22, 15,
             ManaInjectingRecipeCategory.MANA_INJECTING_RECIPE_TYPE
         )
+    }
+
+    override fun registerItemSubtypes(registration: ISubtypeRegistration) {
+        registration.registerSubtypeInterpreter(ModItems.GLOWSTONE_GEM_LANTERN, LanternSubtypeInterpreter())
     }
 }

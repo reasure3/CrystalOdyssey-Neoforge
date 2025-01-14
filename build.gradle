@@ -33,9 +33,9 @@ repositories {
         url = "https://modmaven.dev"
     }
     maven {
-        // location of the maven for Curios Continuation file
-        name = "OctoStudios"
-        url = "https://maven.octo-studios.com/releases"
+        // location of the maven for Curios file
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
     }
     maven {
         // location of the maven for Jade file and ect.
@@ -114,7 +114,7 @@ dependencies {
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
-    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}:api"
     localRuntime "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
 
     compileOnly "curse.maven:jade-324717:${jade_id}"

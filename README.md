@@ -1,8 +1,8 @@
 # Crystal Odyssey
-![Minecraft Version](https://img.shields.io/badge/mc_version-1.21.1-blue)
-![Mod Loader](https://img.shields.io/badge/loader-Neoforge-orange)
+[![Minecraft Version](https://img.shields.io/badge/mc_version-1.21.1-blue)](https://www.minecraft.net/)
+[![Mod Loader](https://img.shields.io/badge/loader-Neoforge-orange)](https://projects.neoforged.net/neoforged/neoforge)
 
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 ## Required Mod
 - **Kotlin for Forge** <small>(5.7.0 or higher)</small><br><br>

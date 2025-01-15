@@ -17,11 +17,13 @@ for neoforge
 - **Curios API (Forge/NeoForge)**<br><br>
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/309927?logo=curseforge&label=Curios&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/curios)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/curios?logo=modrinth&label=Curios&color=00af5c)](https://modrinth.com/mod/curios)
-<br><br><br>
+
+
 - **Just Enough Items (JEI)**<br><br>
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/238222?logo=curseforge&label=JEI&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/jei)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/jei?logo=modrinth&label=JEI&color=00af5c)](https://modrinth.com/mod/jei)
-<br><br><br>
+
+
 - **Jade 🔍**<br><br>
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/324717?logo=curseforge&label=Jade&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/jade)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/jei?logo=modrinth&label=Jade&color=00af5c)](https://modrinth.com/mod/jade)

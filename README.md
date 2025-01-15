@@ -4,10 +4,14 @@ for mc 1.21.1
 
 for neoforge
 
-## Reauired Mod
+## Required Mod
 - **Kotlin for Forge** <small>(5.7.0 or higher)</small><br><br>
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/351264?logo=curseforge&label=Kotlin%20for%20Forge&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/kotlin-for-forge?logo=modrinth&label=Kotlin%20for%20Forge&color=00af5c)](https://modrinth.com/mod/kotlin-for-forge)
+
+
+<details>
+<summary>click to see optional mod</summary>
 
 ## Optional Mod
 - **Curios API (Forge/NeoForge)**<br><br>
@@ -21,6 +25,8 @@ for neoforge
 - **Jade 🔍**<br><br>
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/324717?logo=curseforge&label=Jade&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/jade)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/jei?logo=modrinth&label=Jade&color=00af5c)](https://modrinth.com/mod/jade)
+
+</details>
 
 ---
 [한국어 문서 보러 가기](./doc/ko/Main.md)

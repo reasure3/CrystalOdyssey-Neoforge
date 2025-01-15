@@ -1,4 +1,4 @@
-<big>[[홈으로](../Main.md)]
+<big>[[홈으로](../Main.md)]</big>
 
 # 발광 보석
 ![glowstone_gem.png](../../image/recipe/smelting/glowstone_gem.png)

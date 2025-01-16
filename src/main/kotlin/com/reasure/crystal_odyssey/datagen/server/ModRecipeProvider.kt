@@ -32,6 +32,16 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             unpackedGroup = getItemName(ModItems.GLOWSTONE_GEM)
         )
 
+        storageBlock(
+            recipeOutput, ModItems.RUBY, ModBlocks.RUBY_BLOCK,
+            unpackedGroup = getItemName(ModItems.RUBY)
+        )
+
+        storageBlock(
+            recipeOutput, ModItems.SAPPHIRE, ModBlocks.SAPPHIRE_BLOCK,
+            unpackedGroup = getItemName(ModItems.SAPPHIRE)
+        )
+
         ShapedRecipeBuilder.shaped(
             RecipeCategory.TOOLS,
             ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) }
@@ -51,6 +61,8 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .save(recipeOutput)
 
         manaInjecting(recipeOutput, ModItems.GLOWSTONE_GEM, ModItems.ENCHANTED_GLOWSTONE_GEM, 10)
+        manaInjecting(recipeOutput, ModItems.RUBY, ModItems.ENCHANTED_RUBY, 10)
+        manaInjecting(recipeOutput, ModItems.SAPPHIRE, ModItems.ENCHANTED_SAPPHIRE, 10)
 
         manaInjecting(
             recipeOutput,

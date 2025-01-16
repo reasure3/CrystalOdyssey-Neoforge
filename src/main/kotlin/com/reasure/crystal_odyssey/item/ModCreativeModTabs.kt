@@ -24,11 +24,17 @@ object ModCreativeModTabs {
                     accept(ModItems.GLOWSTONE_GEM)
                     accept(ModItems.ENCHANTED_GLOWSTONE_GEM)
                     accept(ModBlocks.GLOWSTONE_GEM_BLOCK)
+                    accept(ModItems.RUBY)
+                    accept(ModItems.ENCHANTED_RUBY)
+                    accept(ModBlocks.RUBY_BLOCK)
+                    accept(ModItems.SAPPHIRE)
+                    accept(ModItems.ENCHANTED_SAPPHIRE)
+                    accept(ModBlocks.SAPPHIRE_BLOCK)
+                    accept(ModBlocks.MANA_INJECTOR)
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModItems.LIGHT_STAFF)
-                    accept(ModBlocks.MANA_INJECTOR)
                 }
             }
             .build()

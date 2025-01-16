@@ -19,6 +19,18 @@ object ModItems {
         FoilItem(properties)
     }
 
+    val RUBY: Item by ITEMS.registerSimpleItem("ruby")
+
+    val ENCHANTED_RUBY: Item by ITEMS.registerItem("enchanted_ruby") { properties ->
+        FoilItem(properties)
+    }
+
+    val SAPPHIRE: Item by ITEMS.registerSimpleItem("sapphire")
+
+    val ENCHANTED_SAPPHIRE: Item by ITEMS.registerItem("enchanted_sapphire") { properties ->
+        FoilItem(properties)
+    }
+
     val GLOWSTONE_GEM_LANTERN: GlowstoneGemLanternItem by ITEMS.registerItem("glowstone_gem_lantern") { properties ->
         GlowstoneGemLanternItem(ModBlocks.GLOWSTONE_GEM_LANTERN, properties.component(ModDataComponents.LANTERN_LEVEL, 0))
     }

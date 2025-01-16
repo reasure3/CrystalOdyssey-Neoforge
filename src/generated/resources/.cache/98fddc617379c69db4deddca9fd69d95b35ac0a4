@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-08T13:18:26.6965925	Tags for minecraft:block mod id crystal_odyssey
-31436a1145a592e8277c88603a8be00cf75b28d6 data/c/tags/block/storage_blocks.json
-3787b6a5da4eb02883e9bc72d29b928db929c1fe data/minecraft/tags/block/mineable/pickaxe.json
-62d6c0df1327519fcf3a32a07d664ee5b61ffe6c data/minecraft/tags/block/needs_iron_tool.json
+// 1.21.1	2025-01-16T18:53:14.9995027	Tags for minecraft:block mod id crystal_odyssey
+0051fcf3007f4529c1dd5e3e5a404fcc03423f06 data/c/tags/block/storage_blocks.json
+abee2a1b04ead31c92f00d037dff53cf32f0d6a7 data/minecraft/tags/block/mineable/pickaxe.json
+c4eeb69c323e4d9aec186a4ee5efbd726210fa58 data/minecraft/tags/block/needs_iron_tool.json

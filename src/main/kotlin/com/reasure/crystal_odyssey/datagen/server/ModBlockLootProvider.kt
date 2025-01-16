@@ -12,6 +12,8 @@ import java.util.concurrent.CompletableFuture
 class ModBlockLootProvider(registries: HolderLookup.Provider) : ModBaseBlockLootSubProvider(registries) {
     override fun generate() {
         dropSelf(ModBlocks.GLOWSTONE_GEM_BLOCK)
+        dropSelf(ModBlocks.RUBY_BLOCK)
+        dropSelf(ModBlocks.SAPPHIRE_BLOCK)
         addLantern(ModBlocks.GLOWSTONE_GEM_LANTERN)
         dropSelf(ModBlocks.MANA_INJECTOR)
     }

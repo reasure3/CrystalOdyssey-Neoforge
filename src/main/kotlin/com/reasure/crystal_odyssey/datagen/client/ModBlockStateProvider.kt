@@ -10,6 +10,8 @@ class ModBlockStateProvider(output: PackOutput, exFileHelper: ExistingFileHelper
     ModBaseBlockStateProvider(output, exFileHelper) {
     override fun registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.GLOWSTONE_GEM_BLOCK)
+        simpleBlockWithItem(ModBlocks.RUBY_BLOCK)
+        simpleBlockWithItem(ModBlocks.SAPPHIRE_BLOCK)
         getVariantBuilder(ModBlocks.GLOWSTONE_GEM_LANTERN)
             .partialState().with(LanternBlock.HANGING, false).setModel("glowstone_gem_lantern")
             .partialState().with(LanternBlock.HANGING, true).setModel("glowstone_gem_lantern_hanging")

@@ -1,4 +1,6 @@
-// 1.21.1	2025-01-09T16:35:47.1423691	Loot Tables
+// 1.21.1	2025-01-16T18:53:15.0045025	Loot Tables
 7a6bdd30b8ce687dfe2fab33f75e856b14ea2855 data/crystal_odyssey/loot_table/blocks/glowstone_gem_block.json
 c05a58b4f8d923ba1d75703d6530c49841b9e18e data/crystal_odyssey/loot_table/blocks/glowstone_gem_lantern.json
 494195de6e608226f496a0320390ea02c4139b63 data/crystal_odyssey/loot_table/blocks/mana_injector.json
+4a2ffe644cadc1ca58062f56daa7949c5ef3ab37 data/crystal_odyssey/loot_table/blocks/ruby_block.json
+b7e393c2c9a318c58d1c307ef2b6362dbd4ae025 data/crystal_odyssey/loot_table/blocks/sapphire_block.json

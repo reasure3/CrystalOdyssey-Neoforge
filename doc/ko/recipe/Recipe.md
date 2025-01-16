@@ -12,6 +12,24 @@
 
 
 
+# 루비
+![unpack_ruby_block.png](../../image/recipe/crafting/unpack_ruby_block.png)
+
+
+# 루비 블록
+![ruby_block.png](../../image/recipe/crafting/ruby_block.png)
+
+
+
+# 사파이어
+![unpack_sapphire_block.png](../../image/recipe/crafting/unpack_sapphire_block.png)
+
+
+# 사파이어 블록
+![sapphire_block.png](../../image/recipe/crafting/sapphire_block.png)
+
+
+
 # 마나 주입기
 ![mana_injector.png](../../image/recipe/crafting/mana_injector.png)
 
@@ -19,6 +37,16 @@
 
 # 마법이 부여된 발광 보석
 ![enchanted_glowstone_gem.png](../../image/recipe/mana_injecting/enchanted_glowstone_gem.png)
+
+
+
+# 마법이 부여된 루비
+![enchanted_ruby.png](../../image/recipe/mana_injecting/enchanted_ruby.png)
+
+
+
+# 마법이 부여된 사파이어
+![enchanted_sapphire.png](../../image/recipe/mana_injecting/enchanted_sapphire.png)
 
 
 

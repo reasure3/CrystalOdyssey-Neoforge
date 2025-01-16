@@ -11,5 +11,9 @@ class ModItemModelProvider(output: PackOutput, exFileHelper: ExistingFileHelper)
     override fun registerModels() {
         basicItem(ModItems.GLOWSTONE_GEM)
         copyTextureItem(ModItems.ENCHANTED_GLOWSTONE_GEM, ModItems.GLOWSTONE_GEM)
+        basicItem(ModItems.RUBY)
+        copyTextureItem(ModItems.ENCHANTED_RUBY, ModItems.RUBY)
+        basicItem(ModItems.SAPPHIRE)
+        copyTextureItem(ModItems.ENCHANTED_SAPPHIRE, ModItems.SAPPHIRE)
     }
 }

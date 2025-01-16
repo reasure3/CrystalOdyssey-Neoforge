@@ -23,6 +23,14 @@ object ModBlocks {
         Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK).lightLevel { 15 })
     }
 
+    val RUBY_BLOCK: Block by registerBlockWithItem("ruby_block") {
+        Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK).mapColor(MapColor.COLOR_RED))
+    }
+
+    val SAPPHIRE_BLOCK: Block by registerBlockWithItem("sapphire_block") {
+        Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK).mapColor(MapColor.COLOR_BLUE))
+    }
+
     val GLOWSTONE_GEM_LANTERN: Block by BLOCKS.register("glowstone_gem_lantern") { ->
         GlowstoneLanternBlock(
             BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).mapColor(MapColor.GOLD)

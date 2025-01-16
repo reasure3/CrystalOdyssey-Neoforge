@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:mana_injecting",
+  "ingredient": {
+    "item": "crystal_odyssey:ruby"
+  },
+  "require_level": 10,
+  "result": {
+    "id": "crystal_odyssey:enchanted_ruby"
+  }
+}

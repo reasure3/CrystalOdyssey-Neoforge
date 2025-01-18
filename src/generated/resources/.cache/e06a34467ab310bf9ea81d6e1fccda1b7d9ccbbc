@@ -1,4 +1,10 @@
-// 1.21.1	2025-01-13T21:41:35.6435158	Tags for minecraft:item mod id crystal_odyssey
+// 1.21.1	2025-01-16T21:49:13.1151301	Tags for minecraft:item mod id crystal_odyssey
 eaa38a2927b7ebe8eb16d31d8d3d96fd47eb2f31 data/crystal_odyssey/tags/item/light_staff_repairable.json
 20a2e42bc5df29cde183913bb3fed727271fd965 data/curios/tags/item/belt.json
+a3b2f74acb297a22e17f008ac44f7dab9c229d34 data/c/tags/item/ores.json
+820289ea8c7a250e64c797615e48c84535b19d25 data/c/tags/item/ores/ruby.json
+89379b6025f5688cc8d60e34cb66910a613ecc49 data/c/tags/item/ores/sapphire.json
+8f1864f2c3ef2fd3d09f731c106d4f9a7e590b2c data/c/tags/item/storage_blocks.json
+b28560918d822c80790cf2527cfb328c24c7000e data/c/tags/item/storage_blocks/ruby.json
+cc5bace2c9c4c5bb6a4786c9c12b4372b1fc61f7 data/c/tags/item/storage_blocks/sapphire.json
 93ad157fb12a1b81355b4b6427d068ab77e5b816 data/minecraft/tags/item/enchantable/durability.json

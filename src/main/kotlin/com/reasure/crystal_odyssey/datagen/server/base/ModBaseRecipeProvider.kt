@@ -107,4 +107,10 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         val recipe = ManaInjectingRecipe(input, output, requireLevel)
         recipeOutput.accept(id.withPrefix("mana_injecting/"), recipe, null)
     }
+
+    fun getSmeltingName(output: ItemLike, ingredient: ItemLike) =
+        getSmeltingRecipeName(output) + "_" + getItemName(ingredient)
+
+    fun getBlastingName(output: ItemLike, ingredient: ItemLike) =
+        getBlastingRecipeName(output) + "_" + getItemName(ingredient)
 }

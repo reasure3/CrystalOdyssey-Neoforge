@@ -6,8 +6,10 @@ import com.reasure.crystal_odyssey.block.custom.LightOrbBlock
 import com.reasure.crystal_odyssey.block.custom.ManaInjectorBlock
 import com.reasure.crystal_odyssey.block.state.ModBlockStates
 import com.reasure.crystal_odyssey.item.ModItems
+import net.minecraft.util.valueproviders.UniformInt
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.DropExperienceBlock
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.properties.BlockStateProperties
@@ -29,6 +31,34 @@ object ModBlocks {
 
     val SAPPHIRE_BLOCK: Block by registerBlockWithItem("sapphire_block") {
         Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK).mapColor(MapColor.COLOR_BLUE))
+    }
+
+    val RUBY_ORE: Block by registerBlockWithItem("ruby_ore") {
+        DropExperienceBlock(
+            UniformInt.of(2, 5),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_ORE)
+        )
+    }
+
+    val DEEPSLATE_RUBY_ORE: Block by registerBlockWithItem("deepslate_ruby_ore") {
+        DropExperienceBlock(
+            UniformInt.of(2, 5),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_EMERALD_ORE)
+        )
+    }
+
+    val SAPPHIRE_ORE: Block by registerBlockWithItem("sapphire_ore") {
+        DropExperienceBlock(
+            UniformInt.of(2, 8),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_ORE)
+        )
+    }
+
+    val DEEPSLATE_SAPPHIRE_ORE: Block by registerBlockWithItem("deepslate_sapphire_ore") {
+        DropExperienceBlock(
+            UniformInt.of(2, 8),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_EMERALD_ORE)
+        )
     }
 
     val GLOWSTONE_GEM_LANTERN: Block by BLOCKS.register("glowstone_gem_lantern") { ->

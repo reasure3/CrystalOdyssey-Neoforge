@@ -38,6 +38,7 @@ object ModDataGenerators {
                 event.includeServer(),
                 ModCuriosProvider(packOutput, event.existingFileHelper, event.lookupProvider)
             )
+            addProvider(event.includeServer(), ModDatapackEntriesProvider(packOutput, event.lookupProvider))
         }
     }
 }

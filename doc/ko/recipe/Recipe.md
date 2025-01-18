@@ -15,6 +15,9 @@
 # 루비
 ![unpack_ruby_block.png](../../image/recipe/crafting/unpack_ruby_block.png)
 
+![ruby.gif](../../image/recipe/smelting/ruby.gif)
+
+
 
 # 루비 블록
 ![ruby_block.png](../../image/recipe/crafting/ruby_block.png)
@@ -23,6 +26,9 @@
 
 # 사파이어
 ![unpack_sapphire_block.png](../../image/recipe/crafting/unpack_sapphire_block.png)
+
+![sapphire.gif](../../image/recipe/smelting/sapphire.gif)
+
 
 
 # 사파이어 블록

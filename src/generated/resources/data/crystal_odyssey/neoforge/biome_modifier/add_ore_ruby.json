@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "crystal_odyssey:ore_ruby_extra",
+    "crystal_odyssey:ore_ruby"
+  ],
+  "step": "underground_ores"
+}

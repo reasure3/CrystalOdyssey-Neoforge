@@ -32,6 +32,38 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             unpackedGroup = getItemName(ModItems.GLOWSTONE_GEM)
         )
 
+        smeltingAndBlasting(
+            recipeOutput, ModItems.RUBY, ModBlocks.RUBY_ORE,
+            group = getItemName(ModItems.RUBY),
+            experience = 0.7f,
+            smeltingName = getSmeltingName(ModItems.RUBY, ModBlocks.RUBY_ORE),
+            blastingName = getBlastingName(ModItems.RUBY, ModBlocks.RUBY_ORE)
+        )
+
+        smeltingAndBlasting(
+            recipeOutput, ModItems.RUBY, ModBlocks.DEEPSLATE_RUBY_ORE,
+            group = getItemName(ModItems.RUBY),
+            experience = 0.7f,
+            smeltingName = getSmeltingName(ModItems.RUBY, ModBlocks.DEEPSLATE_RUBY_ORE),
+            blastingName = getBlastingName(ModItems.RUBY, ModBlocks.DEEPSLATE_RUBY_ORE)
+        )
+
+        smeltingAndBlasting(
+            recipeOutput, ModItems.SAPPHIRE, ModBlocks.SAPPHIRE_ORE,
+            group = getItemName(ModItems.SAPPHIRE),
+            experience = 1.0f,
+            smeltingName = getSmeltingName(ModItems.SAPPHIRE, ModBlocks.SAPPHIRE_ORE),
+            blastingName = getBlastingName(ModItems.SAPPHIRE, ModBlocks.SAPPHIRE_ORE)
+        )
+
+        smeltingAndBlasting(
+            recipeOutput, ModItems.SAPPHIRE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE,
+            group = getItemName(ModItems.SAPPHIRE),
+            experience = 1.0f,
+            smeltingName = getSmeltingName(ModItems.SAPPHIRE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE),
+            blastingName = getBlastingName(ModItems.SAPPHIRE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
+        )
+
         storageBlock(
             recipeOutput, ModItems.RUBY, ModBlocks.RUBY_BLOCK,
             unpackedGroup = getItemName(ModItems.RUBY)

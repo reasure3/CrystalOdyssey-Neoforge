@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.ItemTagsProvider
 import net.minecraft.tags.ItemTags
 import net.minecraft.world.level.block.Block
+import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import java.util.concurrent.CompletableFuture
 
@@ -27,5 +28,12 @@ class ModItemTagsProvider(
 
         tag(ItemTags.DURABILITY_ENCHANTABLE)
             .add(ModItems.LIGHT_STAFF)
+
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS)
+        copy(ModTags.Blocks.STORAGE_BLOCKS_RUBY, ModTags.Items.STORAGE_BLOCKS_RUBY)
+        copy(ModTags.Blocks.STORAGE_BLOCKS_SAPPHIRE, ModTags.Items.STORAGE_BLOCKS_SAPPHIRE)
+        copy(Tags.Blocks.ORES, Tags.Items.ORES)
+        copy(ModTags.Blocks.ORES_RUBY, ModTags.Items.ORES_RUBY)
+        copy(ModTags.Blocks.ORES_SAPPHIRE, ModTags.Items.ORES_SAPPHIRE)
     }
 }

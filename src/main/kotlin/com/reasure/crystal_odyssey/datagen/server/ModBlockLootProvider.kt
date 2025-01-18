@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.datagen.server
 
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.server.base.ModBaseBlockLootSubProvider
+import com.reasure.crystal_odyssey.item.ModItems
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.loot.LootTableProvider
@@ -14,6 +15,10 @@ class ModBlockLootProvider(registries: HolderLookup.Provider) : ModBaseBlockLoot
         dropSelf(ModBlocks.GLOWSTONE_GEM_BLOCK)
         dropSelf(ModBlocks.RUBY_BLOCK)
         dropSelf(ModBlocks.SAPPHIRE_BLOCK)
+        add(ModBlocks.RUBY_ORE) { block -> createOreDrop(block, ModItems.RUBY) }
+        add(ModBlocks.DEEPSLATE_RUBY_ORE) { block -> createOreDrop(block, ModItems.RUBY) }
+        add(ModBlocks.SAPPHIRE_ORE) { block -> createOreDrop(block, ModItems.SAPPHIRE) }
+        add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE) { block -> createOreDrop(block, ModItems.SAPPHIRE) }
         addLantern(ModBlocks.GLOWSTONE_GEM_LANTERN)
         dropSelf(ModBlocks.MANA_INJECTOR)
     }

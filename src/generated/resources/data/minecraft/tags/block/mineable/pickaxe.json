@@ -3,6 +3,10 @@
     "crystal_odyssey:glowstone_gem_block",
     "crystal_odyssey:ruby_block",
     "crystal_odyssey:sapphire_block",
+    "crystal_odyssey:ruby_ore",
+    "crystal_odyssey:deepslate_ruby_ore",
+    "crystal_odyssey:sapphire_ore",
+    "crystal_odyssey:deepslate_sapphire_ore",
     "crystal_odyssey:glowstone_gem_lantern",
     "crystal_odyssey:mana_injector"
   ]

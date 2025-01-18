@@ -94,7 +94,8 @@
 [![sapphire.png](../image/item/sapphire.png)](./recipe/Recipe.md#사파이어)
 [![enchanted_sapphire.png](../image/item/enchanted_sapphire.png)](./recipe/Recipe.md#마법이-부여된-사파이어)
 [<img alt="sapphire_block.png" height="80" src="../image/block/sapphire_block.png" width="80"/>](./recipe/Recipe.md#사파이어-블록)
-[<img alt="sapphire_ore.png" height="80" src="../image/block/deepslate_sapphire_ore.png" width="80"/>](./worldgen/OreGen.md#사파이어)
+[<img alt="sapphire_ore.png" height="80" src="../image/block/sapphire_ore.png" width="80"/>](./worldgen/OreGen.md#사파이어)
+[<img alt="deepslate_sapphire_ore.png" height="80" src="../image/block/deepslate_sapphire_ore.png" width="80"/>](./worldgen/OreGen.md#사파이어)
 
 - 물과 관련된 아이템을 제작하는데 사용됩니다.
 
@@ -110,7 +111,7 @@
 [![enchanted_ruby.png](../image/item/enchanted_ruby.png)](./recipe/Recipe.md#마법이-부여된-루비)
 [<img alt="ruby_block.png" height="80" src="../image/block/ruby_block.png" width="80"/>](./recipe/Recipe.md#루비-블록)
 [<img alt="ruby_ore.png" height="80" src="../image/block/ruby_ore.png" width="80"/>](./worldgen/OreGen.md#루비)
-[<img alt="ruby_ore.png" height="80" src="../image/block/deepslate_ruby_ore.png" width="80"/>](./worldgen/OreGen.md#루비)
+[<img alt="deepslate_ruby_ore.png" height="80" src="../image/block/deepslate_ruby_ore.png" width="80"/>](./worldgen/OreGen.md#루비)
 
 - 불과 관련된 아이템을 제작하는데 사용됩니다.
 

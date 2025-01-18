@@ -16,16 +16,14 @@
 
 # 사파이어
 
-<img alt="sapphire_ore.png" height="80" src="../../image/block/sapphire_ore.png" width="80"/> 
-<img alt="sapphire_ore.png" height="80" src="../../image/block/deepslate_sapphire_ore.png" width="80"/> 
+<img alt="sapphire_ore.png" height="80" src="../../image/block/sapphire_ore.png" width="80"/> <img alt="deepslate_sapphire_ore.png" height="80" src="../../image/block/deepslate_sapphire_ore.png" width="80"/> 
 
 * Y 0 이상에서 스폰됩니다.
 * Y 46 에서 가장 많이 스폰됩니다.
 
 # 루비
 
-<img alt="sapphire_ore.png" height="80" src="../../image/block/ruby_ore.png" width="80"/>
-<img alt="sapphire_ore.png" height="80" src="../../image/block/deepslate_ruby_ore.png" width="80"/>
+<img alt="ruby_ore.png" height="80" src="../../image/block/ruby_ore.png" width="80"/> <img alt="deepslate_ruby_ore.png" height="80" src="../../image/block/deepslate_ruby_ore.png" width="80"/>
 
 * Y 0 이하에서 스폰됩니다.
 * Y -64 ~ Y -48 에서 가장 많이 스폰됩니다.

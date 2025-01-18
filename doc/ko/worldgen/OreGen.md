@@ -26,5 +26,5 @@
 <img alt="ruby_ore.png" height="80" src="../../image/block/ruby_ore.png" width="80"/> <img alt="deepslate_ruby_ore.png" height="80" src="../../image/block/deepslate_ruby_ore.png" width="80"/>
 
 * Y 0 이하에서 스폰됩니다.
-* Y -64 ~ Y -48 에서 가장 많이 스폰됩니다.
+* Y -64 ~ -48 에서 가장 많이 스폰됩니다.
 * 공기 중에 노출될 확률히 극히 낮습니다.

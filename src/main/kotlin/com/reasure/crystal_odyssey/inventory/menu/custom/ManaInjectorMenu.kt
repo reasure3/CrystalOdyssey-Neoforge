@@ -34,6 +34,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
 
     private val inputHandler: ItemStackHandler = object : ItemStackHandler(1) {
         override fun onContentsChanged(slot: Int) {
+            println("onContentsChanged: $slot")
             onSlotChanged()
         }
     }
@@ -73,14 +74,17 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
         }
     }
 
+    private fun currentRecipeInput() = SingleRecipeInput(inputHandler.getStackInSlot(0))
+
     private fun currentRecipe(): RecipeHolder<ManaInjectingRecipe>? {
-        return quickCheck.getRecipeFor(SingleRecipeInput(inputHandler.getStackInSlot(0)), level).orElse(null)
+        return quickCheck.getRecipeFor(currentRecipeInput(), level).orElse(null)
     }
 
     private fun onSlotChanged() {
-        if (level.isClientSide) return
-        setRecipe()
-        broadcastChanges()
+        println("ManaInjector - onSlotChanged: $level")
+        if (!level.isClientSide) {
+            setRecipe()
+        }
     }
 
     private fun setRecipe() {
@@ -99,7 +103,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
     }
 
     private fun setResult(recipe: RecipeHolder<ManaInjectingRecipe>) {
-        outputHandler.setStackInSlot(0, recipe.value.result.copy())
+        outputHandler.setStackInSlot(0, recipe.value.assemble(currentRecipeInput(), level.registryAccess()))
     }
 
     private fun setResultToEmpty() {

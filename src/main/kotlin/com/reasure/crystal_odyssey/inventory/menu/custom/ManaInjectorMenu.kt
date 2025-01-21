@@ -34,7 +34,6 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
 
     private val inputHandler: ItemStackHandler = object : ItemStackHandler(1) {
         override fun onContentsChanged(slot: Int) {
-            println("onContentsChanged: $slot")
             onSlotChanged()
         }
     }
@@ -81,7 +80,6 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
     }
 
     private fun onSlotChanged() {
-        println("ManaInjector - onSlotChanged: $level")
         if (!level.isClientSide) {
             setRecipe()
         }

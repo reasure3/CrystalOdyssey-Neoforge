@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.client
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.client.compat.curios.CuriosClientInitializer
+import com.reasure.crystal_odyssey.client.item.properties.ModItemProperties
 import com.reasure.crystal_odyssey.client.particle.LightOrbParticle
 import com.reasure.crystal_odyssey.client.screen.ManaInjectorScreen
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
@@ -29,6 +30,7 @@ object CrystalOdysseyClient {
     @SubscribeEvent
     private fun onClientSetup(event: FMLClientSetupEvent) {
         LOGGER.info("Starting clientSetup")
+        ModItemProperties.register()
         if (ModList.get().isLoaded("curios")) {
             CuriosClientInitializer.registerRenderer()
         }

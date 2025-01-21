@@ -1,7 +1,13 @@
-// 1.21.1	2025-01-16T18:54:49.5391911	Item Models: crystal_odyssey
+// 1.21.1	2025-01-21T14:27:35.2948491	Item Models: crystal_odyssey
 ea80ee05e4fc46f4c5a83d08d3ac73ab8be65e7f assets/crystal_odyssey/models/item/enchanted_glowstone_gem.json
 654c1acdd9af1bc2ca6fa908b830671163afbdb6 assets/crystal_odyssey/models/item/enchanted_ruby.json
 f95884fa2a09a6f298ff2698af302df2f23a4f70 assets/crystal_odyssey/models/item/enchanted_sapphire.json
 ea80ee05e4fc46f4c5a83d08d3ac73ab8be65e7f assets/crystal_odyssey/models/item/glowstone_gem.json
+496dfe76a98513b63fe3e2e1858e86b2ab0e1d21 assets/crystal_odyssey/models/item/infinite_ruby_bucket.json
+b5012417989516efd9a810204bc81667a2c6a91f assets/crystal_odyssey/models/item/infinite_sapphire_bucket.json
+65835b2981d028dc414c9a91f2d1e996443dfc38 assets/crystal_odyssey/models/item/lava_ruby_bucket.json
 654c1acdd9af1bc2ca6fa908b830671163afbdb6 assets/crystal_odyssey/models/item/ruby.json
+e6770f29f181265e1452668f1e5c411cba52b218 assets/crystal_odyssey/models/item/ruby_bucket.json
 f95884fa2a09a6f298ff2698af302df2f23a4f70 assets/crystal_odyssey/models/item/sapphire.json
+b7ee391bbe5ce172730fe2931cb123e9164b2d45 assets/crystal_odyssey/models/item/sapphire_bucket.json
+948b4eb0700a253f7d8cb4b9a03bb7e5c8ec3efa assets/crystal_odyssey/models/item/water_sapphire_bucket.json

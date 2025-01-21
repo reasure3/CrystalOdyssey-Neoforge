@@ -19,7 +19,7 @@ abstract class ModBaseBlockLootSubProvider(registries: HolderLookup.Provider) :
         val table: LootTable.Builder = createSingleItemTable(block)
         for (i: Int in 0..2) {
             table.apply(
-                SetComponentsFunction.setComponent(ModDataComponents.LANTERN_LEVEL, i).`when`(
+                SetComponentsFunction.setComponent(ModDataComponents.LANTERN_LEVEL.get(), i).`when`(
                     LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(
                         StatePropertiesPredicate.Builder.properties().hasProperty(ModBlockStates.LANTERN_LEVEL, i)
                     )

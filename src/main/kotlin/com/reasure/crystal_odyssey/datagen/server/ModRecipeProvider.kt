@@ -14,8 +14,12 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.material.Fluids
 import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient
+import net.neoforged.neoforge.fluids.FluidStack
+import net.neoforged.neoforge.fluids.FluidType
+import net.neoforged.neoforge.fluids.SimpleFluidContent
 import java.util.concurrent.CompletableFuture
 
 class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<HolderLookup.Provider>) :
@@ -78,7 +82,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             RecipeCategory.TOOLS,
             ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) }
         ).unlockedBy('X', ModItems.GLOWSTONE_GEM)
-            .unlockedBy('#', Items.IRON_NUGGET)
+            .unlockedBy('#', Tags.Items.NUGGETS_IRON)
             .pattern("###")
             .pattern("#X#")
             .pattern("###")
@@ -126,5 +130,73 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .pattern(" # ")
             .pattern("#  ")
             .save(recipeOutput)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SAPPHIRE_BUCKET)
+            .unlockedBy('X', ModItems.ENCHANTED_SAPPHIRE)
+            .unlockedBy('#', Tags.Items.INGOTS_IRON)
+            .pattern("#X#")
+            .pattern(" # ")
+            .save(recipeOutput)
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.SAPPHIRE_BUCKET)
+            .requiredBy(Items.BUCKET)
+            .requiredBy(ModItems.ENCHANTED_SAPPHIRE)
+            .save(recipeOutput, CrystalOdyssey.modLoc("sapphire_bucket_from_bucket"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
+            set(
+                ModDataComponents.FLUID,
+                SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, FluidType.BUCKET_VOLUME))
+            )
+        }).requiredBy(Items.WATER_BUCKET)
+            .requiredBy(ModItems.ENCHANTED_SAPPHIRE)
+            .save(recipeOutput, CrystalOdyssey.modLoc("sapphire_bucket_from_water_bucket"))
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_BUCKET)
+            .unlockedBy('X', ModItems.ENCHANTED_RUBY)
+            .unlockedBy('#', Tags.Items.INGOTS_IRON)
+            .pattern("#X#")
+            .pattern(" # ")
+            .save(recipeOutput)
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.RUBY_BUCKET)
+            .requiredBy(Items.BUCKET)
+            .requiredBy(ModItems.ENCHANTED_RUBY)
+            .save(recipeOutput, CrystalOdyssey.modLoc("ruby_bucket_from_bucket"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemStack(ModItems.RUBY_BUCKET).apply {
+            set(
+                ModDataComponents.FLUID,
+                SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, FluidType.BUCKET_VOLUME))
+            )
+        }).requiredBy(Items.LAVA_BUCKET)
+            .requiredBy(ModItems.ENCHANTED_RUBY)
+            .save(recipeOutput, CrystalOdyssey.modLoc("ruby_bucket_from_lava_bucket"))
+
+        manaInjecting(
+            recipeOutput,
+            input = DataComponentIngredient.of(
+                false,
+                ModDataComponents.FLUID,
+                SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, 30 * FluidType.BUCKET_VOLUME)),
+                ModItems.SAPPHIRE_BUCKET
+            ),
+            output = ItemStack(ModItems.INFINITE_SAPPHIRE_BUCKET),
+            requireLevel = 50,
+            id = CrystalOdyssey.modLoc("infinite_sapphire_bucket")
+        )
+
+        manaInjecting(
+            recipeOutput,
+            input = DataComponentIngredient.of(
+                false,
+                ModDataComponents.FLUID,
+                SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, 30 * FluidType.BUCKET_VOLUME)),
+                ModItems.RUBY_BUCKET
+            ),
+            output = ItemStack(ModItems.INFINITE_RUBY_BUCKET),
+            requireLevel = 50,
+            id = CrystalOdyssey.modLoc("infinite_ruby_bucket")
+        )
     }
 }

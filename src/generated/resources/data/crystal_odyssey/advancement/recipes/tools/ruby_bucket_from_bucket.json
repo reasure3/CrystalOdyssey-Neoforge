@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glowstone_gem": {
+    "has_bucket": {
       "conditions": {
         "items": [
           {
-            "items": "crystal_odyssey:glowstone_gem"
+            "items": "minecraft:bucket"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_nuggets_iron": {
+    "has_enchanted_ruby": {
       "conditions": {
         "items": [
           {
-            "items": "#c:nuggets/iron"
+            "items": "crystal_odyssey:enchanted_ruby"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "crystal_odyssey:glowstone_gem_lantern"
+        "recipe": "crystal_odyssey:ruby_bucket_from_bucket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glowstone_gem",
-      "has_nuggets_iron"
+      "has_bucket",
+      "has_enchanted_ruby"
     ]
   ],
   "rewards": {
     "recipes": [
-      "crystal_odyssey:glowstone_gem_lantern"
+      "crystal_odyssey:ruby_bucket_from_bucket"
     ]
   }
 }

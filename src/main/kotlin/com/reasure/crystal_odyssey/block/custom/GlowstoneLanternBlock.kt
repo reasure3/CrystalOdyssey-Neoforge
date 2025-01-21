@@ -3,6 +3,7 @@ package com.reasure.crystal_odyssey.block.custom
 import com.reasure.crystal_odyssey.block.state.ModBlockStates
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import net.minecraft.core.BlockPos
+import net.minecraft.core.component.DataComponents
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.context.BlockPlaceContext
@@ -31,6 +32,7 @@ class GlowstoneLanternBlock(properties: Properties) : LanternBlock(properties) {
 
     override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {
         val state: BlockState = super.getStateForPlacement(context) ?: return null
+        context.itemInHand.get(DataComponents.BEES)
         return state.setValue(LANTERN_LEVEL, context.itemInHand.getOrDefault(ModDataComponents.LANTERN_LEVEL, 0))
     }
 

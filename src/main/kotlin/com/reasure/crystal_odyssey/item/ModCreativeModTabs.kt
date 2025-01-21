@@ -7,6 +7,10 @@ import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.level.material.Fluids
+import net.neoforged.neoforge.fluids.FluidStack
+import net.neoforged.neoforge.fluids.FluidType
+import net.neoforged.neoforge.fluids.SimpleFluidContent
 import net.neoforged.neoforge.registries.DeferredRegister
 import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 
@@ -39,6 +43,22 @@ object ModCreativeModTabs {
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModItems.LIGHT_STAFF)
+                    accept(ModItems.SAPPHIRE_BUCKET)
+                    accept(ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
+                        set(
+                            ModDataComponents.FLUID,
+                            SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, 30 * FluidType.BUCKET_VOLUME))
+                        )
+                    })
+                    accept(ModItems.INFINITE_SAPPHIRE_BUCKET)
+                    accept(ModItems.RUBY_BUCKET)
+                    accept(ItemStack(ModItems.RUBY_BUCKET).apply {
+                        set(
+                            ModDataComponents.FLUID,
+                            SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, 30 * FluidType.BUCKET_VOLUME))
+                        )
+                    })
+                    accept(ModItems.INFINITE_RUBY_BUCKET)
                 }
             }
             .build()

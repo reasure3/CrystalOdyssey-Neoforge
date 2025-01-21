@@ -15,6 +15,7 @@ import mezz.jei.api.recipe.vanilla.IJeiAnvilRecipe
 import mezz.jei.api.registration.*
 import net.minecraft.client.Minecraft
 import net.minecraft.resources.ResourceLocation
+import net.neoforged.neoforge.fluids.FluidType
 
 @JeiPlugin
 class JEICrystalOdysseyPlugin : IModPlugin {
@@ -62,5 +63,7 @@ class JEICrystalOdysseyPlugin : IModPlugin {
 
     override fun registerItemSubtypes(registration: ISubtypeRegistration) {
         registration.registerSubtypeInterpreter(ModItems.GLOWSTONE_GEM_LANTERN, LanternSubtypeInterpreter())
+        registration.registerSubtypeInterpreter(ModItems.SAPPHIRE_BUCKET, CapacityBucketSubtypeInterpreter(30 * FluidType.BUCKET_VOLUME))
+        registration.registerSubtypeInterpreter(ModItems.RUBY_BUCKET, CapacityBucketSubtypeInterpreter(30 * FluidType.BUCKET_VOLUME))
     }
 }

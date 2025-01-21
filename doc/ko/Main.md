@@ -85,7 +85,7 @@
 
 </details>
 
-## 사파이어
+# 사파이어
 
 <details>
 <summary>자세히</summary>
@@ -99,9 +99,25 @@
 
 - 물과 관련된 아이템을 제작하는데 사용됩니다.
 
+## 사파이어 양동이
+
+[![sapphire_bucket.png](../image/item/sapphire_bucket.png)](./recipe/Recipe.md#사파이어-양동이)
+[![water_sapphire_bucket.png](../image/item/water_sapphire_bucket.png)](./recipe/Recipe.md#사파이어-양동이)
+
+- 물만 담을 수 있는 양동이입니다.
+- 총 30 버킷만큼 담을 수 있습니다.
+- 우클릭으로 물을 설치하고, 쉬프트 우클릭으로 물을 담습니다.
+
+## 무한의 사파이어 양동이
+
+[![infinite_sapphire_bucket.png](../image/item/infinite_sapphire_bucket.png)](./recipe/Recipe.md#무한의-사파이어-양동이)
+
+- 무한으로 물이 담겨있는 양동이입니다.
+- 우클릭으로 물을 설치하고, 쉬프트 우클릭으로 물을 담습니다.
+
 </details>
 
-## 루비
+# 루비
 
 <details>
 <summary>자세히</summary>
@@ -114,5 +130,21 @@
 [<img alt="deepslate_ruby_ore.png" height="80" src="../image/block/deepslate_ruby_ore.png" width="80"/>](./worldgen/OreGen.md#루비)
 
 - 불과 관련된 아이템을 제작하는데 사용됩니다.
+
+## 루비 양동이
+
+[![ruby_bucket.png](../image/item/ruby_bucket.png)](./recipe/Recipe.md#루비-양동이)
+[![lava_ruby_bucket.png](../image/item/lava_ruby_bucket.png)](./recipe/Recipe.md#루비-양동이)
+
+- 용암만 담을 수 있는 양동이입니다.
+- 총 30 버킷만큼 담을 수 있습니다.
+- 우클릭으로 용암을 설치하고, 쉬프트 우클릭으로 용암을 담습니다.
+
+## 무한의 루비 양동이
+
+[![infinite_ruby_bucket.png](../image/item/infinite_ruby_bucket.png)](./recipe/Recipe.md#무한의-루비-양동이)
+
+- 무한으로 용암이 담겨있는 양동이입니다.
+- 우클릭으로 용암을 설치하고, 쉬프트 우클릭으로 용암을 담습니다.
 
 </details>

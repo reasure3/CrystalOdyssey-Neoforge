@@ -61,3 +61,31 @@
 # 빛의 지팡이
 
 ![light_staff.gif](../../image/recipe/crafting/light_staff.gif)
+
+## 사파이어 양동이
+![sapphire_bucket_1.png](../../image/recipe/crafting/sapphire_bucket_1.png)
+
+![sapphire_bucket_2.png](../../image/recipe/crafting/sapphire_bucket_2.png)
+
+![sapphire_bucket_3.png](../../image/recipe/crafting/sapphire_bucket_3.png)
+
+\* 1 버킷만큼 들어있음
+
+# 무한의 사파이어 양동이
+![infinite_sapphire_bucket.png](../../image/recipe/mana_injecting/infinite_sapphire_bucket.png)
+
+\* 물이 30버킷 만큼 들어간 사파이어 양동이가 재료로 쓰임
+
+## 루비 양동이
+![ruby_bucket_1.png](../../image/recipe/crafting/ruby_bucket_1.png)
+
+![ruby_bucket_2.png](../../image/recipe/crafting/ruby_bucket_2.png)
+
+![ruby_bucket_3.png](../../image/recipe/crafting/ruby_bucket_3.png)
+
+\* 1 버킷만큼 들어있음
+
+## 무한의 루비 양동이
+![infinite_ruby_bucket.png](../../image/recipe/mana_injecting/infinite_ruby_bucket.png)
+
+\* 용암이 30버킷 만큼 들어간 루비 양동이가 재료로 쓰임

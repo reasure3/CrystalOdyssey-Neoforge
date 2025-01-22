@@ -1,9 +1,11 @@
 package com.reasure.crystal_odyssey.inventory.menu.custom
 
 import com.reasure.crystal_odyssey.block.ModBlocks
+import com.reasure.crystal_odyssey.inventory.handler.ContainerMenuItemStackHandler
 import com.reasure.crystal_odyssey.inventory.handler.OutputItemStackHandler
+import com.reasure.crystal_odyssey.inventory.menu.BaseRecipeContainerMenu
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
-import com.reasure.crystal_odyssey.inventory.slot.FakeSlotItemHandler
+import com.reasure.crystal_odyssey.inventory.slot.OutputSlotItemHandler
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import net.minecraft.core.BlockPos
@@ -11,34 +13,25 @@ import net.minecraft.network.FriendlyByteBuf
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.player.Inventory
 import net.minecraft.world.entity.player.Player
-import net.minecraft.world.inventory.AbstractContainerMenu
-import net.minecraft.world.inventory.ContainerData
-import net.minecraft.world.inventory.SimpleContainerData
 import net.minecraft.world.inventory.Slot
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.RecipeHolder
 import net.minecraft.world.item.crafting.RecipeManager
 import net.minecraft.world.item.crafting.SingleRecipeInput
-import net.minecraft.world.level.Level
+import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.items.ItemStackHandler
 import net.neoforged.neoforge.items.SlotItemHandler
 import kotlin.math.max
 
-class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val pos: BlockPos) :
-    AbstractContainerMenu(ModMenuTypes.MANA_INJECTOR_MENU, containerId) {
-    private var requireLevel: Int = 0
-    private var hasRecipe: Boolean = false
+class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos) :
+    BaseRecipeContainerMenu(ModMenuTypes.MANA_INJECTOR_MENU, containerId, playerInventory, pos) {
+    var requireLevel: Int = 0
+        private set
+    var hasRecipe: Boolean = false
+        private set
 
-    private val player: Player = playerInventory.player
-    private val level: Level = playerInventory.player.level()
-
-    private val inputHandler: ItemStackHandler = object : ItemStackHandler(1) {
-        override fun onContentsChanged(slot: Int) {
-            onSlotChanged()
-        }
-    }
+    private val inputHandler: ItemStackHandler = ContainerMenuItemStackHandler(this, 1)
     private val outputHandler: ItemStackHandler = OutputItemStackHandler()
-    private val data: ContainerData = createData()
 
     private val quickCheck: RecipeManager.CachedCheck<SingleRecipeInput, ManaInjectingRecipe> =
         RecipeManager.createCheck(ModRecipeTypes.MANA_INJECTING_RECIPE_TYPE)
@@ -51,19 +44,12 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
 
     init {
         addSlot(SlotItemHandler(inputHandler, 0, 45, 34))
-        addSlot(object : FakeSlotItemHandler(outputHandler, 0, 111, 34) {
-            override fun onTake(player: Player, stack: ItemStack) {
-                onCraft(player, stack)
-                super.onTake(player, stack)
-                setRecipe()
-            }
-        })
+        addSlot(OutputSlotItemHandler(this, outputHandler, 0, 111, 34))
         addPlayerInventory(playerInventory, 8, 84)
         addPlayerHotbar(playerInventory, 8, 142)
-        addDataSlots(data)
     }
 
-    private fun onCraft(player: Player, stack: ItemStack) {
+    override fun onCraft(player: Player, stack: ItemStack) {
         val recipe = currentRecipe() ?: return
         inputHandler.extractItem(0, 1, false)
         if (!player.isCreative && player is ServerPlayer) {
@@ -73,19 +59,13 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
         }
     }
 
-    private fun currentRecipeInput() = SingleRecipeInput(inputHandler.getStackInSlot(0))
+    private fun currentRecipeInput() = SingleRecipeInput(slots[INPUT_SLOT_ID].item)
 
     private fun currentRecipe(): RecipeHolder<ManaInjectingRecipe>? {
         return quickCheck.getRecipeFor(currentRecipeInput(), level).orElse(null)
     }
 
-    private fun onSlotChanged() {
-        if (!level.isClientSide) {
-            setRecipe()
-        }
-    }
-
-    private fun setRecipe() {
+    override fun setRecipe() {
         val recipe = currentRecipe()
         if (recipe == null) {
             clearResult()
@@ -100,6 +80,17 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
         }
     }
 
+    override fun setRecipeClient() {
+        val recipe = currentRecipe()
+        if (recipe == null) {
+            hasRecipe = false
+            requireLevel = 0
+        } else {
+            hasRecipe = true
+            setRequireLevel(recipe)
+        }
+    }
+
     private fun setResult(recipe: RecipeHolder<ManaInjectingRecipe>) {
         outputHandler.setStackInSlot(0, recipe.value.assemble(currentRecipeInput(), level.registryAccess()))
     }
@@ -109,7 +100,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
     }
 
     private fun setRequireLevel(recipe: RecipeHolder<ManaInjectingRecipe>) {
-        data.set(REQUIRE_LEVEL_DATA_SLOT, recipe.value.requireLevel)
+        requireLevel = recipe.value.requireLevel
     }
 
     private fun clearResult() {
@@ -131,15 +122,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
 
     fun isSatisfyRequireLevel(): Boolean {
         if (player.isCreative) return true
-        return player.experienceLevel >= data[REQUIRE_LEVEL_DATA_SLOT]
-    }
-
-    fun getRequireLevel(): Int {
-        return data[REQUIRE_LEVEL_DATA_SLOT]
-    }
-
-    fun isHaveRecipe(): Boolean {
-        return data[HAS_RECIPE_DATA_SLOT] > 0
+        return player.experienceLevel >= requireLevel
     }
 
     override fun removed(player: Player) {
@@ -197,54 +180,13 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, private val
         return copyOfSourceStack
     }
 
-    override fun stillValid(player: Player): Boolean {
-        if (level.isClientSide) return true
-        if (!level.getBlockState(pos).`is`(ModBlocks.MANA_INJECTOR)) return false
-        return player.canInteractWithBlock(pos, 4.0)
-    }
+    override fun getBlock(): Block = ModBlocks.MANA_INJECTOR
 
     override fun canTakeItemForPickAll(stack: ItemStack, slot: Slot): Boolean {
         return slot.index != OUTPUT_SLOT_ID && super.canTakeItemForPickAll(stack, slot)
     }
 
-    private fun addPlayerInventory(playerInventory: Inventory, x: Int, y: Int) {
-        for (i in 0..2) {
-            for (j in 0..8) {
-                addSlot(Slot(playerInventory, j + i * 9 + 9, x + j * 18, y + i * 18))
-            }
-        }
-    }
-
-    private fun addPlayerHotbar(playerInventory: Inventory, x: Int, y: Int) {
-        for (i in 0..8) {
-            addSlot(Slot(playerInventory, i, x + i * 18, y))
-        }
-    }
-
-    private fun createData(): ContainerData {
-        if (level.isClientSide) return SimpleContainerData(DATA_SLOT_COUNT)
-        return object : ContainerData {
-            override fun get(index: Int): Int = when (index) {
-                REQUIRE_LEVEL_DATA_SLOT -> requireLevel
-                HAS_RECIPE_DATA_SLOT -> if (hasRecipe) 1 else 0
-                else -> 0
-            }
-
-            override fun set(index: Int, value: Int) {
-                when (index) {
-                    REQUIRE_LEVEL_DATA_SLOT -> requireLevel = value
-                    HAS_RECIPE_DATA_SLOT -> hasRecipe = value > 0
-                }
-            }
-
-            override fun getCount(): Int = DATA_SLOT_COUNT
-        }
-    }
-
     companion object {
-        const val DATA_SLOT_COUNT = 2
-        const val REQUIRE_LEVEL_DATA_SLOT = 0
-        const val HAS_RECIPE_DATA_SLOT = 1
         const val INPUT_SLOT_ID = 0
         const val OUTPUT_SLOT_ID = 1
         const val INVENTORY_FIRST_SLOT_ID = 2

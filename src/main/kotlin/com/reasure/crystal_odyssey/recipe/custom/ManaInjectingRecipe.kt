@@ -17,7 +17,6 @@ import net.minecraft.world.level.Level
 data class ManaInjectingRecipe(val ingredient: Ingredient, val result: ItemStack, val requireLevel: Int) :
     Recipe<SingleRecipeInput> {
     override fun matches(input: SingleRecipeInput, level: Level): Boolean {
-        if (level.isClientSide) return false
         return ingredient.test(input.getItem(0))
     }
 
@@ -42,7 +41,7 @@ data class ManaInjectingRecipe(val ingredient: Ingredient, val result: ItemStack
             ).apply(instance, ::ManaInjectingRecipe)
         }
 
-        private val STEAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, ManaInjectingRecipe> = StreamCodec.composite(
+        private val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, ManaInjectingRecipe> = StreamCodec.composite(
             Ingredient.CONTENTS_STREAM_CODEC, ManaInjectingRecipe::ingredient,
             ItemStack.STREAM_CODEC, ManaInjectingRecipe::result,
             ByteBufCodecs.VAR_INT, ManaInjectingRecipe::requireLevel,
@@ -51,6 +50,6 @@ data class ManaInjectingRecipe(val ingredient: Ingredient, val result: ItemStack
 
         override fun codec(): MapCodec<ManaInjectingRecipe> = CODEC
 
-        override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, ManaInjectingRecipe> = STEAM_CODEC
+        override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, ManaInjectingRecipe> = STREAM_CODEC
     }
 }

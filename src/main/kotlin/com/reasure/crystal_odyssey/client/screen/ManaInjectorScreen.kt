@@ -28,12 +28,11 @@ class ManaInjectorScreen(menu: ManaInjectorMenu, playerInventory: Inventory, tit
     }
 
     private fun renderRequireLevel(guiGraphics: GuiGraphics) {
-        if (menu.isHaveRecipe()) {
-            val requireLevel = menu.getRequireLevel()
+        if (menu.hasRecipe) {
             val enable = menu.isSatisfyRequireLevel()
             renderExpOrb(guiGraphics, enable)
-            if (requireLevel > 0) {
-                renderRequireLevelText(guiGraphics, requireLevel.toString(), enable)
+            if (menu.requireLevel > 0) {
+                renderRequireLevelText(guiGraphics, menu.requireLevel.toString(), enable)
             }
         }
     }

@@ -20,7 +20,7 @@ import net.minecraft.world.item.ItemStack
 
 class ManaInjectingRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaInjectingRecipe> {
     private val background: IDrawable = helper.drawableBuilder(
-        ResourceLocation.fromNamespaceAndPath(CrystalOdyssey.ID, "textures/gui/container/jei/mana_injecting.png"),
+        ResourceLocation.fromNamespaceAndPath(CrystalOdyssey.ID, "textures/gui/jei/mana_injecting.png"),
         0, 0, 78, 36
     ).setTextureSize(78, 36).build()
 

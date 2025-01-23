@@ -3,6 +3,7 @@ package com.reasure.crystal_odyssey.block
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.custom.GlowstoneLanternBlock
 import com.reasure.crystal_odyssey.block.custom.LightOrbBlock
+import com.reasure.crystal_odyssey.block.custom.ManaAnvilBlock
 import com.reasure.crystal_odyssey.block.custom.ManaInjectorBlock
 import com.reasure.crystal_odyssey.block.state.ModBlockStates
 import com.reasure.crystal_odyssey.item.ModItems
@@ -61,17 +62,21 @@ object ModBlocks {
         )
     }
 
-    val GLOWSTONE_GEM_LANTERN: Block by BLOCKS.register("glowstone_gem_lantern") { ->
+    val GLOWSTONE_GEM_LANTERN: GlowstoneLanternBlock by BLOCKS.register("glowstone_gem_lantern") { ->
         GlowstoneLanternBlock(
             BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).mapColor(MapColor.GOLD)
                 .lightLevel { state -> (state.getValue(ModBlockStates.LANTERN_LEVEL) + 1) * 5 })
     }
 
-    val MANA_INJECTOR: Block by registerBlockWithItem("mana_injector") { ->
+    val MANA_INJECTOR: ManaInjectorBlock by registerBlockWithItem("mana_injector") {
         ManaInjectorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEACON).requiresCorrectToolForDrops())
     }
 
-    val LIGHT_ORB_BLOCK: Block by BLOCKS.registerBlock("light_orb_block") { properties ->
+    val MANA_ANVIL: ManaAnvilBlock by registerBlockWithItem("mana_anvil") {
+        ManaAnvilBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL))
+    }
+
+    val LIGHT_ORB_BLOCK: LightOrbBlock by BLOCKS.registerBlock("light_orb_block") { properties ->
         LightOrbBlock(
             properties
                 .replaceable().noCollission().noLootTable()

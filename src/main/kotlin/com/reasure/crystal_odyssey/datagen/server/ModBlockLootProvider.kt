@@ -21,6 +21,7 @@ class ModBlockLootProvider(registries: HolderLookup.Provider) : ModBaseBlockLoot
         add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE) { block -> createOreDrop(block, ModItems.SAPPHIRE) }
         addLantern(ModBlocks.GLOWSTONE_GEM_LANTERN)
         dropSelf(ModBlocks.MANA_INJECTOR)
+        dropSelf(ModBlocks.MANA_ANVIL)
     }
 
     override fun getKnownBlocks(): MutableIterable<Block> =

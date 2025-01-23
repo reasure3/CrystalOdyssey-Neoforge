@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey.inventory.menu
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.inventory.menu.custom.ManaAnvilMenu
 import com.reasure.crystal_odyssey.inventory.menu.custom.ManaInjectorMenu
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.inventory.AbstractContainerMenu
@@ -16,6 +17,8 @@ object ModMenuTypes {
     val MENUS: DeferredRegister<MenuType<*>> = DeferredRegister.create(Registries.MENU, CrystalOdyssey.ID)
 
     val MANA_INJECTOR_MENU: MenuType<ManaInjectorMenu> by registerMenuType("mana_injector_menu", ::ManaInjectorMenu)
+
+    val MANA_ANVIL_MENU: MenuType<ManaAnvilMenu> by registerMenuType("mana_anvil_menu", ::ManaAnvilMenu)
 
     private fun <T : AbstractContainerMenu?> registerMenuType(
         name: String,

@@ -39,6 +39,7 @@ object ModCreativeModTabs {
                     accept(ModBlocks.SAPPHIRE_ORE)
                     accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
                     accept(ModBlocks.MANA_INJECTOR)
+                    accept(ModBlocks.MANA_ANVIL)
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })

@@ -27,6 +27,7 @@ class ModBlockTagsProvider(
             .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
             .add(ModBlocks.GLOWSTONE_GEM_LANTERN)
             .add(ModBlocks.MANA_INJECTOR)
+            .add(ModBlocks.MANA_ANVIL)
 
         tag(BlockTags.NEEDS_IRON_TOOL)
             .add(ModBlocks.RUBY_BLOCK)
@@ -36,6 +37,7 @@ class ModBlockTagsProvider(
             .add(ModBlocks.SAPPHIRE_ORE)
             .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
             .add(ModBlocks.MANA_INJECTOR)
+            .add(ModBlocks.MANA_ANVIL)
 
         tag(Tags.Blocks.STORAGE_BLOCKS)
             .addTag(ModTags.Blocks.STORAGE_BLOCKS_RUBY)

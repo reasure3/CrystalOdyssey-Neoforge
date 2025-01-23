@@ -1,7 +1,7 @@
 package com.reasure.crystal_odyssey.inventory.menu.custom
 
 import com.reasure.crystal_odyssey.block.ModBlocks
-import com.reasure.crystal_odyssey.inventory.handler.ContainerMenuItemStackHandler
+import com.reasure.crystal_odyssey.inventory.handler.InputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.handler.OutputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.menu.BaseRecipeContainerMenu
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
@@ -30,7 +30,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
     var hasRecipe: Boolean = false
         private set
 
-    private val inputHandler: ItemStackHandler = ContainerMenuItemStackHandler(this, 1)
+    private val inputHandler: ItemStackHandler = InputItemStackHandler(this, 1)
     private val outputHandler: ItemStackHandler = OutputItemStackHandler()
 
     private val quickCheck: RecipeManager.CachedCheck<SingleRecipeInput, ManaInjectingRecipe> =
@@ -45,24 +45,15 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
     init {
         addSlot(SlotItemHandler(inputHandler, 0, 45, 34))
         addSlot(OutputSlotItemHandler(this, outputHandler, 0, 111, 34))
-        addPlayerInventory(playerInventory, 8, 84)
-        addPlayerHotbar(playerInventory, 8, 142)
+        addPlayerInventory(playerInventory)
+        addPlayerHotbar(playerInventory)
     }
 
     override fun onCraft(player: Player, stack: ItemStack) {
-        val recipe = currentRecipe() ?: return
         inputHandler.extractItem(0, 1, false)
         if (!player.isCreative && player is ServerPlayer) {
-            val levelPerOne = recipe.value.requireLevel
-            val craftedCount = stack.count / recipe.value.result.count
-            player.setExperienceLevels(max(player.experienceLevel - levelPerOne * craftedCount, 0))
+            player.setExperienceLevels(max(player.experienceLevel - requireLevel, 0))
         }
-    }
-
-    private fun currentRecipeInput() = SingleRecipeInput(slots[INPUT_SLOT_ID].item)
-
-    private fun currentRecipe(): RecipeHolder<ManaInjectingRecipe>? {
-        return quickCheck.getRecipeFor(currentRecipeInput(), level).orElse(null)
     }
 
     override fun setRecipe() {
@@ -89,6 +80,12 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
             hasRecipe = true
             setRequireLevel(recipe)
         }
+    }
+
+    private fun currentRecipeInput() = SingleRecipeInput(slots[INPUT_SLOT_ID].item)
+
+    private fun currentRecipe(): RecipeHolder<ManaInjectingRecipe>? {
+        return quickCheck.getRecipeFor(currentRecipeInput(), level).orElse(null)
     }
 
     private fun setResult(recipe: RecipeHolder<ManaInjectingRecipe>) {
@@ -164,20 +161,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
             }
         }
 
-        if (sourceStack.isEmpty) {
-            sourceSlot.setByPlayer(ItemStack.EMPTY)
-        }
-
-        if (sourceStack.count == copyOfSourceStack.count) {
-            return ItemStack.EMPTY
-        }
-
-        if (index == OUTPUT_SLOT_ID) {
-            sourceSlot.onTake(player, copyOfSourceStack.copy())
-            player.drop(sourceStack, false)
-        }
-
-        return copyOfSourceStack
+        return finalizeQuickMoveStack(sourceStack, sourceSlot, copyOfSourceStack, index, player)
     }
 
     override fun getBlock(): Block = ModBlocks.MANA_INJECTOR

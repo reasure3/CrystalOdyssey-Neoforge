@@ -27,6 +27,7 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         add(ModBlocks.GLOWSTONE_GEM_LANTERN, "발광 보석 랜턴")
         add(ModItems.LIGHT_STAFF, "빛의 지팡이")
         add(ModBlocks.MANA_INJECTOR, "마나 주입기")
+        add(ModBlocks.MANA_ANVIL, "마나 모루")
         add(ModBlocks.LIGHT_ORB_BLOCK, "빛 오브")
         add(ModItems.SAPPHIRE_BUCKET, "사파이어 양동이")
         add(ModItems.INFINITE_SAPPHIRE_BUCKET, "무한의 사파이어 양동이")

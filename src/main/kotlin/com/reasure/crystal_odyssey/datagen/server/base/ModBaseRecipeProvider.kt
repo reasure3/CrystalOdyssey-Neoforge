@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey.datagen.server.base
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.recipe.custom.ManaAnvilRecipe
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import net.minecraft.advancements.Criterion
 import net.minecraft.core.HolderLookup
@@ -106,6 +107,17 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
     ) {
         val recipe = ManaInjectingRecipe(input, output, requireLevel)
         recipeOutput.accept(id.withPrefix("mana_injecting/"), recipe, null)
+    }
+
+    fun manaAnvil(
+        recipeOutput: RecipeOutput,
+        inputGem: ItemLike,
+        inputMaterial: ItemLike,
+        output: ItemLike,
+        id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.asItem())
+    ) {
+        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), ItemStack(output))
+        recipeOutput.accept(id.withPrefix("mana_anvil/"), recipe, null)
     }
 
     fun getSmeltingName(output: ItemLike, ingredient: ItemLike) =

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "crystal_odyssey:block/mana_anvil",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "crystal_odyssey:block/mana_anvil"
+    },
+    "facing=south": {
+      "model": "crystal_odyssey:block/mana_anvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "crystal_odyssey:block/mana_anvil",
+      "y": 270
+    }
+  }
+}

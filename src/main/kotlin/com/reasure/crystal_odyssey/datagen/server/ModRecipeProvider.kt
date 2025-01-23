@@ -198,5 +198,62 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             requireLevel = 50,
             id = CrystalOdyssey.modLoc("infinite_ruby_bucket")
         )
+
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.BUCKET,
+            CrystalOdyssey.modLoc("test1")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.GLOWSTONE,
+            CrystalOdyssey.modLoc("test2")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.DIAMOND,
+            CrystalOdyssey.modLoc("test3")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.GOLD_ORE,
+            CrystalOdyssey.modLoc("test4")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.LAVA_BUCKET,
+            CrystalOdyssey.modLoc("test5")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.ACACIA_LEAVES,
+            CrystalOdyssey.modLoc("test6")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.ACACIA_TRAPDOOR,
+            CrystalOdyssey.modLoc("test7")
+        )
+        manaAnvil(
+            recipeOutput,
+            ModItems.ENCHANTED_GLOWSTONE_GEM,
+            Items.BOOK,
+            Items.GLOW_ITEM_FRAME,
+            CrystalOdyssey.modLoc("test8")
+        )
     }
 }

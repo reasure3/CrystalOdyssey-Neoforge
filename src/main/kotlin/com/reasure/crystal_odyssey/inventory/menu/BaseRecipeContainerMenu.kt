@@ -1,5 +1,6 @@
 package com.reasure.crystal_odyssey.inventory.menu
 
+import com.reasure.crystal_odyssey.inventory.menu.custom.ManaAnvilMenu.Companion.OUTPUT_SLOT_ID
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.player.Inventory
 import net.minecraft.world.entity.player.Player
@@ -35,13 +36,36 @@ abstract class BaseRecipeContainerMenu(
         }
     }
 
+    protected fun finalizeQuickMoveStack(
+        sourceStack: ItemStack,
+        sourceSlot: Slot,
+        copyOfSourceStack: ItemStack,
+        index: Int,
+        player: Player
+    ): ItemStack {
+        if (sourceStack.isEmpty) {
+            sourceSlot.setByPlayer(ItemStack.EMPTY)
+        }
+
+        if (sourceStack.count == copyOfSourceStack.count) {
+            return ItemStack.EMPTY
+        }
+
+        if (index == OUTPUT_SLOT_ID) {
+            sourceSlot.onTake(player, copyOfSourceStack.copy())
+            player.drop(sourceStack, false)
+        }
+
+        return copyOfSourceStack
+    }
+
     override fun stillValid(player: Player): Boolean {
         if (level.isClientSide) return true
         if (!level.getBlockState(pos).`is`(getBlock())) return false
         return player.canInteractWithBlock(pos, 4.0)
     }
 
-    protected fun addPlayerInventory(playerInventory: Inventory, x: Int, y: Int) {
+    protected fun addPlayerInventory(playerInventory: Inventory, x: Int = 8, y: Int = 84) {
         for (i in 0..2) {
             for (j in 0..8) {
                 addSlot(Slot(playerInventory, j + i * 9 + 9, x + j * 18, y + i * 18))
@@ -49,7 +73,7 @@ abstract class BaseRecipeContainerMenu(
         }
     }
 
-    protected fun addPlayerHotbar(playerInventory: Inventory, x: Int, y: Int) {
+    protected fun addPlayerHotbar(playerInventory: Inventory, x: Int = 8, y: Int = 142) {
         for (i in 0..8) {
             addSlot(Slot(playerInventory, i, x + i * 18, y))
         }

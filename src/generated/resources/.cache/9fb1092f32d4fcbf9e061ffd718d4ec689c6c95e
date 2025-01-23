@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-21T14:59:48.3705512	Recipes
+// 1.21.1	2025-01-22T13:34:51.9121661	Recipes
 a98946e30c9c899d4dc345523faba0e9439a865e data/crystal_odyssey/advancement/recipes/building_blocks/glowstone_gem_block.json
 b61260864bb882cc84ceed6249ec896316fd2593 data/crystal_odyssey/advancement/recipes/building_blocks/mana_injector.json
 2b7d7848af0ddc6ce12fc27b6e00fbd96e38df58 data/crystal_odyssey/advancement/recipes/building_blocks/ruby_block.json
@@ -32,6 +32,14 @@ a52053c27b1bf60319417dc5784aa8212a619e48 data/crystal_odyssey/recipe/glowstone_g
 6969f272f24be52027351a958d0ce0993609fdca data/crystal_odyssey/recipe/glowstone_gem_from_smelting.json
 fed12f2c296bff8f6bd82528a03b49a4446bab67 data/crystal_odyssey/recipe/glowstone_gem_lantern.json
 5b70c4a21bee68b5e5869345592fe69a0280b10a data/crystal_odyssey/recipe/light_staff.json
+40a393c883d106ce9fbc7ffe1f4aeb9aa1567593 data/crystal_odyssey/recipe/mana_anvil/test1.json
+b6a00f84e05370878349549d3b87f04b01b11135 data/crystal_odyssey/recipe/mana_anvil/test2.json
+4f8e6ba3228dca3ed3f67b307821f9b4c5c3c5f2 data/crystal_odyssey/recipe/mana_anvil/test3.json
+5fd4c3712eefa42dc53bca40f4953355389a8880 data/crystal_odyssey/recipe/mana_anvil/test4.json
+155fd78980e29507c7a9b36c13452e0c804bc7b1 data/crystal_odyssey/recipe/mana_anvil/test5.json
+f355e5ef547ccbcf0b292feb46ba79e5533ed488 data/crystal_odyssey/recipe/mana_anvil/test6.json
+6a931bd5b05c513800266a1069e86f251397dff7 data/crystal_odyssey/recipe/mana_anvil/test7.json
+0b3b59e9a6239493cdfd4a6dfec5cc1e3e0b3c40 data/crystal_odyssey/recipe/mana_anvil/test8.json
 14533eed5acf9c572fea03689b165b7a6acedfe2 data/crystal_odyssey/recipe/mana_injecting/enchanted_glowstone_gem.json
 3690f530679efdbfe1e0fdfdd6f0fb6c63646ace data/crystal_odyssey/recipe/mana_injecting/enchanted_ruby.json
 adfe724cee53132ee845dc0cbd187be331701b65 data/crystal_odyssey/recipe/mana_injecting/enchanted_sapphire.json

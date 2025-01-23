@@ -13,7 +13,6 @@ open class OutputSlotItemHandler(
     xPosition: Int,
     yPosition: Int
 ) : SlotItemHandler(itemHandler, index, xPosition, yPosition) {
-
     override fun mayPlace(stack: ItemStack): Boolean = false
 
     override fun isFake(): Boolean = true

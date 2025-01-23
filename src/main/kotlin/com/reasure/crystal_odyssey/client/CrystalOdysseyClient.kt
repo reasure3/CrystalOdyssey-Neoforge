@@ -4,6 +4,7 @@ import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.client.compat.curios.CuriosClientInitializer
 import com.reasure.crystal_odyssey.client.item.properties.ModItemProperties
 import com.reasure.crystal_odyssey.client.particle.LightOrbParticle
+import com.reasure.crystal_odyssey.client.screen.ManaAnvilScreen
 import com.reasure.crystal_odyssey.client.screen.ManaInjectorScreen
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
 import com.reasure.crystal_odyssey.particle.ModParticleTypes
@@ -39,6 +40,7 @@ object CrystalOdysseyClient {
     @SubscribeEvent
     private fun registerScreen(event: RegisterMenuScreensEvent) {
         event.register(ModMenuTypes.MANA_INJECTOR_MENU, ::ManaInjectorScreen)
+        event.register(ModMenuTypes.MANA_ANVIL_MENU, ::ManaAnvilScreen)
     }
 
     @SubscribeEvent

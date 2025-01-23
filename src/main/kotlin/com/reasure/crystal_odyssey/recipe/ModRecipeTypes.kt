@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey.recipe
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.recipe.custom.ManaAnvilRecipe
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.item.crafting.RecipeType
@@ -13,5 +14,9 @@ object ModRecipeTypes {
 
     val MANA_INJECTING_RECIPE_TYPE: RecipeType<ManaInjectingRecipe> by RECIPE_TYPES.register("mana_injecting") { ->
         RecipeType.simple(CrystalOdyssey.modLoc("mana_injecting"))
+    }
+
+    val MANA_ANVIL_RECIPE_TYPE: RecipeType<ManaAnvilRecipe> by RECIPE_TYPES.register("mana_anvil") { ->
+        RecipeType.simple(CrystalOdyssey.modLoc("mana_anvil"))
     }
 }

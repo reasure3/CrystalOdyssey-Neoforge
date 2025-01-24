@@ -1,0 +1,20 @@
+{
+  "type": "crystal_odyssey:mana_anvil",
+  "ingredient_gem": {
+    "item": "crystal_odyssey:enchanted_amethyst_shard"
+  },
+  "ingredient_material": {
+    "item": "minecraft:book"
+  },
+  "priority": 1,
+  "result": {
+    "components": {
+      "minecraft:stored_enchantments": {
+        "levels": {
+          "minecraft:sweeping_edge": 3
+        }
+      }
+    },
+    "id": "minecraft:enchanted_book"
+  }
+}

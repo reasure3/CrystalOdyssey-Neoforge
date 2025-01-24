@@ -11,6 +11,9 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
     override fun addTranslations() {
         addCreativeModeTab("크리스탈 오디세이")
 
+        add(ModItems.ENCHANTED_DIAMOND, "마법이 부여된 다이아몬드")
+        add(ModItems.ENCHANTED_EMERALD, "마법이 부여된 에메랄드")
+        add(ModItems.ENCHANTED_AMETHYST_SHARD, "마법이 부여된 자수정 조각")
         add(ModItems.GLOWSTONE_GEM, "발광 보석")
         add(ModItems.ENCHANTED_GLOWSTONE_GEM, "마법이 부여된 발광 보석")
         add(ModBlocks.GLOWSTONE_GEM_BLOCK, "발광 보석 블록")

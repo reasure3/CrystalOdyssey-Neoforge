@@ -11,6 +11,9 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
     override fun addTranslations() {
         addCreativeModeTab("Crystal Odyssey")
 
+        add(ModItems.ENCHANTED_DIAMOND, "Enchanted Diamond")
+        add(ModItems.ENCHANTED_EMERALD, "Enchanted Emerald")
+        add(ModItems.ENCHANTED_AMETHYST_SHARD, "Enchanted Amethyst Shard")
         add(ModItems.GLOWSTONE_GEM, "Glowstone Gem")
         add(ModItems.ENCHANTED_GLOWSTONE_GEM, "Enchanted Glowstone Gem")
         add(ModBlocks.GLOWSTONE_GEM_BLOCK, "Block of Glowstone Gem")

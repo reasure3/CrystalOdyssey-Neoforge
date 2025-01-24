@@ -102,6 +102,17 @@ abstract class ModBaseRecipeProvider(
 
     fun manaInjecting(
         recipeOutput: RecipeOutput,
+        input: TagKey<Item>,
+        output: ItemLike,
+        requireLevel: Int,
+        id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.asItem())
+    ) {
+        val recipe = ManaInjectingRecipe(Ingredient.of(input), ItemStack(output), requireLevel)
+        recipeOutput.accept(id.withPrefix("mana_injecting/"), recipe, null)
+    }
+
+    fun manaInjecting(
+        recipeOutput: RecipeOutput,
         input: Ingredient,
         output: ItemStack,
         requireLevel: Int,

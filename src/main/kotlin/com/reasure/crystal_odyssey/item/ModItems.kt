@@ -21,6 +21,18 @@ import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 object ModItems {
     val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(CrystalOdyssey.ID)
 
+    val ENCHANTED_DIAMOND: Item by ITEMS.registerItem("enchanted_diamond") { properties ->
+        Item(properties.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+    }
+
+    val ENCHANTED_EMERALD: Item by ITEMS.registerItem("enchanted_emerald") { properties ->
+        Item(properties.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+    }
+
+    val ENCHANTED_AMETHYST_SHARD: Item by ITEMS.registerItem("enchanted_amethyst_shard") { properties ->
+        Item(properties.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+    }
+
     val GLOWSTONE_GEM: Item by ITEMS.registerSimpleItem("glowstone_gem")
 
     val ENCHANTED_GLOWSTONE_GEM: Item by ITEMS.registerItem("enchanted_glowstone_gem") { properties ->

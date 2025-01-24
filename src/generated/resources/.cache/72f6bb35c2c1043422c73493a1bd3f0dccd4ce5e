@@ -1,4 +1,7 @@
-// 1.21.1	2025-01-21T14:27:35.2948491	Item Models: crystal_odyssey
+// 1.21.1	2025-01-24T14:26:58.521521	Item Models: crystal_odyssey
+c64ed609ece68994ce23dd2809145040bce13579 assets/crystal_odyssey/models/item/enchanted_amethyst_shard.json
+848dfadf0ac405c10a66bd390d1eee2dae9cfdf9 assets/crystal_odyssey/models/item/enchanted_diamond.json
+5af477fae0ee316daeface1cde9128dc4f6e626c assets/crystal_odyssey/models/item/enchanted_emerald.json
 ea80ee05e4fc46f4c5a83d08d3ac73ab8be65e7f assets/crystal_odyssey/models/item/enchanted_glowstone_gem.json
 654c1acdd9af1bc2ca6fa908b830671163afbdb6 assets/crystal_odyssey/models/item/enchanted_ruby.json
 f95884fa2a09a6f298ff2698af302df2f23a4f70 assets/crystal_odyssey/models/item/enchanted_sapphire.json

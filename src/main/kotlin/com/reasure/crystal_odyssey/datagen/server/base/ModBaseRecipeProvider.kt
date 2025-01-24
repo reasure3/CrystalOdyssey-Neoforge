@@ -16,8 +16,10 @@ import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.ItemLike
 import java.util.concurrent.CompletableFuture
 
-abstract class ModBaseRecipeProvider(output: PackOutput, registries: CompletableFuture<HolderLookup.Provider>) :
-    RecipeProvider(output, registries) {
+abstract class ModBaseRecipeProvider(
+    output: PackOutput,
+    protected val registries: CompletableFuture<HolderLookup.Provider>
+) : RecipeProvider(output, registries) {
     fun storageBlock(
         recipeOutput: RecipeOutput, unpacked: ItemLike, packed: ItemLike,
         unpackedCategory: RecipeCategory = RecipeCategory.MISC,
@@ -113,10 +115,11 @@ abstract class ModBaseRecipeProvider(output: PackOutput, registries: Completable
         recipeOutput: RecipeOutput,
         inputGem: ItemLike,
         inputMaterial: ItemLike,
-        output: ItemLike,
-        id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.asItem())
+        output: ItemStack,
+        priority: Int,
+        id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.item)
     ) {
-        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), ItemStack(output))
+        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), output, priority)
         recipeOutput.accept(id.withPrefix("mana_anvil/"), recipe, null)
     }
 

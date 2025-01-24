@@ -11,6 +11,7 @@
   "block.crystal_odyssey.sapphire_block": "사파이어 블록",
   "block.crystal_odyssey.sapphire_ore": "사파이어 광석",
   "config.jade.plugin_crystal_odyssey.glowstone_gem_lantern": "발광 보석 랜턴 강도",
+  "container.crystal_odyssey.mana_anvil": "마나 모루",
   "container.crystal_odyssey.mana_injector": "마나 주입기",
   "effect.crystal_odyssey.lantern_vision": "랜턴 불빛",
   "item.crystal_odyssey.enchanted_glowstone_gem": "마법이 부여된 발광 보석",

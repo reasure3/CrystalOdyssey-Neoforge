@@ -108,6 +108,7 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
 
     private fun currentRecipes(): List<RecipeHolder<ManaAnvilRecipe>> {
         return level.recipeManager.getRecipesFor(ModRecipeTypes.MANA_ANVIL_RECIPE_TYPE, currentRecipeInput(), level)
+            .sortedByDescending { it.value.priority }
     }
 
     override fun quickMoveStack(player: Player, index: Int): ItemStack {

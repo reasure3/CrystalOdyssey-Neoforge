@@ -36,6 +36,7 @@
   "item.minecraft.splash_potion.effect.effect.crystal_odyssey.lantern_vision": "투척용 랜턴 불빛의 물약",
   "item.minecraft.tipped_arrow.effect.effect.crystal_odyssey.lantern_vision": "랜턴 불빛의 화살",
   "itemGroup.crystal_odyssey": "크리스탈 오디세이",
+  "jei.category.crystal_odyssey.mana_anvil": "마나 모루",
   "jei.category.crystal_odyssey.mana_injecting": "마나 주입",
   "tag.item.crystal_odyssey.light_staff_repairable": "빛의 지팡이 수리 재료들"
 }

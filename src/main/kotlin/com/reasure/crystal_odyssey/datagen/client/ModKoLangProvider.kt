@@ -47,6 +47,7 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         addContainer("mana_injector", "마나 주입기")
         addContainer("mana_anvil", "마나 모루")
         addJeiCategory("mana_injecting", "마나 주입")
+        addJeiCategory("mana_anvil", "마나 모루")
         addJadeConfig("glowstone_gem_lantern", "발광 보석 랜턴 강도")
         add(ModTags.Items.LIGHT_STAFF_REPAIRABLE, "빛의 지팡이 수리 재료들")
     }

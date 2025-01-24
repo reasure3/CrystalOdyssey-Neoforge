@@ -47,6 +47,7 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         addContainer("mana_injector", "Mana Injector")
         addContainer("mana_anvil", "Mana Anvil")
         addJeiCategory("mana_injecting", "Mana Injecting")
+        addJeiCategory("mana_anvil", "Mana Anvil")
         addJadeConfig("glowstone_gem_lantern", "Glowstone Gem Lantern Level")
         add(ModTags.Items.LIGHT_STAFF_REPAIRABLE, "Repair Items of Staff of Light")
     }

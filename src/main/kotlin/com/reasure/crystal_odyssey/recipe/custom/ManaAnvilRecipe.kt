@@ -23,8 +23,7 @@ data class ManaAnvilRecipe(
     val ingredientMaterial: Ingredient,
     val result: ItemStack,
     val priority: Int = 1
-) :
-    Recipe<TupleRecipeInput> {
+) : Recipe<TupleRecipeInput> {
     override fun matches(input: TupleRecipeInput, level: Level): Boolean {
         return ingredientGem.test(input.getItem(0)) && ingredientMaterial.test(input.getItem(1))
     }

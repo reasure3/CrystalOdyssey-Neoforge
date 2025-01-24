@@ -36,6 +36,7 @@
   "item.minecraft.splash_potion.effect.effect.crystal_odyssey.lantern_vision": "Splash Potion of Lantern Vision",
   "item.minecraft.tipped_arrow.effect.effect.crystal_odyssey.lantern_vision": "Arrow of Lantern Vision",
   "itemGroup.crystal_odyssey": "Crystal Odyssey",
+  "jei.category.crystal_odyssey.mana_anvil": "Mana Anvil",
   "jei.category.crystal_odyssey.mana_injecting": "Mana Injecting",
   "tag.item.crystal_odyssey.light_staff_repairable": "Repair Items of Staff of Light"
 }

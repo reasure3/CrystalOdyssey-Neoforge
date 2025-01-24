@@ -11,6 +11,7 @@ import net.minecraft.data.recipes.RecipeCategory
 import net.minecraft.data.recipes.RecipeOutput
 import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.data.recipes.ShapelessRecipeBuilder
+import net.minecraft.tags.ItemTags
 import net.minecraft.world.item.EnchantedBookItem
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
@@ -98,6 +99,8 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .pattern("#X#")
             .pattern("###")
             .save(recipeOutput)
+
+        manaInjecting(recipeOutput, ItemTags.ANVIL, ModBlocks.MANA_ANVIL, 30)
 
         manaInjecting(recipeOutput, Tags.Items.GEMS_DIAMOND, ModItems.ENCHANTED_DIAMOND, 10)
         manaInjecting(recipeOutput, Tags.Items.GEMS_EMERALD, ModItems.ENCHANTED_EMERALD, 10)

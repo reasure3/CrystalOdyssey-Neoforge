@@ -6,6 +6,7 @@ import com.reasure.crystal_odyssey.inventory.handler.InputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.handler.OutputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.menu.BaseRecipeContainerMenu
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
+import com.reasure.crystal_odyssey.inventory.slot.InputSlotItemHandler
 import com.reasure.crystal_odyssey.inventory.slot.OutputSlotItemHandler
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.ManaAnvilRecipe
@@ -22,7 +23,6 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.RecipeHolder
 import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.items.ItemStackHandler
-import net.neoforged.neoforge.items.SlotItemHandler
 
 class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos) :
     BaseRecipeContainerMenu(ModMenuTypes.MANA_ANVIL_MENU, containerId, playerInventory, pos) {
@@ -52,8 +52,8 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
     )
 
     init {
-        addSlot(SlotItemHandler(inputHandler, 0, 19, 15))
-        addSlot(SlotItemHandler(inputHandler, 1, 19, 54))
+        addSlot(InputSlotItemHandler(inputHandler, 0, 19, 15))
+        addSlot(InputSlotItemHandler(inputHandler, 1, 19, 54))
         addSlot(OutputSlotItemHandler(this, outputHandler, 0, 138, 35))
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)

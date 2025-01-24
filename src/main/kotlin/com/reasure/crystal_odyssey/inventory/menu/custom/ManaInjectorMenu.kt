@@ -5,6 +5,7 @@ import com.reasure.crystal_odyssey.inventory.handler.InputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.handler.OutputItemStackHandler
 import com.reasure.crystal_odyssey.inventory.menu.BaseRecipeContainerMenu
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
+import com.reasure.crystal_odyssey.inventory.slot.InputSlotItemHandler
 import com.reasure.crystal_odyssey.inventory.slot.OutputSlotItemHandler
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
@@ -20,7 +21,6 @@ import net.minecraft.world.item.crafting.RecipeManager
 import net.minecraft.world.item.crafting.SingleRecipeInput
 import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.items.ItemStackHandler
-import net.neoforged.neoforge.items.SlotItemHandler
 import kotlin.math.max
 
 class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos) :
@@ -43,7 +43,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
     )
 
     init {
-        addSlot(SlotItemHandler(inputHandler, 0, 45, 34))
+        addSlot(InputSlotItemHandler(inputHandler, 0, 45, 34))
         addSlot(OutputSlotItemHandler(this, outputHandler, 0, 111, 34))
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)

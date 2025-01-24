@@ -6,7 +6,7 @@
   "ingredient_material": {
     "item": "minecraft:book"
   },
-  "priority": 1,
+  "priority": 2,
   "result": {
     "components": {
       "minecraft:stored_enchantments": {

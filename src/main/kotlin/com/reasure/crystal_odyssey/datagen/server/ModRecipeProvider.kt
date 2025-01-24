@@ -213,7 +213,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             inputGem = ModItems.ENCHANTED_DIAMOND,
             inputMaterial = Items.BOOK,
             output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.EFFICIENCY), 4)
+                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.EFFICIENCY), 5)
             ),
             priority = 3,
             id = CrystalOdyssey.modLoc("enchanted_book_efficiency")
@@ -314,7 +314,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             output = EnchantedBookItem.createForEnchantment(
                 EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SHARPNESS), 5)
             ),
-            priority = 3,
+            priority = 4,
             id = CrystalOdyssey.modLoc("enchanted_book_sharpness")
         )
 
@@ -325,7 +325,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             output = EnchantedBookItem.createForEnchantment(
                 EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SMITE), 5)
             ),
-            priority = 2,
+            priority = 3,
             id = CrystalOdyssey.modLoc("enchanted_book_smite")
         )
 
@@ -336,8 +336,19 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             output = EnchantedBookItem.createForEnchantment(
                 EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SWEEPING_EDGE), 3)
             ),
-            priority = 1,
+            priority = 2,
             id = CrystalOdyssey.modLoc("enchanted_book_sweeping_edge")
+        )
+
+        manaAnvil(
+            recipeOutput = recipeOutput,
+            inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
+            inputMaterial = Items.BOOK,
+            output = EnchantedBookItem.createForEnchantment(
+                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.IMPALING), 5)
+            ),
+            priority = 1,
+            id = CrystalOdyssey.modLoc("enchanted_book_impaling")
         )
 
         manaAnvil(

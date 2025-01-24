@@ -11,7 +11,7 @@
     "components": {
       "minecraft:stored_enchantments": {
         "levels": {
-          "minecraft:efficiency": 4
+          "minecraft:efficiency": 5
         }
       }
     },

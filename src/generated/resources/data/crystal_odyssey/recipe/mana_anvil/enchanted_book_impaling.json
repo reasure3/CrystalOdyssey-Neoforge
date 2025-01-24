@@ -6,12 +6,12 @@
   "ingredient_material": {
     "item": "minecraft:book"
   },
-  "priority": 4,
+  "priority": 1,
   "result": {
     "components": {
       "minecraft:stored_enchantments": {
         "levels": {
-          "minecraft:sharpness": 5
+          "minecraft:impaling": 5
         }
       }
     },

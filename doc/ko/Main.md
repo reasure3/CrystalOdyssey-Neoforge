@@ -16,6 +16,54 @@
 
 </details>
 
+# 마나 모루
+
+<details>
+<summary>자세히</summary>
+
+
+<img alt="mana_anvil.png" src="../image/gui/mana_anvil_screen.png" align="top"/>[<img alt="mana_anvil.png" height="80" src="../image/block/mana_anvil.png" width="80"/>](./recipe/Recipe.md#마나-모루)
+
+- 마법이 부여된 보석을 사용해 아이템을 제작하는 제작대입니다.
+
+</details>
+
+# 다이아몬드
+
+<details>
+<summary>자세히</summary>
+
+
+[![enchanted_diamond.png](../image/item/enchanted_diamond.png)](./recipe/Recipe.md#마법이-부여된-다이아몬드)
+
+- 마나 모루에서, 방어구 및 도구에 관한 인첸트 책을 제작하는데 사용됩니다.
+
+</details>
+
+# 에메랄드
+
+<details>
+<summary>자세히</summary>
+
+
+[![enchanted_emerald.png](../image/item/enchanted_emerald.png)](./recipe/Recipe.md#마법이-부여된-에메랄드)
+
+- 마나 모루에서, 자원 채집에 관련된 인첸트 북을 제작하는데 사용됩니다.
+
+</details>
+
+# 자수정
+
+<details>
+<summary>자세히</summary>
+
+
+[![enchanted_amethyst_shard.png](../image/item/enchanted_amethyst_shard.png)](./recipe/Recipe.md#마법이-부여된-자수정-조각)
+
+- 마나 모루에서, 근접 무기와 관련된 인첸트 북을 제작하는데 사용됩니다.
+
+</details>
+
 # 발광석 보석
 
 <details>

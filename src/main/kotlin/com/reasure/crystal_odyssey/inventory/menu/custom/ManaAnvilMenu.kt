@@ -52,8 +52,8 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
     )
 
     init {
-        addSlot(InputSlotItemHandler(inputHandler, 0, 19, 15))
-        addSlot(InputSlotItemHandler(inputHandler, 1, 19, 54))
+        addSlot(InputSlotItemHandler(inputHandler, 0, 19, 17))
+        addSlot(InputSlotItemHandler(inputHandler, 1, 19, 52))
         addSlot(OutputSlotItemHandler(this, outputHandler, 0, 138, 35))
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)

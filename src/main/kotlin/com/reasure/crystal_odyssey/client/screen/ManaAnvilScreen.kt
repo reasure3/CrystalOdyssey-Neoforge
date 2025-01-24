@@ -70,10 +70,10 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
 
     private fun renderInputSlotBackground(guiGraphics: GuiGraphics) {
         if (menu.getInputGem().isEmpty) {
-            guiGraphics.blit(inputGemBackgroundTexture, leftPos + 19, topPos + 15, 0f, 0f, 16, 16, 16, 16)
+            guiGraphics.blit(inputGemBackgroundTexture, leftPos + 19, topPos + 17, 0f, 0f, 16, 16, 16, 16)
         }
         if (menu.getInputMaterial().isEmpty) {
-            guiGraphics.blit(inputMaterialBackgroundTexture, leftPos + 19, topPos + 54, 0f, 0f, 16, 16, 16, 16)
+            guiGraphics.blit(inputMaterialBackgroundTexture, leftPos + 19, topPos + 52, 0f, 0f, 16, 16, 16, 16)
         }
     }
 

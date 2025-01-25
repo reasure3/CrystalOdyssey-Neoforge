@@ -80,18 +80,18 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
     private fun renderPrevButton(guiGraphics: GuiGraphics, mouseX: Int, mouseY: Int) {
         if (canClickPrevButton()) {
             val texture = if (isMouseInPrevButton(mouseX, mouseY)) prevHighlightedTexture else prevTexture
-            guiGraphics.blit(texture, leftPos + 97, topPos + 58, 0f, 0f, 8, 13, 8, 13)
+            guiGraphics.blit(texture, leftPos + 95, topPos + 58, 0f, 0f, 8, 13, 8, 13)
         } else {
-            guiGraphics.blit(prevDisabledTexture, leftPos + 97, topPos + 58, 0f, 0f, 8, 13, 8, 13)
+            guiGraphics.blit(prevDisabledTexture, leftPos + 95, topPos + 58, 0f, 0f, 8, 13, 8, 13)
         }
     }
 
     private fun renderNextButton(guiGraphics: GuiGraphics, mouseX: Int, mouseY: Int) {
         if (canClickNextButton()) {
             val texture = if (isMouseInNextButton(mouseX, mouseY)) nextHighlightedTexture else nextTexture
-            guiGraphics.blit(texture, leftPos + 109, topPos + 58, 0f, 0f, 8, 13, 8, 13)
+            guiGraphics.blit(texture, leftPos + 107, topPos + 58, 0f, 0f, 8, 13, 8, 13)
         } else {
-            guiGraphics.blit(nextDisabledTexture, leftPos + 109, topPos + 58, 0f, 0f, 8, 13, 8, 13)
+            guiGraphics.blit(nextDisabledTexture, leftPos + 107, topPos + 58, 0f, 0f, 8, 13, 8, 13)
         }
     }
 
@@ -101,7 +101,7 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
             if (recipeIndex >= recipeCount) break
             val item = menu.recipeList[recipeIndex].value.result
             val texture = if (recipeIndex == menu.currentRecipeIndex) recipeSlotSelectedTexture else recipeSlotTexture
-            val x = leftPos + 55 + i * 22
+            val x = leftPos + 53 + i * 22
             guiGraphics.blit(texture, x, topPos + 34, 0f, 0f, 18, 18, 18, 18)
             guiGraphics.renderFakeItem(item, x + 1, topPos + 35)
         }
@@ -154,15 +154,15 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
     }
 
     private fun isMouseInRecipeButton(mouseX: Int, mouseY: Int, posId: Int): Boolean {
-        return (mouseY - topPos) in 34..51 && (mouseX - leftPos) in (55 + posId * 22)..(55 + posId * 22 + 18)
+        return (mouseY - topPos) in 34..51 && (mouseX - leftPos) in (53 + posId * 22)..(53 + posId * 22 + 18)
     }
 
     private fun isMouseInPrevButton(mouseX: Int, mouseY: Int): Boolean {
-        return (mouseX - leftPos) in 97..104 && (mouseY - topPos) in 58..70
+        return (mouseX - leftPos) in 95..102 && (mouseY - topPos) in 58..70
     }
 
     private fun isMouseInNextButton(mouseX: Int, mouseY: Int): Boolean {
-        return (mouseX - leftPos) in 109..116 && (mouseY - topPos) in 58..70
+        return (mouseX - leftPos) in 107..114 && (mouseY - topPos) in 58..70
     }
 
     private fun canClickPrevButton(): Boolean {

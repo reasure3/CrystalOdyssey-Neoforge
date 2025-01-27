@@ -1,0 +1,17 @@
+{
+  "type": "crystal_odyssey:mana_injecting",
+  "ingredient": {
+    "type": "neoforge:components",
+    "components": {
+      "crystal_odyssey:fluid": {
+        "amount": 30000,
+        "id": "minecraft:water"
+      }
+    },
+    "items": "crystal_odyssey:sapphire_bucket"
+  },
+  "require_level": 50,
+  "result": {
+    "id": "crystal_odyssey:infinite_sapphire_bucket"
+  }
+}

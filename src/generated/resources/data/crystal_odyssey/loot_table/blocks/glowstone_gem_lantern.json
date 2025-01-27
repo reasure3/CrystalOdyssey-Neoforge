@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "components": {
+        "crystal_odyssey:lantern_level": 0
+      },
+      "conditions": [
+        {
+          "block": "crystal_odyssey:glowstone_gem_lantern",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "lantern_level": "0"
+          }
+        }
+      ],
+      "function": "minecraft:set_components"
+    },
+    {
+      "components": {
+        "crystal_odyssey:lantern_level": 1
+      },
+      "conditions": [
+        {
+          "block": "crystal_odyssey:glowstone_gem_lantern",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "lantern_level": "1"
+          }
+        }
+      ],
+      "function": "minecraft:set_components"
+    },
+    {
+      "components": {
+        "crystal_odyssey:lantern_level": 2
+      },
+      "conditions": [
+        {
+          "block": "crystal_odyssey:glowstone_gem_lantern",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "lantern_level": "2"
+          }
+        }
+      ],
+      "function": "minecraft:set_components"
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crystal_odyssey:glowstone_gem_lantern"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "crystal_odyssey:blocks/glowstone_gem_lantern"
+}

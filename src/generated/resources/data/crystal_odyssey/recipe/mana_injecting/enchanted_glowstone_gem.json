@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:mana_injecting",
+  "ingredient": {
+    "item": "crystal_odyssey:glowstone_gem"
+  },
+  "require_level": 10,
+  "result": {
+    "id": "crystal_odyssey:enchanted_glowstone_gem"
+  }
+}

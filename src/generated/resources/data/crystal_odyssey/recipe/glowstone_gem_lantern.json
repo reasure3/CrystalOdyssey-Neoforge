@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:nuggets/iron"
+    },
+    "X": {
+      "item": "crystal_odyssey:glowstone_gem"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crystal_odyssey:glowstone_gem_lantern"
+  }
+}

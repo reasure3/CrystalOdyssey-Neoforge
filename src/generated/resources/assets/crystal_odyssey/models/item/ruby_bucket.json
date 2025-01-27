@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "crystal_odyssey:item/lava_ruby_bucket",
+      "predicate": {
+        "crystal_odyssey:has_fluid": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "crystal_odyssey:item/ruby_bucket"
+  }
+}

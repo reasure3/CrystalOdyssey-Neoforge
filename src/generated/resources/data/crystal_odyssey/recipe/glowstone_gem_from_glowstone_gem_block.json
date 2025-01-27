@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "glowstone_gem",
+  "ingredients": [
+    {
+      "item": "crystal_odyssey:glowstone_gem_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "crystal_odyssey:glowstone_gem"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "neoforge:item_layers",
+  "neoforge_data": {
+    "layers": {
+      "1": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": true
+      }
+    }
+  },
+  "textures": {
+    "layer0": "crystal_odyssey:item/glowstone_gem_lantern_base",
+    "layer1": "crystal_odyssey:item/glowstone_gem_lantern_light"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [67, 0, 0],
+      "translation": [0, -2, -3],
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [67, 0, 0],
+      "translation": [0, -2, -3],
+      "scale": [0.55, 0.55, 0.55]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "crystal_odyssey:block/glowstone_gem_lantern"
+  },
+  "perspectives": {
+    "thirdperson_righthand": {
+      "parent": "crystal_odyssey:block/glowstone_gem_lantern_hanging"
+    },
+    "thirdperson_lefthand": {
+      "parent": "crystal_odyssey:block/glowstone_gem_lantern_hanging"
+    },
+    "gui": {
+      "parent": "crystal_odyssey:item/glowstone_gem_lantern_gui"
+    },
+    "ground": {
+      "parent": "crystal_odyssey:item/glowstone_gem_lantern_gui"
+    },
+    "fixed": {
+      "parent": "crystal_odyssey:block/glowstone_gem_lantern_fixed"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+package com.reasure.crystal_odyssey.inventory.menu
+
+import com.reasure.crystal_odyssey.inventory.menu.custom.ManaAnvilMenu.Companion.OUTPUT_SLOT_ID
+import net.minecraft.core.BlockPos
+import net.minecraft.world.entity.player.Inventory
+import net.minecraft.world.entity.player.Player
+import net.minecraft.world.inventory.AbstractContainerMenu
+import net.minecraft.world.inventory.MenuType
+import net.minecraft.world.inventory.Slot
+import net.minecraft.world.item.ItemStack
+import net.minecraft.world.level.Level
+import net.minecraft.world.level.block.Block
+
+abstract class BaseRecipeContainerMenu(
+    menuType: MenuType<*>,
+    containerId: Int,
+    playerInventory: Inventory,
+    private val pos: BlockPos
+) : AbstractContainerMenu(menuType, containerId) {
+    protected val player: Player = playerInventory.player
+    protected val level: Level = playerInventory.player.level()
+
+    abstract fun getBlock(): Block
+
+    abstract fun onCraft(player: Player, stack: ItemStack)
+
+    abstract fun setRecipe()
+
+    abstract fun setRecipeClient()
+
+    fun onSlotChanged() {
+        if (level.isClientSide) {
+            setRecipeClient()
+        } else {
+            setRecipe()
+        }
+    }
+
+    protected fun finalizeQuickMoveStack(
+        sourceStack: ItemStack,
+        sourceSlot: Slot,
+        copyOfSourceStack: ItemStack,
+        index: Int,
+        player: Player
+    ): ItemStack {
+        if (sourceStack.isEmpty) {
+            sourceSlot.setByPlayer(ItemStack.EMPTY)
+        }
+
+        if (sourceStack.count == copyOfSourceStack.count) {
+            return ItemStack.EMPTY
+        }
+
+        if (index == OUTPUT_SLOT_ID) {
+            sourceSlot.onTake(player, copyOfSourceStack.copy())
+            player.drop(sourceStack, false)
+        }
+
+        return copyOfSourceStack
+    }
+
+    override fun stillValid(player: Player): Boolean {
+        if (level.isClientSide) return true
+        if (!level.getBlockState(pos).`is`(getBlock())) return false
+        return player.canInteractWithBlock(pos, 4.0)
+    }
+
+    protected fun addPlayerInventory(playerInventory: Inventory, x: Int = 8, y: Int = 84) {
+        for (i in 0..2) {
+            for (j in 0..8) {
+                addSlot(Slot(playerInventory, j + i * 9 + 9, x + j * 18, y + i * 18))
+            }
+        }
+    }
+
+    protected fun addPlayerHotbar(playerInventory: Inventory, x: Int = 8, y: Int = 142) {
+        for (i in 0..8) {
+            addSlot(Slot(playerInventory, i, x + i * 18, y))
+        }
+    }
+}

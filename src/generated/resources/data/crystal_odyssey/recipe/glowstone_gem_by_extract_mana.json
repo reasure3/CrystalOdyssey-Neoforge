@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crystal_odyssey:enchanted_glowstone_gem"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "crystal_odyssey:glowstone_gem"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enchanted_glowstone_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "crystal_odyssey:enchanted_glowstone_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rods_wooden": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:rods/wooden"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crystal_odyssey:light_staff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enchanted_glowstone_gem",
+      "has_rods_wooden"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crystal_odyssey:light_staff"
+    ]
+  }
+}

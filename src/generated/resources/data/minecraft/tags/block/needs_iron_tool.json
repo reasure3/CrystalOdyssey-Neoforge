@@ -1,0 +1,12 @@
+{
+  "values": [
+    "crystal_odyssey:ruby_block",
+    "crystal_odyssey:sapphire_block",
+    "crystal_odyssey:ruby_ore",
+    "crystal_odyssey:deepslate_ruby_ore",
+    "crystal_odyssey:sapphire_ore",
+    "crystal_odyssey:deepslate_sapphire_ore",
+    "crystal_odyssey:mana_injector",
+    "crystal_odyssey:mana_anvil"
+  ]
+}

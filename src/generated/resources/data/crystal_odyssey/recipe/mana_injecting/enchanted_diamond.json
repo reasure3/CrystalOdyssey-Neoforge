@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:mana_injecting",
+  "ingredient": {
+    "tag": "c:gems/diamond"
+  },
+  "require_level": 10,
+  "result": {
+    "id": "crystal_odyssey:enchanted_diamond"
+  }
+}

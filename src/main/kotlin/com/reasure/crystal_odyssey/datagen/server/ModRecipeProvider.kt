@@ -553,20 +553,6 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             id = CrystalOdyssey.modLoc("enchanted_fire_protection")
         )
 
-        manaAnvil(
-            recipeOutput = recipeOutput,
-            inputGem = ModItems.ENCHANTED_RUBY,
-            inputMaterial = Items.BOOK,
-            output = ItemStack(Items.BOOK).apply {
-                set(
-                    ModDataComponents.FIND_BLOCKS,
-                    FindBlocks.of(Tags.Blocks.ORES, "hahaha", 0xFF00FF00)
-                )
-            },
-            priority = 0,
-            id = CrystalOdyssey.modLoc("test")
-        )
-
         FindBlocks.makeVanillaList().zip(
             listOf(
                 "netherite", "diamond", "emerald", "gold", "iron",

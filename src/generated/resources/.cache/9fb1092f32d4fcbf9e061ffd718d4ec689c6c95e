@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-27T12:29:45.1752524	Recipes
+// 1.21.1	2025-01-27T15:22:34.4560972	Recipes
 a98946e30c9c899d4dc345523faba0e9439a865e data/crystal_odyssey/advancement/recipes/building_blocks/glowstone_gem_block.json
 b61260864bb882cc84ceed6249ec896316fd2593 data/crystal_odyssey/advancement/recipes/building_blocks/mana_injector.json
 2b7d7848af0ddc6ce12fc27b6e00fbd96e38df58 data/crystal_odyssey/advancement/recipes/building_blocks/ruby_block.json
@@ -82,7 +82,6 @@ f8bb63d8cf083ae01f581395ff9a90a3949b55c9 data/crystal_odyssey/recipe/mana_anvil/
 a7c6d47d6fbeef35311319eb94632d8a6abe69b6 data/crystal_odyssey/recipe/mana_anvil/enchanted_fire_aspect.json
 1df00164b3a30e0d7d651480eb4a5f17a39934a3 data/crystal_odyssey/recipe/mana_anvil/enchanted_fire_protection.json
 1b21546f0a00dd51226f2f0ca4164c0a1867d12d data/crystal_odyssey/recipe/mana_anvil/enchanted_flame.json
-734431fe2b1f0bd7b7f94f42c51313f5a980efab data/crystal_odyssey/recipe/mana_anvil/test.json
 9ae2760dedc1cc88fad02dc476d6dba4e752eb1f data/crystal_odyssey/recipe/mana_injecting/enchanted_amethyst_shard.json
 8f2361be677766b2f9ccf3cd299e096c4d888138 data/crystal_odyssey/recipe/mana_injecting/enchanted_diamond.json
 ceee929f0a04d40cce2634f54d2b70b53b44982c data/crystal_odyssey/recipe/mana_injecting/enchanted_emerald.json

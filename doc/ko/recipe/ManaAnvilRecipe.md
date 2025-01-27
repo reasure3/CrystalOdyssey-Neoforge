@@ -24,6 +24,19 @@
 - 인첸트 북 (살충 V)
 - 인첸트 북 (가시 III)
 
+# 발광 보석 핵
+![glowstone_gem_core.png](../../image/item/glowstone_gem_core.png) ![el_dorado_wand.png](../../image/item/el_dorado_wand.png)
+- 엘도라도 지팡이 (네더라이드)
+- 엘도라도 지팡이 (다이아몬드)
+- 엘도라도 지팡이 (에메랄드)
+- 엘도라도 지팡이 (금)
+- 엘도라도 지팡이 (철)
+- 엘도라도 지팡이 (구리)
+- 엘도라도 지팡이 (석탄)
+- 엘도라도 지팡이 (청금석)
+- 엘도라도 지팡이 (레드스톤)
+- 엘도라도 지팡이 (석영)
+
 # 마법이 부여된 사파이어
 ![enchanted_sapphire.png](../../image/item/enchanted_sapphire.png) ![book.png](../../image/item/book.png)
 - 인첸트 북 (친수성)

@@ -62,6 +62,9 @@
 
 ![enchanted_sapphire.png](../../image/recipe/mana_injecting/enchanted_sapphire.png)
 
+# 발광 보석 핵
+![glowstone_gem_core.png](../../image/recipe/crafting/glowstone_gem_core.png)
+
 # 발광 보석 랜턴
 
 ![glowstone_gem_lantern.png](../../image/recipe/crafting/glowstone_gem_lantern.png)
@@ -77,6 +80,11 @@
 # 빛의 지팡이
 
 ![light_staff.png](../../image/recipe/crafting/light_staff.png)
+
+# 엘도라도 지팡이
+![el_dorado_staff.png](../../image/recipe/crafting/el_dorado_staff.png)
+
+![el_dorado_staff_active.png](../../image/recipe/mana_anvil/el_dorado_staff_active.png)
 
 ## 사파이어 양동이
 ![sapphire_bucket_1.png](../../image/recipe/crafting/sapphire_bucket_1.png)

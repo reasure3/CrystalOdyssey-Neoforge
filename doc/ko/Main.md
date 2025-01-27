@@ -72,6 +72,7 @@
 
 [![glowstone_gem.png](../image/item/glowstone_gem.png)](./recipe/Recipe.md#발광-보석)
 [![enchanted_glowstone_gem.png](../image/item/enchanted_glowstone_gem.png)](./recipe/Recipe.md#마법이-부여된-발광-보석)
+[![glowstone_gem_core.png](../image/item/glowstone_gem_core.png)](./recipe/Recipe.md#발광-보석-핵)
 [<img alt="glowstone_gem_block.png" height="80" src="../image/block/glowstone_gem_block.png" width="80"/>](./recipe/Recipe.md#발광-보석-블록)
 
 - 발광석을 화로에 녹여서 만듭니다.
@@ -130,6 +131,16 @@
 
 
 - 내구성 및 수선 인첸트를 붙일 수 있습니다.
+
+## 엘도라도 지팡이
+[![el_dorado_wand.png](../image/item/el_dorado_wand.png)](./recipe/Recipe.md#엘도라도-지팡이)
+[![el_dorado_wand_active.png](../image/item/el_dorado_wand_active.png)](./recipe/Recipe.md#엘도라도-지팡이)
+
+- 우클릭해서 주위 10칸 이내 (기본 설정) 광물을 찾으세요!
+
+<img alt="find_diamond.png" src="../image/screenshot/find_diamond.png" width="400"/>
+
+▲ 다이아몬드를 찾는 모습
 
 </details>
 

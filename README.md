@@ -1,5 +1,6 @@
 # Crystal Odyssey
 [![Minecraft Version](https://img.shields.io/badge/mc_version-1.21.1-blue)](https://www.minecraft.net/)
+![Mod Version](https://img.shields.io/badge/mod_version-1.0.0-dark_green)
 [![Mod Loader](https://img.shields.io/badge/loader-Neoforge-orange)](https://projects.neoforged.net/neoforged/neoforge)
 
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)

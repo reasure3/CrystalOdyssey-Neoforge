@@ -32,7 +32,7 @@ data class CustomColor(val color: UInt) {
         fun of(color: Long) = CustomColor(color.toUInt())
 
         fun parseOrDefault(colorCode: String): CustomColor {
-            return parse(colorCode).result().getOrDefault(DEFAULT)
+            return parse(colorCode).resultOrPartial().getOrDefault(DEFAULT)
         }
 
         /**
@@ -50,7 +50,7 @@ data class CustomColor(val color: UInt) {
                     8 -> hexString
                     else -> {
                         // Invalid color code length, return default color
-                        return DataResult.error { "Invalid color code length: $colorCode" }
+                        return DataResult.error({ "Invalid color code length: $colorCode" }, DEFAULT)
                     }
                 }
 
@@ -58,7 +58,7 @@ data class CustomColor(val color: UInt) {
                 val parsedColor = normalizedHexString.toUInt(16)
                 DataResult.success(CustomColor(parsedColor))
             } catch (e: Exception) {
-                DataResult.error { "Failed to parse color code: $colorCode" }
+                DataResult.error({ "Failed to parse color code: $colorCode" }, DEFAULT)
             }
         }
     }

@@ -1,4 +1,6 @@
-// 1.21.1	2025-01-24T14:26:58.521521	Item Models: crystal_odyssey
+// 1.21.1	2025-01-25T21:52:08.0549605	Item Models: crystal_odyssey
+22ad7f3ae54a3d1a90001f251169dc46d104eeff assets/crystal_odyssey/models/item/el_dorado_staff.json
+c1fb5603977c2df99df0ea023b5c48159c0dc8b0 assets/crystal_odyssey/models/item/el_dorado_staff_active.json
 c64ed609ece68994ce23dd2809145040bce13579 assets/crystal_odyssey/models/item/enchanted_amethyst_shard.json
 848dfadf0ac405c10a66bd390d1eee2dae9cfdf9 assets/crystal_odyssey/models/item/enchanted_diamond.json
 5af477fae0ee316daeface1cde9128dc4f6e626c assets/crystal_odyssey/models/item/enchanted_emerald.json
@@ -6,6 +8,7 @@ ea80ee05e4fc46f4c5a83d08d3ac73ab8be65e7f assets/crystal_odyssey/models/item/ench
 654c1acdd9af1bc2ca6fa908b830671163afbdb6 assets/crystal_odyssey/models/item/enchanted_ruby.json
 f95884fa2a09a6f298ff2698af302df2f23a4f70 assets/crystal_odyssey/models/item/enchanted_sapphire.json
 ea80ee05e4fc46f4c5a83d08d3ac73ab8be65e7f assets/crystal_odyssey/models/item/glowstone_gem.json
+bf8cce2dc2dfc75adfbc9a804a8e4a559ec665e6 assets/crystal_odyssey/models/item/glowstone_gem_core.json
 496dfe76a98513b63fe3e2e1858e86b2ab0e1d21 assets/crystal_odyssey/models/item/infinite_ruby_bucket.json
 b5012417989516efd9a810204bc81667a2c6a91f assets/crystal_odyssey/models/item/infinite_sapphire_bucket.json
 65835b2981d028dc414c9a91f2d1e996443dfc38 assets/crystal_odyssey/models/item/lava_ruby_bucket.json

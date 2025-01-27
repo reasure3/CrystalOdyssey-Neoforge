@@ -5,6 +5,7 @@ import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.server.base.ModBaseRecipeProvider
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.RecipeCategory
@@ -109,6 +110,38 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
         manaInjecting(recipeOutput, ModItems.RUBY, ModItems.ENCHANTED_RUBY, 10)
         manaInjecting(recipeOutput, ModItems.SAPPHIRE, ModItems.ENCHANTED_SAPPHIRE, 10)
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.DIAMOND)
+            .requiredBy(ModItems.ENCHANTED_DIAMOND)
+            .save(recipeOutput, CrystalOdyssey.modLoc("diamond_by_extract_mana"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.EMERALD)
+            .requiredBy(ModItems.ENCHANTED_EMERALD)
+            .save(recipeOutput, CrystalOdyssey.modLoc("emerald_by_extract_mana"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD)
+            .requiredBy(ModItems.ENCHANTED_AMETHYST_SHARD)
+            .save(recipeOutput, CrystalOdyssey.modLoc("amethyst_shard_by_extract_mana"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWSTONE_GEM)
+            .requiredBy(ModItems.ENCHANTED_GLOWSTONE_GEM)
+            .save(recipeOutput, CrystalOdyssey.modLoc("glowstone_gem_by_extract_mana"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE)
+            .requiredBy(ModItems.ENCHANTED_SAPPHIRE)
+            .save(recipeOutput, CrystalOdyssey.modLoc("sapphire_by_extract_mana"))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY)
+            .requiredBy(ModItems.ENCHANTED_RUBY)
+            .save(recipeOutput, CrystalOdyssey.modLoc("ruby_by_extract_mana"))
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_GEM_CORE)
+            .unlockedBy('X', ModItems.ENCHANTED_DIAMOND)
+            .unlockedBy('#', ModItems.ENCHANTED_GLOWSTONE_GEM)
+            .pattern("XXX")
+            .pattern("X#X")
+            .pattern("XXX")
+            .save(recipeOutput)
+
         manaInjecting(
             recipeOutput,
             input = DataComponentIngredient.of(
@@ -128,13 +161,17 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             id = CrystalOdyssey.modLoc("glowstone_gem_lantern_level_3")
         )
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWSTONE_GEM)
-            .requiredBy(ModItems.ENCHANTED_GLOWSTONE_GEM)
-            .save(recipeOutput, CrystalOdyssey.modLoc("glowstone_gem_by_extract_mana"))
-
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LIGHT_STAFF)
             .unlockedBy('X', ModItems.ENCHANTED_GLOWSTONE_GEM)
-            .unlockedBy('#', Tags.Items.RODS)
+            .unlockedBy('#', Tags.Items.RODS_WOODEN)
+            .pattern("  X")
+            .pattern(" # ")
+            .pattern("#  ")
+            .save(recipeOutput)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.EL_DORADO_STAFF)
+            .unlockedBy('X', ModItems.GLOWSTONE_GEM)
+            .unlockedBy('#', Tags.Items.RODS_BLAZE)
             .pattern("  X")
             .pattern(" # ")
             .pattern("#  ")
@@ -515,5 +552,38 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             priority = 0,
             id = CrystalOdyssey.modLoc("enchanted_fire_protection")
         )
+
+        manaAnvil(
+            recipeOutput = recipeOutput,
+            inputGem = ModItems.ENCHANTED_RUBY,
+            inputMaterial = Items.BOOK,
+            output = ItemStack(Items.BOOK).apply {
+                set(
+                    ModDataComponents.FIND_BLOCKS,
+                    FindBlocks.of(Tags.Blocks.ORES, "hahaha", 0xFF00FF00)
+                )
+            },
+            priority = 0,
+            id = CrystalOdyssey.modLoc("test")
+        )
+
+        FindBlocks.makeVanillaList().zip(
+            listOf(
+                "netherite", "diamond", "emerald", "gold", "iron",
+                "copper", "coal", "lapis_lazuli", "redstone", "quartz"
+            )
+        ).reversed().forEachIndexed { index, pair ->
+            manaAnvil(
+                recipeOutput = recipeOutput,
+                inputGem = ModItems.GLOWSTONE_GEM_CORE,
+                inputMaterial = ModItems.EL_DORADO_STAFF,
+                output = ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
+                    set(ModDataComponents.FIND_BLOCKS, pair.first)
+                },
+                priority = index,
+                maintainData = true,
+                id = CrystalOdyssey.modLoc("el_dorado_staff_${pair.second}")
+            )
+        }
     }
 }

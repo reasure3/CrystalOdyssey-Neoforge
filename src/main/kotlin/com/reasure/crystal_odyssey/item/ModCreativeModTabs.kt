@@ -3,6 +3,7 @@ package com.reasure.crystal_odyssey.item
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -30,6 +31,7 @@ object ModCreativeModTabs {
                     accept(ModItems.ENCHANTED_AMETHYST_SHARD)
                     accept(ModItems.GLOWSTONE_GEM)
                     accept(ModItems.ENCHANTED_GLOWSTONE_GEM)
+                    accept(ModItems.GLOWSTONE_GEM_CORE)
                     accept(ModBlocks.GLOWSTONE_GEM_BLOCK)
                     accept(ModItems.SAPPHIRE)
                     accept(ModItems.ENCHANTED_SAPPHIRE)
@@ -47,6 +49,8 @@ object ModCreativeModTabs {
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModItems.LIGHT_STAFF)
+                    accept(ModItems.EL_DORADO_STAFF)
+                    acceptAll(makeAllElDoradoStaff())
                     accept(ModItems.SAPPHIRE_BUCKET)
                     accept(ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
                         set(
@@ -66,5 +70,13 @@ object ModCreativeModTabs {
                 }
             }
             .build()
+    }
+
+    private fun makeAllElDoradoStaff(): List<ItemStack> {
+        return FindBlocks.makeVanillaList().map {
+            ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
+                set(ModDataComponents.FIND_BLOCKS, it)
+            }
+        }
     }
 }

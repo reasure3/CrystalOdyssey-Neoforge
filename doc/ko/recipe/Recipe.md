@@ -76,7 +76,7 @@
 
 # 빛의 지팡이
 
-![light_staff.gif](../../image/recipe/crafting/light_staff.gif)
+![light_staff.png](../../image/recipe/crafting/light_staff.png)
 
 ## 사파이어 양동이
 ![sapphire_bucket_1.png](../../image/recipe/crafting/sapphire_bucket_1.png)

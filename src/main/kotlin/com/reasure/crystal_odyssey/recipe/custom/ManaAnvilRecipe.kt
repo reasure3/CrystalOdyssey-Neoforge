@@ -1,11 +1,13 @@
 package com.reasure.crystal_odyssey.recipe.custom
 
+import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.recipe.custom.input.TupleRecipeInput
 import net.minecraft.core.HolderLookup
+import net.minecraft.core.component.DataComponentType
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
@@ -22,14 +24,22 @@ data class ManaAnvilRecipe(
     val ingredientGem: Ingredient,
     val ingredientMaterial: Ingredient,
     val result: ItemStack,
-    val priority: Int = 1
+    val priority: Int = 1,
+    val maintainData: Boolean = false
 ) : Recipe<TupleRecipeInput> {
     override fun matches(input: TupleRecipeInput, level: Level): Boolean {
         return ingredientGem.test(input.getItem(0)) && ingredientMaterial.test(input.getItem(1))
     }
 
     override fun assemble(input: TupleRecipeInput, registries: HolderLookup.Provider): ItemStack {
-        return result.copy()
+        val output: ItemStack = result.copy()
+        if (maintainData) {
+            val inputMaterial = input.getItem(1)
+            if (!inputMaterial.isComponentsPatchEmpty) {
+                output.applyComponents(inputMaterial.componentsPatch)
+            }
+        }
+        return output
     }
 
     override fun canCraftInDimensions(width: Int, height: Int): Boolean = true
@@ -46,7 +56,8 @@ data class ManaAnvilRecipe(
                 Ingredient.CODEC_NONEMPTY.fieldOf("ingredient_gem").forGetter(ManaAnvilRecipe::ingredientGem),
                 Ingredient.CODEC_NONEMPTY.fieldOf("ingredient_material").forGetter(ManaAnvilRecipe::ingredientMaterial),
                 ItemStack.STRICT_SINGLE_ITEM_CODEC.fieldOf("result").forGetter(ManaAnvilRecipe::result),
-                ExtraCodecs.NON_NEGATIVE_INT.fieldOf("priority").forGetter(ManaAnvilRecipe::priority)
+                ExtraCodecs.NON_NEGATIVE_INT.fieldOf("priority").forGetter(ManaAnvilRecipe::priority),
+                Codec.BOOL.optionalFieldOf("maintain_data", false).forGetter(ManaAnvilRecipe::maintainData)
             ).apply(instance, ::ManaAnvilRecipe)
         }
 
@@ -55,6 +66,7 @@ data class ManaAnvilRecipe(
             Ingredient.CONTENTS_STREAM_CODEC, ManaAnvilRecipe::ingredientMaterial,
             ItemStack.STREAM_CODEC, ManaAnvilRecipe::result,
             ByteBufCodecs.VAR_INT, ManaAnvilRecipe::priority,
+            ByteBufCodecs.BOOL, ManaAnvilRecipe::maintainData,
             ::ManaAnvilRecipe
         )
 
@@ -62,4 +74,8 @@ data class ManaAnvilRecipe(
 
         override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, ManaAnvilRecipe> = STREAM_CODEC
     }
+}
+
+private operator fun <T> ItemStack.set(type: DataComponentType<out T?>, value: T?) {
+    set(type, value)
 }

@@ -15,9 +15,11 @@ import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.material.Fluids
 import net.neoforged.bus.api.SubscribeEvent
+import net.neoforged.fml.ModContainer
 import net.neoforged.fml.ModList
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
+import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
 import net.neoforged.neoforge.capabilities.Capabilities
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent
@@ -28,10 +30,14 @@ import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
 @Mod(CrystalOdyssey.ID)
 @EventBusSubscriber(modid = CrystalOdyssey.ID, bus = EventBusSubscriber.Bus.MOD)
-object CrystalOdyssey {
-    const val ID = "crystal_odyssey"
+class CrystalOdyssey(container: ModContainer) {
+    companion object {
+        const val ID = "crystal_odyssey"
 
-    val LOGGER: Logger = LogManager.getLogger(ID)
+        val LOGGER: Logger = LogManager.getLogger(ID)
+
+        fun modLoc(path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(ID, path)
+    }
 
     init {
         LOGGER.info("Starting initialization of $ID")
@@ -45,9 +51,9 @@ object CrystalOdyssey {
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(MOD_BUS)
         ModRecipeTypes.RECIPE_TYPES.register(MOD_BUS)
         ModParticleTypes.PARTICLE_TYPES.register(MOD_BUS)
-    }
 
-    fun modLoc(path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(ID, path)
+        container.registerConfig(ModConfig.Type.SERVER, CrystalOdysseyServerConfig.SPEC)
+    }
 
     @SubscribeEvent
     private fun onCommonSetup(event: FMLCommonSetupEvent) {

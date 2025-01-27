@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "tag": "c:rods"
+      "tag": "c:rods/wooden"
     },
     "X": {
       "item": "crystal_odyssey:enchanted_glowstone_gem"

@@ -128,9 +128,10 @@ abstract class ModBaseRecipeProvider(
         inputMaterial: ItemLike,
         output: ItemStack,
         priority: Int,
+        maintainData: Boolean = false,
         id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.item)
     ) {
-        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), output, priority)
+        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), output, priority, maintainData)
         recipeOutput.accept(id.withPrefix("mana_anvil/"), recipe, null)
     }
 

@@ -3,10 +3,8 @@ package com.reasure.crystal_odyssey.item
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
-import com.reasure.crystal_odyssey.item.custom.CapabilityBucketItem
-import com.reasure.crystal_odyssey.item.custom.CapacityBucketItem
-import com.reasure.crystal_odyssey.item.custom.GlowstoneGemLanternItem
-import com.reasure.crystal_odyssey.item.custom.LightStaffItem
+import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
+import com.reasure.crystal_odyssey.item.custom.*
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
@@ -39,6 +37,10 @@ object ModItems {
         Item(properties.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
     }
 
+    val GLOWSTONE_GEM_CORE: Item by ITEMS.registerItem("glowstone_gem_core") { properties ->
+        Item(properties.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.UNCOMMON))
+    }
+
     val RUBY: Item by ITEMS.registerSimpleItem("ruby")
 
     val ENCHANTED_RUBY: Item by ITEMS.registerItem("enchanted_ruby") { properties ->
@@ -59,7 +61,17 @@ object ModItems {
     }
 
     val LIGHT_STAFF: LightStaffItem by ITEMS.registerItem("light_staff") { properties ->
-        LightStaffItem(ModBlocks.LIGHT_ORB_BLOCK, properties.stacksTo(1).durability(300))
+        LightStaffItem(ModBlocks.LIGHT_ORB_BLOCK, properties.durability(300))
+    }
+
+    val EL_DORADO_STAFF: Item by ITEMS.registerItem("el_dorado_staff") { properties ->
+        Item(properties.stacksTo(1))
+    }
+
+    val EL_DORADO_STAFF_ACTIVE: ElDoradoStaffItem by ITEMS.registerItem("el_dorado_staff_active") { properties ->
+        ElDoradoStaffItem(
+            properties.durability(1024).rarity(Rarity.RARE).component(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
+        )
     }
 
     val SAPPHIRE_BUCKET: CapacityBucketItem by ITEMS.registerItem("sapphire_bucket") { properties ->

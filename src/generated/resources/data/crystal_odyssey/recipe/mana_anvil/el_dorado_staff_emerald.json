@@ -1,0 +1,23 @@
+{
+  "type": "crystal_odyssey:mana_anvil",
+  "ingredient_gem": {
+    "item": "crystal_odyssey:glowstone_gem_core"
+  },
+  "ingredient_material": {
+    "item": "crystal_odyssey:el_dorado_staff"
+  },
+  "maintain_data": true,
+  "priority": 7,
+  "result": {
+    "components": {
+      "crystal_odyssey:find_blocks": {
+        "block_group_name": {
+          "translate": "item.crystal_odyssey.el_dorado.emerald"
+        },
+        "blocks": "#crystal_odyssey:el_dorado/emerald",
+        "border_color": "#7F005300"
+      }
+    },
+    "id": "crystal_odyssey:el_dorado_staff_active"
+  }
+}

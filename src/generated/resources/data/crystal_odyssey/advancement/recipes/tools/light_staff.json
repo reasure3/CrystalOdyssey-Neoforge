@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_rods": {
+    "has_rods_wooden": {
       "conditions": {
         "items": [
           {
-            "items": "#c:rods"
+            "items": "#c:rods/wooden"
           }
         ]
       },
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_enchanted_glowstone_gem",
-      "has_rods"
+      "has_rods_wooden"
     ]
   ],
   "rewards": {

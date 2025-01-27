@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:rods/blaze"
+    },
+    "X": {
+      "item": "crystal_odyssey:glowstone_gem"
+    }
+  },
+  "pattern": [
+    "  X",
+    " # ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crystal_odyssey:el_dorado_staff"
+  }
+}

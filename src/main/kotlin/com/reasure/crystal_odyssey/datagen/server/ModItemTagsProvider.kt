@@ -26,8 +26,14 @@ class ModItemTagsProvider(
             .add(ModItems.GLOWSTONE_GEM)
             .add(ModItems.ENCHANTED_GLOWSTONE_GEM)
 
+        tag(ModTags.Items.EL_DORADO_STAFF_REPAIRABLE)
+            .add(ModItems.GLOWSTONE_GEM)
+            .add(ModItems.ENCHANTED_GLOWSTONE_GEM)
+            .add(ModItems.GLOWSTONE_GEM_CORE)
+
         tag(ItemTags.DURABILITY_ENCHANTABLE)
             .add(ModItems.LIGHT_STAFF)
+            .add(ModItems.EL_DORADO_STAFF_ACTIVE)
 
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS)
         copy(ModTags.Blocks.STORAGE_BLOCKS_RUBY, ModTags.Items.STORAGE_BLOCKS_RUBY)

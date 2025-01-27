@@ -8,7 +8,8 @@ import kotlin.jvm.optionals.getOrNull
 
 object CuriosHelper {
     fun findFirst(livingEntity: LivingEntity, item: Item): ItemStack {
-        return CuriosApi.getCuriosInventory(livingEntity).getOrNull()?.findFirstCurio(item)?.get()?.stack
-            ?: ItemStack.EMPTY
+        val inventory = CuriosApi.getCuriosInventory(livingEntity).getOrNull() ?: return ItemStack.EMPTY
+        val result = inventory.findFirstCurio(item)?.getOrNull() ?: return ItemStack.EMPTY
+        return result.stack
     }
 }

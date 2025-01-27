@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.item.custom
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.effect.ModMobEffects
+import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.item.custom.GlowstoneGemLanternItem.Companion.lanternGetter
 import net.minecraft.network.chat.Component
@@ -55,7 +56,9 @@ class GlowstoneGemLanternItem(block: Block, properties: Properties) : BlockItem(
         }
 
         private fun getLantern(player: Player): ItemStack {
-            return lanternGetter.map { it(player) }.maxByOrNull { getLanternLevel(it) } ?: ItemStack.EMPTY
+            return lanternGetter.map { it(player) }
+                .filter { it.`is`(ModItems.GLOWSTONE_GEM_LANTERN) }
+                .maxByOrNull { getLanternLevel(it) } ?: ItemStack.EMPTY
         }
 
         private fun getLanternLevel(lantern: ItemStack): Int {

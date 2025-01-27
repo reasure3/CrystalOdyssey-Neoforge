@@ -20,7 +20,6 @@ import net.neoforged.fml.ModList
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.config.ModConfig
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
 import net.neoforged.neoforge.capabilities.Capabilities
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent
 import net.neoforged.neoforge.fluids.FluidType
@@ -53,11 +52,7 @@ class CrystalOdyssey(container: ModContainer) {
         ModParticleTypes.PARTICLE_TYPES.register(MOD_BUS)
 
         container.registerConfig(ModConfig.Type.SERVER, CrystalOdysseyServerConfig.SPEC)
-    }
 
-    @SubscribeEvent
-    private fun onCommonSetup(event: FMLCommonSetupEvent) {
-        LOGGER.info("Starting commonSetup")
         if (ModList.get().isLoaded("curios")) {
             CuriosInitializer.init()
         }

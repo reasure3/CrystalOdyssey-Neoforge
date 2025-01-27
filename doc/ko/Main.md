@@ -82,7 +82,7 @@
 
 ## 발광 보석 랜턴
 
-[![glowstone_gem_lanttern.png](../image/item/glowstone_gem_lanttern.png)](./recipe/Recipe.md#발광-보석-랜턴)
+[![glowstone_gem_lantern.png](../image/item/glowstone_gem_lantern.png)](./recipe/Recipe.md#발광-보석-랜턴)
 [<img alt="glowstone_gem_lantern.png" height="80" src="../image/block/glowstone_gem_lantern.png" width="80"/>](./recipe/Recipe.md#발광-보석-랜턴)
 [<img alt="glowstone_gem_lantern_hanging.png" height="80" src="../image/block/glowstone_gem_lantern_hanging.png" width="80"/>](./recipe/Recipe.md#발광-보석-랜턴)
 [<img alt="glowstone_gem_lantern_fixed.png" height="80" src="../image/block/glowstone_gem_lantern_fixed.png" width="80"/>](./recipe/Recipe.md#발광-보석-랜턴)

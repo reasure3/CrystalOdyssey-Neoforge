@@ -3,6 +3,7 @@ package com.reasure.crystal_odyssey.item.components.custom
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.util.CustomColor
 import com.reasure.crystal_odyssey.util.ModTags
 import net.minecraft.core.HolderSet
@@ -16,6 +17,7 @@ import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 import net.minecraft.tags.TagKey
 import net.minecraft.world.level.block.Block
+import kotlin.jvm.optionals.getOrNull
 
 data class FindBlocks(
     val blocks: HolderSet<Block>,
@@ -43,13 +45,23 @@ data class FindBlocks(
             ::FindBlocks
         )
 
-        fun of(blockTag: TagKey<Block>, blockGroupNameTansKey: String, borderColor: Long) = FindBlocks(
+        fun of(blockTag: TagKey<Block>, blockGroupNameTransKey: String, borderColor: Long) = FindBlocks(
             BuiltInRegistries.BLOCK.getOrCreateTag(blockTag),
-            Component.translatable(blockGroupNameTansKey),
+            Component.translatable(blockGroupNameTransKey),
             CustomColor.of(borderColor)
         )
 
-        fun makeVanillaList(): List<FindBlocks> {
+        fun of(blocks: List<Block>, blockGroupNameTransKey: String, borderColor: Long) = FindBlocks(
+            HolderSet.direct(blocks.mapNotNull { block ->
+                BuiltInRegistries.BLOCK.getHolder(
+                    BuiltInRegistries.BLOCK.getKey(block)
+                ).getOrNull()
+            }.toList()),
+            Component.translatable(blockGroupNameTransKey),
+            CustomColor.of(borderColor)
+        )
+
+        fun makeDefaultList(): List<FindBlocks> {
             return listOf(
                 of(
                     ModTags.Blocks.EL_DORADO_NETHERITE,
@@ -100,6 +112,16 @@ data class FindBlocks(
                     ModTags.Blocks.EL_DORADO_QUARTZ,
                     "item.${CrystalOdyssey.ID}.el_dorado.quartz",
                     0x7FB3A091
+                ),
+                of(
+                    listOf(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModBlocks.SAPPHIRE_BLOCK),
+                    "item.${CrystalOdyssey.ID}.el_dorado.sapphire",
+                    0x7F5793E1
+                ),
+                of(
+                    listOf(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, ModBlocks.RUBY_BLOCK),
+                    "item.${CrystalOdyssey.ID}.el_dorado.ruby",
+                    0x7FBB4052
                 )
             )
         }

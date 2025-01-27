@@ -7,7 +7,7 @@
     "item": "crystal_odyssey:el_dorado_staff"
   },
   "maintain_data": true,
-  "priority": 4,
+  "priority": 6,
   "result": {
     "components": {
       "crystal_odyssey:find_blocks": {

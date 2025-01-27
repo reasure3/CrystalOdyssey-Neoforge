@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient
 
 object ModAnvilRepairRecipeMaker {
     fun getRepairRecipes(vanillaRecipeFactory: IVanillaRecipeFactory): List<IJeiAnvilRecipe> {
-        val elDoradoStaffList = FindBlocks.makeVanillaList().map {
+        val elDoradoStaffList = FindBlocks.makeDefaultList().map {
             ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
                 set(ModDataComponents.FIND_BLOCKS, it)
             }

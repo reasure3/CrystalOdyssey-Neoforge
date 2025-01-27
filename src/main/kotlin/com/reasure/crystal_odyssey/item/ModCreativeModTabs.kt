@@ -73,7 +73,7 @@ object ModCreativeModTabs {
     }
 
     private fun makeAllElDoradoStaff(): List<ItemStack> {
-        return FindBlocks.makeVanillaList().map {
+        return FindBlocks.makeDefaultList().map {
             ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
                 set(ModDataComponents.FIND_BLOCKS, it)
             }

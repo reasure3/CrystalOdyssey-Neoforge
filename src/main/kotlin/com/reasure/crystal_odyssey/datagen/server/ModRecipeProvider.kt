@@ -553,10 +553,10 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             id = CrystalOdyssey.modLoc("enchanted_fire_protection")
         )
 
-        FindBlocks.makeVanillaList().zip(
+        FindBlocks.makeDefaultList().zip(
             listOf(
-                "netherite", "diamond", "emerald", "gold", "iron",
-                "copper", "coal", "lapis_lazuli", "redstone", "quartz"
+                "netherite", "diamond", "emerald", "gold", "iron", "copper",
+                "coal", "lapis_lazuli", "redstone", "quartz", "sapphire", "ruby"
             )
         ).reversed().forEachIndexed { index, pair ->
             manaAnvil(

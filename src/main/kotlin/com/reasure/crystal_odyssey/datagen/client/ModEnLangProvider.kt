@@ -65,6 +65,8 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
         add("item.${CrystalOdyssey.ID}.el_dorado.redstone", "Redstone")
         add("item.${CrystalOdyssey.ID}.el_dorado.quartz", "Quartz")
         add("item.${CrystalOdyssey.ID}.el_dorado.emerald", "Emerald")
+        add("item.${CrystalOdyssey.ID}.el_dorado.sapphire", "Sapphire")
+        add("item.${CrystalOdyssey.ID}.el_dorado.ruby", "Ruby")
         add("item.${CrystalOdyssey.ID}.el_dorado_staff_active.cover_name", "El Dorado Staff (%1\$s)")
     }
 }

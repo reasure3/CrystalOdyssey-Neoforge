@@ -65,6 +65,8 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         add("item.${CrystalOdyssey.ID}.el_dorado.redstone", "레드스톤")
         add("item.${CrystalOdyssey.ID}.el_dorado.quartz", "석영")
         add("item.${CrystalOdyssey.ID}.el_dorado.emerald", "에메랄드")
+        add("item.${CrystalOdyssey.ID}.el_dorado.sapphire", "사파이어")
+        add("item.${CrystalOdyssey.ID}.el_dorado.ruby", "루비")
         add("item.${CrystalOdyssey.ID}.el_dorado_staff_active.cover_name", "엘도라도 지팡이 (%1\$s)")
     }
 }

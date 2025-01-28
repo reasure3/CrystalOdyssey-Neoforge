@@ -102,9 +102,9 @@
 Left: In hand<br>
 Right: Equipped in Curios belt slot
 
-## Light Staff
+## Staff of Light
 
-[![light_staff.png](../image/item/light_staff.png)](recipe/Recipe.md#light-staff)
+[![light_staff.png](../image/item/light_staff.png)](recipe/Recipe.md#staff-of-light)
 ![light_orb.gif](../image/particle/light_orb.gif)
 
 - Right-click to place a light orb block.
@@ -112,7 +112,7 @@ Right: Equipped in Curios belt slot
 - Can be repaired with Glowstone Gems.
 - Compatible with Unbreaking and Mending enchantments.
 
-## Wand of El Dorado
+## El Dorado Staff
 
 [![el_dorado_wand.png](../image/item/el_dorado_wand.png)](recipe/Recipe.md#el-dorado-staff)
 [![el_dorado_wand_active.png](../image/item/el_dorado_wand_active.png)](recipe/Recipe.md#el-dorado-staff)

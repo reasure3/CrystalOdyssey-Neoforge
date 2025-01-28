@@ -78,7 +78,7 @@
 
 ![glowstone_gem_lantern_upgrade_1.png](../../image/recipe/mana_injecting/glowstone_gem_lantern_upgrade_1.png)
 
-# Light Staff
+# Staff of Light
 
 ![light_staff.png](../../image/recipe/crafting/light_staff.png)
 

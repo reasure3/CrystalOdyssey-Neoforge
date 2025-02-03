@@ -1,6 +1,5 @@
 package com.reasure.crystal_odyssey.inventory.menu
 
-import com.reasure.crystal_odyssey.inventory.menu.custom.ManaAnvilMenu.Companion.OUTPUT_SLOT_ID
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.player.Inventory
 import net.minecraft.world.entity.player.Player
@@ -41,6 +40,7 @@ abstract class BaseRecipeContainerMenu(
         sourceSlot: Slot,
         copyOfSourceStack: ItemStack,
         index: Int,
+        outputIndex: Int,
         player: Player
     ): ItemStack {
         if (sourceStack.isEmpty) {
@@ -51,7 +51,7 @@ abstract class BaseRecipeContainerMenu(
             return ItemStack.EMPTY
         }
 
-        if (index == OUTPUT_SLOT_ID) {
+        if (index == outputIndex) {
             sourceSlot.onTake(player, copyOfSourceStack.copy())
             player.drop(sourceStack, false)
         }

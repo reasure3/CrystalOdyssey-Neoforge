@@ -147,7 +147,7 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
             }
         }
 
-        return finalizeQuickMoveStack(sourceStack, sourceSlot, copyOfSourceStack, index, player)
+        return finalizeQuickMoveStack(sourceStack, sourceSlot, copyOfSourceStack, index, OUTPUT_SLOT_ID, player)
     }
 
     private fun moveInInventory(index: Int, sourceStack: ItemStack): Boolean {

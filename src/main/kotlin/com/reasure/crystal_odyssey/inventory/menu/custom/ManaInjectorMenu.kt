@@ -161,7 +161,7 @@ class ManaInjectorMenu(containerId: Int, playerInventory: Inventory, pos: BlockP
             }
         }
 
-        return finalizeQuickMoveStack(sourceStack, sourceSlot, copyOfSourceStack, index, player)
+        return finalizeQuickMoveStack(sourceStack, sourceSlot, copyOfSourceStack, index, OUTPUT_SLOT_ID, player)
     }
 
     override fun getBlock(): Block = ModBlocks.MANA_INJECTOR

@@ -27,7 +27,7 @@ public class GameRendererMixin {
                         cir.setReturnValue(0.15f);
                     }
                     break;
-                case 2:
+                default:
                     cir.setReturnValue(1.0f);
                     break;
             }

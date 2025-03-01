@@ -13,6 +13,16 @@
   "config.jade.plugin_crystal_odyssey.glowstone_gem_lantern": "Glowstone Gem Lantern Level",
   "container.crystal_odyssey.mana_anvil": "Mana Anvil",
   "container.crystal_odyssey.mana_injector": "Mana Injector",
+  "crystal_odyssey.configuration.ElDoradoStaff": "El Dorado Staff",
+  "crystal_odyssey.configuration.ElDoradoStaff.Range": "Detection Range",
+  "crystal_odyssey.configuration.ElDoradoStaff.Range.tooltip": "This is the mineral detection range of the El Dorado Staff. If this value is 10, it will detect an area of 10 squares around the player, or a total of 21 x 21 x 21.",
+  "crystal_odyssey.configuration.ElDoradoStaff.RetainTick": "Retain Tick",
+  "crystal_odyssey.configuration.ElDoradoStaff.RetainTick.tooltip": "This is the duration (in ticks) for which the mineral detection border is visible. This value determines how long the border will remain on the screen after detecting mineral. If the player detects mineral again before the duration expires, the previous border will disappear.",
+  "crystal_odyssey.configuration.ElDoradoStaff.button": "Modify",
+  "crystal_odyssey.configuration.ElDoradoStaff.tooltip": "Modify El Dorado Staff Stat",
+  "crystal_odyssey.configuration.section.crystal.odyssey.server.toml": "Modify Server Configuration",
+  "crystal_odyssey.configuration.section.crystal.odyssey.server.toml.title": "Server Configuration",
+  "crystal_odyssey.configuration.title": "Crystal Odyssey Configuration",
   "effect.crystal_odyssey.lantern_vision": "Lantern Vision",
   "item.crystal_odyssey.el_dorado_staff": "El Dorado Staff",
   "item.crystal_odyssey.el_dorado_staff_active": "El Dorado Staff",
@@ -54,5 +64,6 @@
   "itemGroup.crystal_odyssey": "Crystal Odyssey",
   "jei.category.crystal_odyssey.mana_anvil": "Mana Anvil",
   "jei.category.crystal_odyssey.mana_injecting": "Mana Injecting",
+  "tag.item.crystal_odyssey.el_dorado_staff_repairable": "Repair Items of El Dorado Staff",
   "tag.item.crystal_odyssey.light_staff_repairable": "Repair Items of Staff of Light"
 }

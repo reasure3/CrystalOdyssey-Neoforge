@@ -86,10 +86,31 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
     }
 
     override fun addConfigTranslations() {
+        addConfig("title", "크리스탈 오디세이 설정")
+        addConfig("section.crystal.odyssey.server.toml", "서버 설정 수정하기")
+        addConfig("section.crystal.odyssey.server.toml.title", "서버 설정")
+
+        addConfig("ElDoradoStaff", "엘도라도 지팡이")
+        addConfig("ElDoradoStaff.button", "수정")
+        addConfig("ElDoradoStaff.tooltip", "엘도라도 지팡이 스탯 수정")
+        addConfig("ElDoradoStaff.Range", "탐지 범위")
+        addConfigDesc(
+            "ElDoradoStaff.Range.tooltip",
+            "엘도라도 지팡이 광물 탐지 범위입니다.",
+            "만약 이 값이 10이라면, 플레이어 주위로 10칸, 즉 21 x 21 x 21 범위의 광물을 탐지합니다."
+        )
+        addConfig("ElDoradoStaff.RetainTick", "지속 시간 (틱 단위)")
+        addConfigDesc(
+            "ElDoradoStaff.RetainTick.tooltip",
+            "광물이 감지됐을 때, 테두리가 유지되는 시간입니다.",
+            "만약, 지속 시간이 끝나기 전에 광물을 다시 탐지하면 이전에 탐지된 테두리는 사라집니다."
+        )
+
         addJadeConfig("glowstone_gem_lantern", "발광 보석 랜턴 강도")
     }
 
     override fun addTagTranslations() {
         add(ModTags.Items.LIGHT_STAFF_REPAIRABLE, "빛의 지팡이 수리 재료들")
+        add(ModTags.Items.EL_DORADO_STAFF_REPAIRABLE, "엘도라도 지팡이 수리 재료들")
     }
 }

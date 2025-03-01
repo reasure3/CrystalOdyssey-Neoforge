@@ -86,10 +86,32 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
     }
 
     override fun addConfigTranslations() {
+        addConfig("title", "Crystal Odyssey Configuration")
+        addConfig("section.crystal.odyssey.server.toml", "Modify Server Configuration")
+        addConfig("section.crystal.odyssey.server.toml.title", "Server Configuration")
+
+        addConfig("ElDoradoStaff", "El Dorado Staff")
+        addConfig("ElDoradoStaff.button", "Modify")
+        addConfig("ElDoradoStaff.tooltip", "Modify El Dorado Staff Stat")
+        addConfig("ElDoradoStaff.Range", "Detection Range")
+        addConfigDesc(
+            "ElDoradoStaff.Range.tooltip",
+            "This is the mineral detection range of the El Dorado Staff.",
+            "If this value is 10, it will detect an area of 10 squares around the player, or a total of 21 x 21 x 21."
+        )
+        addConfig("ElDoradoStaff.RetainTick", "Retain Tick")
+        addConfigDesc(
+            "ElDoradoStaff.RetainTick.tooltip",
+            "This is the duration (in ticks) for which the mineral detection border is visible.",
+            "This value determines how long the border will remain on the screen after detecting mineral.",
+            "If the player detects mineral again before the duration expires, the previous border will disappear."
+        )
+
         addJadeConfig("glowstone_gem_lantern", "Glowstone Gem Lantern Level")
     }
 
     override fun addTagTranslations() {
         add(ModTags.Items.LIGHT_STAFF_REPAIRABLE, "Repair Items of Staff of Light")
+        add(ModTags.Items.EL_DORADO_STAFF_REPAIRABLE, "Repair Items of El Dorado Staff")
     }
 }

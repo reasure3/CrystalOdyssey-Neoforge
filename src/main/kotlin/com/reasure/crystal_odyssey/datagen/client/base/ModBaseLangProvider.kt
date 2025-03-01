@@ -26,7 +26,14 @@ abstract class ModBaseLangProvider(output: PackOutput, locale: String) :
     fun <T : MobEffect> addLingeringPotion(key: Supplier<T>, name: String) =
         add("item.minecraft.lingering_potion.effect.${key.get().descriptionId}", name)
 
+    fun addConfig(key: String, name: String) =
+        add("${CrystalOdyssey.ID}.configuration.$key", name)
+
+    fun addConfigDesc(key: String, vararg desc: String) =
+        add("${CrystalOdyssey.ID}.configuration.$key", desc.joinToString(" "))
+
     fun addJadeConfig(key: String, name: String) = add("config.jade.plugin_${CrystalOdyssey.ID}.$key", name)
+
 
     override fun addTranslations() {
         addCreativeModeTabTranslations()

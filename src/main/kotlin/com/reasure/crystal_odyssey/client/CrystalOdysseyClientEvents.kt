@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.client.event
+package com.reasure.crystal_odyssey.client
 
 import com.mojang.blaze3d.systems.RenderSystem
 import com.reasure.crystal_odyssey.CrystalOdyssey

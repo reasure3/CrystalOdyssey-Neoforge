@@ -2,7 +2,6 @@ package com.reasure.crystal_odyssey.compat.curios
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.item.ModItems
-import com.reasure.crystal_odyssey.item.custom.GlowstoneGemLanternItem
 
 /**
  * This software includes modifications based on the original source code from the project "[Create](https://github.com/Creators-of-Create/Create)" by simibubi.
@@ -23,7 +22,7 @@ import com.reasure.crystal_odyssey.item.custom.GlowstoneGemLanternItem
 object CuriosInitializer {
     fun init() {
         CrystalOdyssey.LOGGER.debug("Find Curios! Start initialization for curio.")
-        GlowstoneGemLanternItem.addLanternGetter { player ->
+        ModItems.GLOWSTONE_GEM_LANTERN.addLanternGetter { player ->
             CuriosHelper.findFirst(player, ModItems.GLOWSTONE_GEM_LANTERN)
         }
     }

@@ -1,4 +1,4 @@
-package com.reasure.crystal_odyssey.client.compat.curios
+package com.reasure.crystal_odyssey.client.curios
 
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.math.Axis
@@ -35,9 +35,9 @@ class GlowstoneGemLanternCuriosRenderer : ICurioRenderer {
 
         // Basic rotation and scaling
         matrixStack.apply {
+            scale(0.4f, 0.4f, 0.4f)
             mulPose(Axis.ZP.rotation(Mth.PI))
             mulPose(Axis.YN.rotation(Mth.HALF_PI))
-            scale(0.4f, 0.4f, 0.4f)
         }
 
         // Calculate position offsets

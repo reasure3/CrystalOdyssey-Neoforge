@@ -1,11 +1,12 @@
 package com.reasure.crystal_odyssey.item.custom
 
-import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.client.util.BlockFinder
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import com.reasure.crystal_odyssey.util.ModTags
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.core.component.DataComponents
@@ -29,10 +30,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
     override fun getName(stack: ItemStack): Component {
         val findBlocks = stack.getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
         if (findBlocks.isNotEmpty()) {
-            return Component.translatable(
-                "item.${CrystalOdyssey.ID}.el_dorado_staff_active.cover_name",
-                findBlocks.blockGroupName
-            )
+            return findBlocks.blockGroupName
         }
         return super.getName(stack)
     }
@@ -76,7 +74,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
             }
         } else {
             tooltipComponents.add(
-                Component.translatable("item.${CrystalOdyssey.ID}.tooltip.press_shift.block_list")
+                TranslateHelper.Tooltip.Shift.BLOCK_LIST.translateComponent()
                     .withStyle(ChatFormatting.DARK_GRAY)
             )
         }

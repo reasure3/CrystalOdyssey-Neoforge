@@ -1,7 +1,8 @@
 package com.reasure.crystal_odyssey.item.custom
 
-import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
@@ -26,7 +27,7 @@ class CapacityBucketItem(properties: Properties, private val capacity: Int, flui
         }
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag)
         tooltipComponents.add(
-            Component.translatable("item.${CrystalOdyssey.ID}.tooltip.press_shift.mb_capacity")
+            TranslateHelper.Tooltip.Shift.MB_CAPACITY.translateComponent()
                 .withStyle(ChatFormatting.DARK_GRAY)
         )
     }

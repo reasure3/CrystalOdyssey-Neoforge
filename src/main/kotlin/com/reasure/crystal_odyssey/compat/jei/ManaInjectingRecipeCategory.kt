@@ -3,6 +3,8 @@ package com.reasure.crystal_odyssey.compat.jei
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder
 import mezz.jei.api.gui.drawable.IDrawable
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView
@@ -28,7 +30,7 @@ class ManaInjectingRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaInje
 
     override fun getRecipeType(): RecipeType<ManaInjectingRecipe> = MANA_INJECTING_RECIPE_TYPE
 
-    override fun getTitle(): Component = Component.translatable("jei.category.${CrystalOdyssey.ID}.mana_injecting")
+    override fun getTitle(): Component = TranslateHelper.Jei.CATEGORY_MANA_INJECTING.translateComponent()
 
     override fun getIcon(): IDrawable = icon
 

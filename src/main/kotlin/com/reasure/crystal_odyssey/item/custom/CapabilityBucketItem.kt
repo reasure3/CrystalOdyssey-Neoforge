@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey.item.custom
 
-import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import net.minecraft.client.resources.language.I18n
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
@@ -138,12 +139,7 @@ open class CapabilityBucketItem(properties: Properties, private val fluidDescKey
         tooltipFlag: TooltipFlag
     ) {
         if (fluidDescKey.isNotEmpty()) {
-            tooltipComponents.add(
-                Component.translatable(
-                    "item.${CrystalOdyssey.ID}.tooltip.crouch.pickup_fluid",
-                    I18n.get(fluidDescKey)
-                )
-            )
+            tooltipComponents.add(TranslateHelper.Tooltip.Crouch.PICKUP_FLUID.translateComponent(I18n.get(fluidDescKey)))
         }
     }
 }

@@ -1,9 +1,10 @@
 package com.reasure.crystal_odyssey.item.custom
 
-import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.effect.ModMobEffects
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import net.minecraft.network.chat.Component
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.entity.Entity
@@ -67,10 +68,6 @@ class GlowstoneGemLanternItem(block: Block, properties: Properties) : BlockItem(
         tooltipComponents: MutableList<Component>,
         tooltipFlag: TooltipFlag
     ) {
-        tooltipComponents.add(Component.translatable(LAMP_LEVEL_KEY, getLanternLevel(stack) + 1))
-    }
-
-    companion object {
-        const val LAMP_LEVEL_KEY = "item.${CrystalOdyssey.ID}.tooltip.lamp_level"
+        tooltipComponents.add(TranslateHelper.Tooltip.LAMP_LEVEL.translateComponent(getLanternLevel(stack)))
     }
 }

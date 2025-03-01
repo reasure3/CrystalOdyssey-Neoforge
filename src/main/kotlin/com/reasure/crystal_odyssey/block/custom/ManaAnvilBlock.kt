@@ -1,10 +1,10 @@
 package com.reasure.crystal_odyssey.block.custom
 
-import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.inventory.menu.custom.ManaAnvilMenu
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
-import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.MenuProvider
 import net.minecraft.world.SimpleMenuProvider
@@ -59,7 +59,7 @@ class ManaAnvilBlock(properties: Properties) : Block(properties) {
     override fun getMenuProvider(state: BlockState, level: Level, pos: BlockPos): MenuProvider {
         return SimpleMenuProvider({ containerId, playerInventory, _ ->
             ManaAnvilMenu(containerId, playerInventory, pos)
-        }, Component.translatable("container.${CrystalOdyssey.ID}.mana_anvil"))
+        }, TranslateHelper.Container.MANA_ANVIL.translateComponent())
     }
 
     companion object {

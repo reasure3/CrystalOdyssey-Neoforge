@@ -3,6 +3,8 @@ package com.reasure.crystal_odyssey.compat.jei
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.recipe.custom.ManaAnvilRecipe
+import com.reasure.crystal_odyssey.util.TranslateHelper
+import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder
 import mezz.jei.api.gui.drawable.IDrawable
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView
@@ -26,7 +28,7 @@ class ManaAnvilRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaAnvilRec
 
     override fun getRecipeType(): RecipeType<ManaAnvilRecipe> = MANA_ANVIL_RECIPE_TYPE
 
-    override fun getTitle(): Component = Component.translatable("jei.category.${CrystalOdyssey.ID}.mana_anvil")
+    override fun getTitle(): Component = TranslateHelper.Jei.CATEGORY_MANA_ANVIL.translateComponent()
 
     override fun getIcon(): IDrawable = icon
 

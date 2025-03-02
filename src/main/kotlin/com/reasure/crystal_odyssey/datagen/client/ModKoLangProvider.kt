@@ -102,8 +102,8 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
         addConfig("ElDoradoStaff.RetainTick", "지속 시간 (틱 단위)")
         addConfigDesc(
             "ElDoradoStaff.RetainTick.tooltip",
-            "광물이 감지됐을 때, 테두리가 유지되는 시간입니다.",
-            "만약, 지속 시간이 끝나기 전에 광물을 다시 탐지하면 이전에 탐지된 테두리는 사라집니다."
+            "광물이 감지됐을 때, 블록 테두리가 유지되는 시간입니다.",
+            "만약, 지속 시간이 끝나기 전에 광물을 다시 탐지하면 이전에 탐지된 블록의 테두리는 사라집니다."
         )
 
         addJadeConfig("glowstone_gem_lantern", "발광 보석 랜턴 강도")

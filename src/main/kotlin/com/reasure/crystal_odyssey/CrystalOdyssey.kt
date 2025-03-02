@@ -1,6 +1,7 @@
 package com.reasure.crystal_odyssey
 
 import com.reasure.crystal_odyssey.block.ModBlocks
+import com.reasure.crystal_odyssey.client.network.ClientPayloadHandler
 import com.reasure.crystal_odyssey.compat.curios.CuriosInitializer
 import com.reasure.crystal_odyssey.effect.ModMobEffects
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
@@ -9,6 +10,8 @@ import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.item.fluid.InfiniteOneFluidHandlerItemStack
 import com.reasure.crystal_odyssey.item.fluid.OneFluidHandlerItemStack
+import com.reasure.crystal_odyssey.network.BlockBreakPayload
+import com.reasure.crystal_odyssey.network.ChangeDimensionPayload
 import com.reasure.crystal_odyssey.particle.ModParticleTypes
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
@@ -24,6 +27,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
 import net.neoforged.neoforge.capabilities.Capabilities
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent
 import net.neoforged.neoforge.fluids.FluidType
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
@@ -87,6 +91,23 @@ class CrystalOdyssey(container: ModContainer) {
                 Capabilities.FluidHandler.ITEM,
                 { stack, _ -> InfiniteOneFluidHandlerItemStack(stack, Fluids.LAVA) },
                 ModItems.INFINITE_RUBY_BUCKET
+            )
+        }
+
+        @SubscribeEvent
+        private fun registerPayloads(event: RegisterPayloadHandlersEvent) {
+            val registrar = event.registrar("1")
+
+            registrar.playToClient(
+                BlockBreakPayload.TYPE,
+                BlockBreakPayload.STEAM_CODEC,
+                ClientPayloadHandler::handle
+            )
+
+            registrar.playToClient(
+                ChangeDimensionPayload.TYPE,
+                ChangeDimensionPayload.STREAM_CODEC,
+                ClientPayloadHandler::handle
             )
         }
     }

@@ -17,7 +17,7 @@
   "crystal_odyssey.configuration.ElDoradoStaff.Range": "탐지 범위",
   "crystal_odyssey.configuration.ElDoradoStaff.Range.tooltip": "엘도라도 지팡이 광물 탐지 범위입니다. 만약 이 값이 10이라면, 플레이어 주위로 10칸, 즉 21 x 21 x 21 범위의 광물을 탐지합니다.",
   "crystal_odyssey.configuration.ElDoradoStaff.RetainTick": "지속 시간 (틱 단위)",
-  "crystal_odyssey.configuration.ElDoradoStaff.RetainTick.tooltip": "광물이 감지됐을 때, 테두리가 유지되는 시간입니다. 만약, 지속 시간이 끝나기 전에 광물을 다시 탐지하면 이전에 탐지된 테두리는 사라집니다.",
+  "crystal_odyssey.configuration.ElDoradoStaff.RetainTick.tooltip": "광물이 감지됐을 때, 블록 테두리가 유지되는 시간입니다. 만약, 지속 시간이 끝나기 전에 광물을 다시 탐지하면 이전에 탐지된 블록의 테두리는 사라집니다.",
   "crystal_odyssey.configuration.ElDoradoStaff.button": "수정",
   "crystal_odyssey.configuration.ElDoradoStaff.tooltip": "엘도라도 지팡이 스탯 수정",
   "crystal_odyssey.configuration.section.crystal.odyssey.server.toml": "서버 설정 수정하기",

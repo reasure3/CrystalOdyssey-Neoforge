@@ -15,7 +15,7 @@
           "translate": "item.crystal_odyssey.el_dorado_staff_active.emerald"
         },
         "blocks": "#crystal_odyssey:el_dorado/emerald",
-        "border_color": "#7F005300"
+        "border_color": "#7D005300"
       }
     },
     "id": "crystal_odyssey:el_dorado_staff_active"

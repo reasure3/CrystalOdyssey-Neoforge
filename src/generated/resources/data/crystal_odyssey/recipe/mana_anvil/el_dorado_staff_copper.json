@@ -15,7 +15,7 @@
           "translate": "item.crystal_odyssey.el_dorado_staff_active.copper"
         },
         "blocks": "#crystal_odyssey:el_dorado/copper",
-        "border_color": "#7F9C4529"
+        "border_color": "#7D9C4529"
       }
     },
     "id": "crystal_odyssey:el_dorado_staff_active"

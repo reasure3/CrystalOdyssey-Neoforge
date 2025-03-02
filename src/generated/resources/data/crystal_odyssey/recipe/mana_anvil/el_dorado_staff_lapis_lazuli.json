@@ -15,7 +15,7 @@
           "translate": "item.crystal_odyssey.el_dorado_staff_active.lapis_lazuli"
         },
         "blocks": "#crystal_odyssey:el_dorado/lapis_lazuli",
-        "border_color": "#7F1A3D8F"
+        "border_color": "#7D1A3D8F"
       }
     },
     "id": "crystal_odyssey:el_dorado_staff_active"

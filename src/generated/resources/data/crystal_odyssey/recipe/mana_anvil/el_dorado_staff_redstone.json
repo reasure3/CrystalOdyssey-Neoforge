@@ -15,7 +15,7 @@
           "translate": "item.crystal_odyssey.el_dorado_staff_active.redstone"
         },
         "blocks": "#crystal_odyssey:el_dorado/redstone",
-        "border_color": "#7F5C0700"
+        "border_color": "#7D5C0700"
       }
     },
     "id": "crystal_odyssey:el_dorado_staff_active"

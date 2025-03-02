@@ -15,7 +15,7 @@
           "translate": "item.crystal_odyssey.el_dorado_staff_active.coal"
         },
         "blocks": "#crystal_odyssey:el_dorado/coal",
-        "border_color": "#FF1C1C1E"
+        "border_color": "#BE1C1C1E"
       }
     },
     "id": "crystal_odyssey:el_dorado_staff_active"

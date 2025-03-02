@@ -15,6 +15,8 @@ import com.reasure.crystal_odyssey.network.ChangeDimensionPayload
 import com.reasure.crystal_odyssey.particle.ModParticleTypes
 import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
+import com.reasure.crystal_odyssey.registry.ElDoradoTarget
+import com.reasure.crystal_odyssey.registry.ModRegistries
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.material.Fluids
 import net.neoforged.bus.api.SubscribeEvent
@@ -28,6 +30,7 @@ import net.neoforged.neoforge.capabilities.Capabilities
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent
 import net.neoforged.neoforge.fluids.FluidType
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent
+import net.neoforged.neoforge.registries.DataPackRegistryEvent
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
@@ -65,6 +68,14 @@ class CrystalOdyssey(container: ModContainer) {
             if (ModList.get().isLoaded("curios")) {
                 CuriosInitializer.init()
             }
+        }
+
+        @SubscribeEvent
+        private fun registerRegistries(event: DataPackRegistryEvent.NewRegistry) {
+            event.dataPackRegistry(
+                ModRegistries.EL_DORADO_TARGET_REGISTRY_KEY,
+                ElDoradoTarget.CODEC, ElDoradoTarget.CODEC
+            )
         }
 
         @SubscribeEvent

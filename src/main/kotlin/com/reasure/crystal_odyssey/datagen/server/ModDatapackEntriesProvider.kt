@@ -1,9 +1,11 @@
 package com.reasure.crystal_odyssey.datagen.server
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
+import com.reasure.crystal_odyssey.datagen.util.el_dorado_target.DefaultElDoradoTargets
 import com.reasure.crystal_odyssey.datagen.util.worldgen.ore.ModOreBiomeModifiers
 import com.reasure.crystal_odyssey.datagen.util.worldgen.ore.ModOreConfigs
 import com.reasure.crystal_odyssey.datagen.util.worldgen.ore.ModOrePlacements
+import com.reasure.crystal_odyssey.registry.ModRegistries
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.core.registries.Registries
@@ -20,5 +22,6 @@ class ModDatapackEntriesProvider(output: PackOutput, registries: CompletableFutu
             .add(Registries.CONFIGURED_FEATURE, ModOreConfigs::bootstrap)
             .add(Registries.PLACED_FEATURE, ModOrePlacements::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModOreBiomeModifiers::bootstrap)
+            .add(ModRegistries.EL_DORADO_TARGET_REGISTRY_KEY, DefaultElDoradoTargets::bootstrap)
     }
 }

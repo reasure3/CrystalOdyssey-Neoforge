@@ -1,0 +1,13 @@
+{
+  "find_blocks": {
+    "block_group_name": {
+      "translate": "item.crystal_odyssey.el_dorado_staff_active.quartz"
+    },
+    "blocks": "#crystal_odyssey:el_dorado/quartz",
+    "border_color": "#7DB3A091"
+  },
+  "ingredient": {
+    "tag": "c:gems/quartz"
+  },
+  "priority": 2
+}

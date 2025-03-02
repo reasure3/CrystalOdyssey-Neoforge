@@ -1,0 +1,13 @@
+{
+  "find_blocks": {
+    "block_group_name": {
+      "translate": "item.crystal_odyssey.el_dorado_staff_active.lapis_lazuli"
+    },
+    "blocks": "#crystal_odyssey:el_dorado/lapis_lazuli",
+    "border_color": "#7D1A3D8F"
+  },
+  "ingredient": {
+    "tag": "c:gems/lapis"
+  },
+  "priority": 4
+}

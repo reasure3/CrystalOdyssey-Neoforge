@@ -3,7 +3,8 @@ package com.reasure.crystal_odyssey.item
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
-import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
+import com.reasure.crystal_odyssey.registry.ElDoradoTarget
+import com.reasure.crystal_odyssey.registry.ModRegistries
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -24,7 +25,7 @@ object ModCreativeModTabs {
         CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.${CrystalOdyssey.ID}"))
             .icon { ItemStack(ModItems.GLOWSTONE_GEM) }
-            .displayItems { _, output ->
+            .displayItems { parameters, output ->
                 with(output) {
                     accept(ModItems.ENCHANTED_DIAMOND)
                     accept(ModItems.ENCHANTED_EMERALD)
@@ -50,7 +51,7 @@ object ModCreativeModTabs {
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModItems.LIGHT_STAFF)
                     accept(ModItems.EL_DORADO_STAFF)
-                    acceptAll(makeAllElDoradoStaff())
+                    acceptAll(makeAllElDoradoStaff(parameters))
                     accept(ModItems.SAPPHIRE_BUCKET)
                     accept(ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
                         set(
@@ -72,11 +73,16 @@ object ModCreativeModTabs {
             .build()
     }
 
-    private fun makeAllElDoradoStaff(): List<ItemStack> {
-        return FindBlocks.makeDefaultList().map {
-            ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
-                set(ModDataComponents.FIND_BLOCKS, it)
-            }
-        }
+    private fun makeAllElDoradoStaff(parameters: CreativeModeTab.ItemDisplayParameters): List<ItemStack> {
+        return parameters.holders.lookupOrThrow(ModRegistries.EL_DORADO_TARGET_REGISTRY_KEY)
+            .filterElements(ElDoradoTarget::isNotEmpty)
+            .listElements()
+            .map { it.value() }
+            .sorted(compareBy<ElDoradoTarget> { it.priority })
+            .map {
+                ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
+                    set(ModDataComponents.FIND_BLOCKS, it.findBlocks)
+                }
+            }.toList()
     }
 }

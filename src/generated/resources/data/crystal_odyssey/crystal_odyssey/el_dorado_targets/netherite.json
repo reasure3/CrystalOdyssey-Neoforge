@@ -1,0 +1,13 @@
+{
+  "find_blocks": {
+    "block_group_name": {
+      "translate": "item.crystal_odyssey.el_dorado_staff_active.netherite"
+    },
+    "blocks": "#crystal_odyssey:el_dorado/netherite",
+    "border_color": "#BE271C1D"
+  },
+  "ingredient": {
+    "tag": "c:ingots/netherite"
+  },
+  "priority": 11
+}

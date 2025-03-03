@@ -99,7 +99,7 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
         for (i in 0..2) {
             val recipeIndex = page * 3 + i
             if (recipeIndex >= recipeCount) break
-            val item = menu.recipeList[recipeIndex].value.result
+            val item = menu.previewResult(recipeIndex)
             val texture = if (recipeIndex == menu.currentRecipeIndex) recipeSlotSelectedTexture else recipeSlotTexture
             val x = leftPos + 53 + i * 22
             guiGraphics.blit(texture, x, topPos + 34, 0f, 0f, 18, 18, 18, 18)
@@ -113,7 +113,7 @@ class ManaAnvilScreen(menu: ManaAnvilMenu, playerInventory: Inventory, title: Co
                 val recipeIndex = page * 3 + i
                 if (recipeIndex >= recipeCount) break
                 if (isMouseInRecipeButton(mouseX, mouseY, i)) {
-                    val item = menu.recipeList[recipeIndex].value.result
+                    val item = menu.previewResult(recipeIndex)
                     guiGraphics.renderTooltip(font, item, mouseX, mouseY)
                     return
                 }

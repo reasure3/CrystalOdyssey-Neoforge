@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/iron",
     "border_color": "#7DD8D8D8"
   },
-  "ingredient": {
-    "tag": "c:ingots/iron"
-  },
   "priority": 7
 }

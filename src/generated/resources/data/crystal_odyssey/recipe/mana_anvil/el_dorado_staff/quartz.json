@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:quartz",
+  "ingredient_gem": {
+    "tag": "c:gems/quartz"
+  },
+  "ingredient_material": {
+    "item": "crystal_odyssey:el_dorado_staff"
+  }
+}

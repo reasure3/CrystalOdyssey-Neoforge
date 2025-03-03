@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:coal",
+  "ingredient_gem": {
+    "tag": "minecraft:coals"
+  },
+  "ingredient_material": {
+    "item": "crystal_odyssey:el_dorado_staff"
+  }
+}

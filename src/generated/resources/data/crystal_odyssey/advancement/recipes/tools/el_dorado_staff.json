@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glowstone_gem": {
+    "has_glowstone_gem_core": {
       "conditions": {
         "items": [
           {
-            "items": "crystal_odyssey:glowstone_gem"
+            "items": "crystal_odyssey:glowstone_gem_core"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glowstone_gem",
+      "has_glowstone_gem_core",
       "has_rods_blaze"
     ]
   ],

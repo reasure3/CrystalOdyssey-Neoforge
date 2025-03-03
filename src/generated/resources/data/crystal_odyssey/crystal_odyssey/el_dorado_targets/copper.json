@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/copper",
     "border_color": "#7D9C4529"
   },
-  "ingredient": {
-    "tag": "c:ingots/copper"
-  },
   "priority": 6
 }

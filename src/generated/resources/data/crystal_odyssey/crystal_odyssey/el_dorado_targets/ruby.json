@@ -10,8 +10,5 @@
     ],
     "border_color": "#7DBB4052"
   },
-  "ingredient": {
-    "item": "crystal_odyssey:ruby"
-  },
-  "priority": 0
+  "priority": 1
 }

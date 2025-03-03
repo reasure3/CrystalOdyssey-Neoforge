@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/quartz",
     "border_color": "#7DB3A091"
   },
-  "ingredient": {
-    "tag": "c:gems/quartz"
-  },
   "priority": 2
 }

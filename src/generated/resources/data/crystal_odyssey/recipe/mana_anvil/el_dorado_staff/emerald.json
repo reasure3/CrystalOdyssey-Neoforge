@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:emerald",
+  "ingredient_gem": {
+    "tag": "c:gems/emerald"
+  },
+  "ingredient_material": {
+    "item": "crystal_odyssey:el_dorado_staff"
+  }
+}

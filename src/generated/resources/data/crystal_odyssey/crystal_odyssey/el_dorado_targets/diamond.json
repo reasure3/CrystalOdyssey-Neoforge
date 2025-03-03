@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/diamond",
     "border_color": "#7D11727A"
   },
-  "ingredient": {
-    "tag": "c:gems/diamond"
-  },
   "priority": 10
 }

@@ -108,7 +108,7 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
 
     private fun currentRecipes(): List<RecipeHolder<ManaAnvilRecipe>> {
         return level.recipeManager.getRecipesFor(ModRecipeTypes.MANA_ANVIL_RECIPE_TYPE, currentRecipeInput(), level)
-            .sortedByDescending { it.value.priority }
+            .sortedByDescending { it.value.getPriority(level.registryAccess()) }
     }
 
     override fun quickMoveStack(player: Player, index: Int): ItemStack {
@@ -133,11 +133,13 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
             // source slot is inventory or hotbar
             else -> {
                 val recipes = level.recipeManager.getAllRecipesFor(ModRecipeTypes.MANA_ANVIL_RECIPE_TYPE)
-                if (recipes.any { it.value.ingredientGem.test(copyOfSourceStack) }) {
+                if (recipes.any { it.value.getGem().test(copyOfSourceStack) }) {
                     if (!moveItemStackTo(sourceStack, INPUT_GEM_SLOT_ID, INPUT_GEM_SLOT_ID + 1, false)
                         && !moveInInventory(index, sourceStack)
                     ) return ItemStack.EMPTY
-                } else if (recipes.any { it.value.ingredientMaterial.test(copyOfSourceStack) }) {
+                } else if (recipes.any {
+                        it.value.getMaterial().test(copyOfSourceStack)
+                    }) {
                     if (!moveItemStackTo(sourceStack, INPUT_MATERIAL_SLOT_ID, INPUT_MATERIAL_SLOT_ID + 1, false)
                         && !moveInInventory(index, sourceStack)
                     ) return ItemStack.EMPTY
@@ -193,6 +195,10 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
 
     fun getInputMaterial(): ItemStack {
         return slots[INPUT_MATERIAL_SLOT_ID].item
+    }
+
+    fun previewResult(index: Int): ItemStack {
+        return recipeList[index].value.getResultItem(level.registryAccess())
     }
 
     override fun removed(player: Player) {

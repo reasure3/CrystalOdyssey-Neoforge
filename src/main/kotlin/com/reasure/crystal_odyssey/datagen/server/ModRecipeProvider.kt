@@ -3,9 +3,9 @@ package com.reasure.crystal_odyssey.datagen.server
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.server.base.ModBaseRecipeProvider
+import com.reasure.crystal_odyssey.datagen.util.el_dorado_target.DefaultElDoradoTargets
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
-import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.RecipeCategory
@@ -13,10 +13,9 @@ import net.minecraft.data.recipes.RecipeOutput
 import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.data.recipes.ShapelessRecipeBuilder
 import net.minecraft.tags.ItemTags
-import net.minecraft.world.item.EnchantedBookItem
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
-import net.minecraft.world.item.enchantment.EnchantmentInstance
+import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.item.enchantment.Enchantments
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.material.Fluids
@@ -170,7 +169,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .save(recipeOutput)
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.EL_DORADO_STAFF)
-            .unlockedBy('X', ModItems.GLOWSTONE_GEM)
+            .unlockedBy('X', ModItems.GLOWSTONE_GEM_CORE)
             .unlockedBy('#', Tags.Items.RODS_BLAZE)
             .pattern("  X")
             .pattern(" # ")
@@ -245,331 +244,272 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             id = CrystalOdyssey.modLoc("infinite_ruby_bucket")
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.EFFICIENCY), 5)
-            ),
-            priority = 3,
-            id = CrystalOdyssey.modLoc("enchanted_book_efficiency")
+            enchantmentKey = Enchantments.EFFICIENCY,
+            priority = 3
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.PROTECTION), 4)
-            ),
-            priority = 2,
-            id = CrystalOdyssey.modLoc("enchanted_book_protection")
+            enchantmentKey = Enchantments.PROTECTION,
+            priority = 2
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.UNBREAKING), 3)
-            ),
-            priority = 2,
-            id = CrystalOdyssey.modLoc("enchanted_book_unbreaking")
+            enchantmentKey = Enchantments.UNBREAKING,
+            priority = 2
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FEATHER_FALLING), 4)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_feather_falling")
+            enchantmentKey = Enchantments.FEATHER_FALLING,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.PROJECTILE_PROTECTION), 4)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_projectile_protection")
+            enchantmentKey = Enchantments.PROJECTILE_PROTECTION,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_DIAMOND,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.KNOCKBACK), 2)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_knockback")
+            enchantmentKey = Enchantments.KNOCKBACK,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_EMERALD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FORTUNE), 3)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_fortune")
+            enchantmentKey = Enchantments.FORTUNE,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_EMERALD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SILK_TOUCH), 1)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_silk_touch")
+            enchantmentKey = Enchantments.SILK_TOUCH,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_EMERALD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.LOOTING), 3)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_looting")
+            enchantmentKey = Enchantments.LOOTING,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SHARPNESS), 5)
-            ),
-            priority = 4,
-            id = CrystalOdyssey.modLoc("enchanted_book_sharpness")
+            enchantmentKey = Enchantments.SHARPNESS,
+            priority = 4
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SMITE), 5)
-            ),
-            priority = 3,
-            id = CrystalOdyssey.modLoc("enchanted_book_smite")
+            enchantmentKey = Enchantments.SMITE,
+            priority = 3
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.SWEEPING_EDGE), 3)
-            ),
-            priority = 2,
-            id = CrystalOdyssey.modLoc("enchanted_book_sweeping_edge")
+            enchantmentKey = Enchantments.SWEEPING_EDGE,
+            priority = 2
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.IMPALING), 5)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_impaling")
+            enchantmentKey = Enchantments.IMPALING,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.BANE_OF_ARTHROPODS), 5)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_bane_of_arthropods")
+            enchantmentKey = Enchantments.BANE_OF_ARTHROPODS,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_AMETHYST_SHARD,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.THORNS), 3)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_thorns")
+            enchantmentKey = Enchantments.THORNS,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.AQUA_AFFINITY), 1)
-            ),
-            priority = 3,
-            id = CrystalOdyssey.modLoc("enchanted_book_aqua_affinity")
+            enchantmentKey = Enchantments.AQUA_AFFINITY,
+            priority = 3
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.RESPIRATION), 3)
-            ),
-            priority = 3,
-            id = CrystalOdyssey.modLoc("enchanted_book_respiration")
+            enchantmentKey = Enchantments.RESPIRATION,
+            priority = 3
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.DEPTH_STRIDER), 3)
-            ),
-            priority = 3,
-            id = CrystalOdyssey.modLoc("enchanted_book_depth_strider")
+            enchantmentKey = Enchantments.DEPTH_STRIDER,
+            priority = 3
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FROST_WALKER), 2)
-            ),
-            priority = 2,
-            id = CrystalOdyssey.modLoc("enchanted_book_frost_walker")
+            enchantmentKey = Enchantments.FROST_WALKER,
+            priority = 2
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.CHANNELING), 1)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_channeling")
+            enchantmentKey = Enchantments.CHANNELING,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.LOYALTY), 3)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_loyalty")
+            enchantmentKey = Enchantments.LOYALTY,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.RIPTIDE), 3)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_book_riptide")
+            enchantmentKey = Enchantments.RIPTIDE,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.LUCK_OF_THE_SEA), 3)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_luck_of_sea")
+            enchantmentKey = Enchantments.LUCK_OF_THE_SEA,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_SAPPHIRE,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.LURE), 3)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_book_lure")
+            enchantmentKey = Enchantments.LURE,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_RUBY,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FIRE_ASPECT), 2)
-            ),
-            priority = 2,
-            id = CrystalOdyssey.modLoc("enchanted_fire_aspect")
+            enchantmentKey = Enchantments.FIRE_ASPECT,
+            priority = 2
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_RUBY,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FLAME), 1)
-            ),
-            priority = 1,
-            id = CrystalOdyssey.modLoc("enchanted_flame")
+            enchantmentKey = Enchantments.FLAME,
+            priority = 1
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_RUBY,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.BLAST_PROTECTION), 4)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_blast_protection")
+            enchantmentKey = Enchantments.BLAST_PROTECTION,
+            priority = 0
         )
 
-        manaAnvil(
+        enchantedBook(
             recipeOutput = recipeOutput,
             inputGem = ModItems.ENCHANTED_RUBY,
-            inputMaterial = Items.BOOK,
-            output = EnchantedBookItem.createForEnchantment(
-                EnchantmentInstance(registries.get().holderOrThrow(Enchantments.FIRE_PROTECTION), 4)
-            ),
-            priority = 0,
-            id = CrystalOdyssey.modLoc("enchanted_fire_protection")
+            enchantmentKey = Enchantments.FIRE_PROTECTION,
+            priority = 0
         )
 
-        FindBlocks.makeDefaultList().zip(
-            listOf(
-                "netherite", "diamond", "emerald", "gold", "iron", "copper",
-                "coal", "lapis_lazuli", "redstone", "quartz", "sapphire", "ruby"
-            )
-        ).reversed().forEachIndexed { index, pair ->
-            manaAnvil(
-                recipeOutput = recipeOutput,
-                inputGem = ModItems.GLOWSTONE_GEM_CORE,
-                inputMaterial = ModItems.EL_DORADO_STAFF,
-                output = ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
-                    set(ModDataComponents.FIND_BLOCKS, pair.first)
-                },
-                priority = index,
-                maintainData = true,
-                id = CrystalOdyssey.modLoc("el_dorado_staff_${pair.second}")
-            )
-        }
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(ModItems.SAPPHIRE),
+            targetKey = DefaultElDoradoTargets.SAPPHIRE_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(ModItems.RUBY),
+            targetKey = DefaultElDoradoTargets.RUBY_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_QUARTZ),
+            targetKey = DefaultElDoradoTargets.QUARTZ_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.DUSTS_REDSTONE),
+            targetKey = DefaultElDoradoTargets.REDSTONE_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_LAPIS),
+            targetKey = DefaultElDoradoTargets.LAPIS_LAZULI_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(ItemTags.COALS),
+            targetKey = DefaultElDoradoTargets.COAL_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.INGOTS_COPPER),
+            targetKey = DefaultElDoradoTargets.COPPER_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.INGOTS_IRON),
+            targetKey = DefaultElDoradoTargets.IRON_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.INGOTS_GOLD),
+            targetKey = DefaultElDoradoTargets.GOLD_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_EMERALD),
+            targetKey = DefaultElDoradoTargets.EMERALD_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_DIAMOND),
+            targetKey = DefaultElDoradoTargets.DIAMOND_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.INGOTS_NETHERITE),
+            targetKey = DefaultElDoradoTargets.NETHERITE_KEY
+        )
     }
 }

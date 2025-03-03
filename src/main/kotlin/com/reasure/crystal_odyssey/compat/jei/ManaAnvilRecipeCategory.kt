@@ -12,10 +12,12 @@ import mezz.jei.api.helpers.IGuiHelper
 import mezz.jei.api.recipe.IFocusGroup
 import mezz.jei.api.recipe.RecipeType
 import mezz.jei.api.recipe.category.IRecipeCategory
+import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.Items
 
 
 class ManaAnvilRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaAnvilRecipe> {
@@ -33,9 +35,12 @@ class ManaAnvilRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaAnvilRec
     override fun getIcon(): IDrawable = icon
 
     override fun setRecipe(builder: IRecipeLayoutBuilder, recipe: ManaAnvilRecipe, focuses: IFocusGroup) {
-        builder.addInputSlot(1, 1).addIngredients(recipe.ingredientGem)
-        builder.addInputSlot(1, 36).addIngredients(recipe.ingredientMaterial)
-        builder.addOutputSlot(33, 18).addItemStack(recipe.result)
+        val registries = Minecraft.getInstance().connection?.registryAccess()
+        val output = registries?.let { recipe.getResultItem(registries) } ?: ItemStack(Items.BARRIER)
+
+        builder.addInputSlot(1, 1).addIngredients(recipe.getGem())
+        builder.addInputSlot(1, 36).addIngredients(recipe.getMaterial())
+        builder.addOutputSlot(33, 18).addItemStack(output)
     }
 
     override fun getWidth(): Int = 54
@@ -53,7 +58,6 @@ class ManaAnvilRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaAnvilRec
 
     companion object {
         private val UID: ResourceLocation = ResourceLocation.fromNamespaceAndPath(CrystalOdyssey.ID, "mana_anvil")
-        val MANA_ANVIL_RECIPE_TYPE: RecipeType<ManaAnvilRecipe> =
-            RecipeType(UID, ManaAnvilRecipe::class.java)
+        val MANA_ANVIL_RECIPE_TYPE: RecipeType<ManaAnvilRecipe> = RecipeType(UID, ManaAnvilRecipe::class.java)
     }
 }

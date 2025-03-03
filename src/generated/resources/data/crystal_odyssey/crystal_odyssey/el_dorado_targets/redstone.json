@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/redstone",
     "border_color": "#7D5C0700"
   },
-  "ingredient": {
-    "tag": "c:dusts/redstone"
-  },
   "priority": 3
 }

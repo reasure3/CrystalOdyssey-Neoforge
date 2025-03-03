@@ -2,10 +2,7 @@ package com.reasure.crystal_odyssey.item.components.custom
 
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
-import com.reasure.crystal_odyssey.CrystalOdyssey
-import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.util.CustomColor
-import com.reasure.crystal_odyssey.util.ModTags
 import net.minecraft.core.HolderSet
 import net.minecraft.core.RegistryCodecs
 import net.minecraft.core.registries.BuiltInRegistries
@@ -60,70 +57,5 @@ data class FindBlocks(
             Component.translatable(blockGroupNameTransKey),
             CustomColor.of(borderColor)
         )
-
-        fun makeDefaultList(): List<FindBlocks> {
-            return listOf(
-                of(
-                    ModTags.Blocks.EL_DORADO_NETHERITE,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.netherite",
-                    0xBE271C1D
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_DIAMOND,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.diamond",
-                    0x7D11727A
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_EMERALD,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.emerald",
-                    0x7D005300
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_GOLD,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.gold",
-                    0x7DB26411
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_IRON,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.iron",
-                    0x7DD8D8D8
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_COPPER,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.copper",
-                    0x7D9C4529
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_COAL,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.coal",
-                    0xBE1C1C1E
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_LAPIS_LAZULI,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.lapis_lazuli",
-                    0x7D1A3D8F
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_REDSTONE,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.redstone",
-                    0x7D5C0700
-                ),
-                of(
-                    ModTags.Blocks.EL_DORADO_QUARTZ,
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.quartz",
-                    0x7DB3A091
-                ),
-                of(
-                    listOf(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModBlocks.SAPPHIRE_BLOCK),
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.sapphire",
-                    0x7D5793E1
-                ),
-                of(
-                    listOf(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, ModBlocks.RUBY_BLOCK),
-                    "item.${CrystalOdyssey.ID}.el_dorado_staff_active.ruby",
-                    0x7DBB4052
-                )
-            )
-        }
     }
 }

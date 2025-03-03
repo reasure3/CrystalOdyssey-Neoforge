@@ -10,8 +10,5 @@
     ],
     "border_color": "#7D5793E1"
   },
-  "ingredient": {
-    "item": "crystal_odyssey:sapphire"
-  },
-  "priority": 1
+  "priority": 0
 }

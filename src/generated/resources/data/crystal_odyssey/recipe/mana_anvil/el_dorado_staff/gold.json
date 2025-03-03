@@ -1,0 +1,10 @@
+{
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:gold",
+  "ingredient_gem": {
+    "tag": "c:ingots/gold"
+  },
+  "ingredient_material": {
+    "item": "crystal_odyssey:el_dorado_staff"
+  }
+}

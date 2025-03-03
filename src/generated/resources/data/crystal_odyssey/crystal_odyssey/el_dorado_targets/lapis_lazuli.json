@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/lapis_lazuli",
     "border_color": "#7D1A3D8F"
   },
-  "ingredient": {
-    "tag": "c:gems/lapis"
-  },
   "priority": 4
 }

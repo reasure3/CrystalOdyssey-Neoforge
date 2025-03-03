@@ -6,8 +6,5 @@
     "blocks": "#crystal_odyssey:el_dorado/gold",
     "border_color": "#7DB26411"
   },
-  "ingredient": {
-    "tag": "c:ingots/gold"
-  },
   "priority": 8
 }

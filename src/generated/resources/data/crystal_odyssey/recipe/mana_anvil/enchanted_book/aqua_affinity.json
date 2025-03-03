@@ -1,0 +1,20 @@
+{
+  "type": "crystal_odyssey:simple_mana_anvil",
+  "ingredient_gem": {
+    "item": "crystal_odyssey:enchanted_sapphire"
+  },
+  "ingredient_material": {
+    "item": "minecraft:book"
+  },
+  "priority": 3,
+  "result": {
+    "components": {
+      "minecraft:stored_enchantments": {
+        "levels": {
+          "minecraft:aqua_affinity": 1
+        }
+      }
+    },
+    "id": "minecraft:enchanted_book"
+  }
+}

@@ -1,18 +1,26 @@
 package com.reasure.crystal_odyssey.datagen.server.base
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
-import com.reasure.crystal_odyssey.recipe.custom.ManaAnvilRecipe
+import com.reasure.crystal_odyssey.item.ModItems
+import com.reasure.crystal_odyssey.recipe.custom.ElDoradoRecipe
 import com.reasure.crystal_odyssey.recipe.custom.ManaInjectingRecipe
+import com.reasure.crystal_odyssey.recipe.custom.SimpleManaAnvilRecipe
+import com.reasure.crystal_odyssey.registry.ElDoradoTarget
 import net.minecraft.advancements.Criterion
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.*
+import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.TagKey
+import net.minecraft.world.item.EnchantedBookItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.Items
 import net.minecraft.world.item.crafting.Ingredient
+import net.minecraft.world.item.enchantment.Enchantment
+import net.minecraft.world.item.enchantment.EnchantmentInstance
 import net.minecraft.world.level.ItemLike
 import java.util.concurrent.CompletableFuture
 
@@ -122,6 +130,31 @@ abstract class ModBaseRecipeProvider(
         recipeOutput.accept(id.withPrefix("mana_injecting/"), recipe, null)
     }
 
+    fun enchantedBook(
+        recipeOutput: RecipeOutput,
+        inputGem: ItemLike,
+        enchantmentKey: ResourceKey<Enchantment>,
+        priority: Int,
+        id: ResourceLocation = CrystalOdyssey.modLoc(enchantmentKey.location().withPrefix("enchanted_book/").path),
+        enchantLevel: Int? = null,
+    ) {
+        val enchantment = registries.get().holderOrThrow(enchantmentKey)
+        val level = enchantLevel ?: enchantment.value().maxLevel
+        val enchantmentInstance = EnchantmentInstance(enchantment, level)
+        val enchantedBook = EnchantedBookItem.createForEnchantment(enchantmentInstance)
+        manaAnvil(recipeOutput, inputGem, Items.BOOK, enchantedBook, priority, false, id)
+    }
+
+    fun elDoradoStaff(
+        recipeOutput: RecipeOutput,
+        inputGem: Ingredient,
+        targetKey: ResourceKey<ElDoradoTarget>,
+        id: ResourceLocation = CrystalOdyssey.modLoc(targetKey.location().withPrefix("el_dorado_staff/").path)
+    ) {
+        val recipe = ElDoradoRecipe(inputGem, Ingredient.of(ModItems.EL_DORADO_STAFF), targetKey)
+        recipeOutput.accept(id.withPrefix("mana_anvil/"), recipe, null)
+    }
+
     fun manaAnvil(
         recipeOutput: RecipeOutput,
         inputGem: ItemLike,
@@ -131,7 +164,8 @@ abstract class ModBaseRecipeProvider(
         maintainData: Boolean = false,
         id: ResourceLocation = BuiltInRegistries.ITEM.getKey(output.item)
     ) {
-        val recipe = ManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), output, priority, maintainData)
+        val recipe =
+            SimpleManaAnvilRecipe(Ingredient.of(inputGem), Ingredient.of(inputMaterial), output, priority, maintainData)
         recipeOutput.accept(id.withPrefix("mana_anvil/"), recipe, null)
     }
 

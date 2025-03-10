@@ -7,6 +7,7 @@ import net.minecraft.core.Direction
 import net.minecraft.util.RandomSource
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelAccessor
@@ -36,6 +37,13 @@ class LightOrbBlock(properties: Properties) : Block(properties), SimpleWaterlogg
 
     override fun getShape(state: BlockState, level: BlockGetter, pos: BlockPos, context: CollisionContext): VoxelShape =
         SHAPE
+
+    override fun getStateForPlacement(context: BlockPlaceContext): BlockState {
+        return defaultBlockState().setValue(
+            WATERLOGGED,
+            context.level.getFluidState(context.clickedPos).`is`(Fluids.WATER)
+        )
+    }
 
     override fun propagatesSkylightDown(state: BlockState, level: BlockGetter, pos: BlockPos): Boolean {
         return state.fluidState.isEmpty

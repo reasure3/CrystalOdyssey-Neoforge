@@ -9,6 +9,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.item.context.UseOnContext
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.gameevent.GameEvent
 
 class LightStaffItem(val block: Block, properties: Properties) : Item(properties) {
@@ -25,8 +26,9 @@ class LightStaffItem(val block: Block, properties: Properties) : Item(properties
         val placeContext = BlockPlaceContext(context)
         val level = placeContext.level
         val pos = placeContext.clickedPos
+        val oldState = level.getBlockState(pos)
 
-        if (!level.getBlockState(pos).isAir) return InteractionResult.FAIL
+        if (!oldState.isAir && !oldState.`is`(Blocks.WATER)) return InteractionResult.FAIL
         val state = block.getStateForPlacement(placeContext) ?: return InteractionResult.FAIL
 
         val player = placeContext.player

@@ -10,18 +10,18 @@ import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.resources.ResourceKey
 
 object DefaultElDoradoTargets {
-   val SAPPHIRE_KEY: ResourceKey<ElDoradoTarget> = createKey("sapphire")
-   val RUBY_KEY: ResourceKey<ElDoradoTarget> = createKey("ruby")
-   val QUARTZ_KEY: ResourceKey<ElDoradoTarget> = createKey("quartz")
-   val REDSTONE_KEY: ResourceKey<ElDoradoTarget> = createKey("redstone")
-   val LAPIS_LAZULI_KEY: ResourceKey<ElDoradoTarget> = createKey("lapis_lazuli")
-   val COAL_KEY: ResourceKey<ElDoradoTarget> = createKey("coal")
-   val COPPER_KEY: ResourceKey<ElDoradoTarget> = createKey("copper")
-   val IRON_KEY: ResourceKey<ElDoradoTarget> = createKey("iron")
-   val GOLD_KEY: ResourceKey<ElDoradoTarget> = createKey("gold")
-   val EMERALD_KEY: ResourceKey<ElDoradoTarget> = createKey("emerald")
-   val DIAMOND_KEY: ResourceKey<ElDoradoTarget> = createKey("diamond")
-   val NETHERITE_KEY: ResourceKey<ElDoradoTarget> = createKey("netherite")
+    val SAPPHIRE_KEY: ResourceKey<ElDoradoTarget> = createKey("sapphire")
+    val RUBY_KEY: ResourceKey<ElDoradoTarget> = createKey("ruby")
+    val QUARTZ_KEY: ResourceKey<ElDoradoTarget> = createKey("quartz")
+    val REDSTONE_KEY: ResourceKey<ElDoradoTarget> = createKey("redstone")
+    val LAPIS_LAZULI_KEY: ResourceKey<ElDoradoTarget> = createKey("lapis_lazuli")
+    val COAL_KEY: ResourceKey<ElDoradoTarget> = createKey("coal")
+    val COPPER_KEY: ResourceKey<ElDoradoTarget> = createKey("copper")
+    val IRON_KEY: ResourceKey<ElDoradoTarget> = createKey("iron")
+    val GOLD_KEY: ResourceKey<ElDoradoTarget> = createKey("gold")
+    val EMERALD_KEY: ResourceKey<ElDoradoTarget> = createKey("emerald")
+    val DIAMOND_KEY: ResourceKey<ElDoradoTarget> = createKey("diamond")
+    val NETHERITE_KEY: ResourceKey<ElDoradoTarget> = createKey("netherite")
 
     private val TARGETS: Map<ResourceKey<ElDoradoTarget>, ElDoradoTarget> = mapOf(
         SAPPHIRE_KEY to ElDoradoTarget(

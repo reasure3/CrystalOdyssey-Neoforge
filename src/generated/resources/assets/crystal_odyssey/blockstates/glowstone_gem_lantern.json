@@ -1,10 +1,25 @@
 {
   "variants": {
-    "hanging=false": {
+    "facing=down": {
       "model": "crystal_odyssey:block/glowstone_gem_lantern"
     },
-    "hanging=true": {
+    "facing=east": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern_wall",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern_wall"
+    },
+    "facing=south": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern_wall",
+      "y": 180
+    },
+    "facing=up": {
       "model": "crystal_odyssey:block/glowstone_gem_lantern_hanging"
+    },
+    "facing=west": {
+      "model": "crystal_odyssey:block/glowstone_gem_lantern_wall",
+      "y": 270
     }
   }
 }

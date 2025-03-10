@@ -44,9 +44,9 @@ class GlowstoneGemLanternCuriosRenderer : ICurioRenderer {
         val isCrouching = slotContext.entity.isCrouching
         val hasLegArmor = !slotContext.entity.getItemBySlot(EquipmentSlot.LEGS).isEmpty
 
-        val xOffset = if (isCrouching) 0.7f else 0f
+        val xOffset = if (isCrouching) 0.7f else 0.0f
         val yOffset = if (isCrouching) -1.9f else -1.6f
-        val zOffset = if (hasLegArmor) -0.75f else -0.7f
+        val zOffset = if (hasLegArmor) -0.60f else -0.55f
 
         matrixStack.translate(xOffset, yOffset, zOffset)
 

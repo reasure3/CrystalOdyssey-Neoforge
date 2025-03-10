@@ -3,7 +3,6 @@ package com.reasure.crystal_odyssey.datagen.client
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.client.base.ModBaseBlockStateProvider
 import net.minecraft.data.PackOutput
-import net.minecraft.world.level.block.LanternBlock
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 
 class ModBlockStateProvider(output: PackOutput, exFileHelper: ExistingFileHelper) :
@@ -16,9 +15,12 @@ class ModBlockStateProvider(output: PackOutput, exFileHelper: ExistingFileHelper
         simpleBlockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE)
         simpleBlockWithItem(ModBlocks.SAPPHIRE_ORE)
         simpleBlockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
-        getVariantBuilder(ModBlocks.GLOWSTONE_GEM_LANTERN)
-            .partialState().with(LanternBlock.HANGING, false).setModel("glowstone_gem_lantern")
-            .partialState().with(LanternBlock.HANGING, true).setModel("glowstone_gem_lantern_hanging")
+        attachFaceBlock(
+            ModBlocks.GLOWSTONE_GEM_LANTERN,
+            "glowstone_gem_lantern",
+            "glowstone_gem_lantern_hanging",
+            "glowstone_gem_lantern_wall"
+        )
         simpleBlockStateWithItem(ModBlocks.MANA_INJECTOR)
         simpleBlockStateWithItem(ModBlocks.LIGHT_ORB_BLOCK)
         horizontalBlockWithExistingModel(ModBlocks.MANA_ANVIL)

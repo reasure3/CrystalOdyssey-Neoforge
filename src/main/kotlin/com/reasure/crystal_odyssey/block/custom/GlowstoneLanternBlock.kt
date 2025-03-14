@@ -66,6 +66,14 @@ class GlowstoneLanternBlock(properties: Properties) : Block(properties),
             return state
         }
 
+        for (direction in context.nearestLookingDirections) {
+            val lookDir = if (direction.axis == Direction.Axis.Y) direction.opposite else direction
+            val lookState = state.setValue(FACING, lookDir)
+            if (lookState.canSurvive(context.level, context.clickedPos)) {
+                return lookState
+            }
+        }
+
         return null
     }
 

@@ -30,9 +30,9 @@ data class ElDoradoRecipe(
         return getTarget(registries).priority
     }
 
-    override fun getGem(): Ingredient = ingredientGem
+    override fun getIngredientFirst(): Ingredient = ingredientGem
 
-    override fun getMaterial(): Ingredient = ingredientMaterial
+    override fun getIngredientSecond(): Ingredient = ingredientMaterial
 
     override fun assemble(input: TupleRecipeInput, registries: HolderLookup.Provider): ItemStack {
         val output = getResultItem(registries)
@@ -55,8 +55,9 @@ data class ElDoradoRecipe(
     object Serializer : RecipeSerializer<ElDoradoRecipe> {
         private val CODEC: MapCodec<ElDoradoRecipe> = RecordCodecBuilder.mapCodec { instance ->
             instance.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient_gem").forGetter(ElDoradoRecipe::ingredientGem),
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient_material").forGetter(ElDoradoRecipe::ingredientMaterial),
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(ElDoradoRecipe::ingredientGem),
+                Ingredient.CODEC_NONEMPTY.optionalFieldOf("staff", Ingredient.of(ModItems.EL_DORADO_STAFF))
+                    .forGetter(ElDoradoRecipe::ingredientMaterial),
                 ResourceKey.codec(ModRegistries.EL_DORADO_TARGET_REGISTRY_KEY).fieldOf("el_dorado_target")
                     .forGetter(ElDoradoRecipe::targetKey)
             ).apply(instance, ::ElDoradoRecipe)

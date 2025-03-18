@@ -35,15 +35,16 @@ class ModEnLangProvider(output: PackOutput) : ModBaseLangProvider(output, "en_us
 
     override fun addItemSubtypeTranslations() {
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "coal", "El Dorado Staff (Coal)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "copper", "El Dorado Staff (Copper)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "iron", "El Dorado Staff (Iron)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "copper", "El Dorado Staff (Copper)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "gold", "El Dorado Staff (Gold)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "diamond", "El Dorado Staff (Diamond)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "netherite", "El Dorado Staff (Netherite)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "lapis_lazuli", "El Dorado Staff (Lapis Lazuli)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "redstone", "El Dorado Staff (Redstone)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "quartz", "El Dorado Staff (Quartz)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "emerald", "El Dorado Staff (Emerald)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "lapis", "El Dorado Staff (Lapis Lazuli)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "diamond", "El Dorado Staff (Diamond)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "quartz", "El Dorado Staff (Quartz)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "netherite", "El Dorado Staff (Netherite)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "amethyst", "El Dorado Staff (Amethyst)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "sapphire", "El Dorado Staff (Sapphire)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "ruby", "El Dorado Staff (Ruby)")
     }

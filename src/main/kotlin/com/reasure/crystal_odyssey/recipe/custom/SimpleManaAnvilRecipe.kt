@@ -24,9 +24,9 @@ data class SimpleManaAnvilRecipe(
 ) : ManaAnvilRecipe {
     override fun getPriority(registries: HolderLookup.Provider): Int = priority
 
-    override fun getGem(): Ingredient = ingredientGem
+    override fun getIngredientFirst(): Ingredient = ingredientGem
 
-    override fun getMaterial(): Ingredient = ingredientMaterial
+    override fun getIngredientSecond(): Ingredient = ingredientMaterial
 
     override fun assemble(input: TupleRecipeInput, registries: HolderLookup.Provider): ItemStack {
         val output: ItemStack = result.copy()

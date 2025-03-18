@@ -38,8 +38,8 @@ class ManaAnvilRecipeCategory(helper: IGuiHelper) : IRecipeCategory<ManaAnvilRec
         val registries = Minecraft.getInstance().connection?.registryAccess()
         val output = registries?.let { recipe.getResultItem(registries) } ?: ItemStack(Items.BARRIER)
 
-        builder.addInputSlot(1, 1).addIngredients(recipe.getGem())
-        builder.addInputSlot(1, 36).addIngredients(recipe.getMaterial())
+        builder.addInputSlot(1, 1).addIngredients(recipe.getIngredientFirst())
+        builder.addInputSlot(1, 36).addIngredients(recipe.getIngredientSecond())
         builder.addOutputSlot(33, 18).addItemStack(output)
     }
 

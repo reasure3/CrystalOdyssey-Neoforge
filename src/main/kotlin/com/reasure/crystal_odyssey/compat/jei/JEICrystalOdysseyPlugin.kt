@@ -37,7 +37,6 @@ class JEICrystalOdysseyPlugin : IModPlugin {
 
     override fun registerRecipes(registration: IRecipeRegistration) {
         val recipeManager = Minecraft.getInstance().level?.recipeManager ?: return
-        val access = Minecraft.getInstance().connection?.registryAccess() ?: return
 
         val manaInjectingRecipes: List<ManaInjectingRecipe> =
             recipeManager.getAllRecipesFor(ModRecipeTypes.MANA_INJECTING_RECIPE_TYPE).map { it.value }
@@ -45,11 +44,6 @@ class JEICrystalOdysseyPlugin : IModPlugin {
 
         val manaAnvilRecipes: List<ManaAnvilRecipe> =
             recipeManager.getAllRecipesFor(ModRecipeTypes.MANA_ANVIL_RECIPE_TYPE).map { it.value }
-                .sortedWith(compareByDescending<ManaAnvilRecipe> {
-                    it.getMaterial().toString()
-                }.thenByDescending { it.getGem().toString() }
-                    .thenByDescending { it.getPriority(access) }
-                )
         registration.addRecipes(ManaAnvilRecipeCategory.MANA_ANVIL_RECIPE_TYPE, manaAnvilRecipes)
 
         val anvilRepairRecipes: List<IJeiAnvilRecipe> =

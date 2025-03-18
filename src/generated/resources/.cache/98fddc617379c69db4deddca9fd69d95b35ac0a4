@@ -1,4 +1,5 @@
-// 1.21.1	2025-01-25T21:52:08.0428817	Tags for minecraft:block mod id crystal_odyssey
+// 1.21.1	2025-03-18T21:09:26.738196	Tags for minecraft:block mod id crystal_odyssey
+9c69df975f5e8375ad3cd90817d6743d9a459e16 data/crystal_odyssey/tags/block/el_dorado/amethyst.json
 f10207b1877b3fccf8b5110ae5c9e609666166db data/crystal_odyssey/tags/block/el_dorado/coal.json
 c01176ccd655ce9c587b30aec0e6cdc5101fff02 data/crystal_odyssey/tags/block/el_dorado/copper.json
 39df632cbdd5955b62c60685a0fc7223491d173b data/crystal_odyssey/tags/block/el_dorado/diamond.json
@@ -7,12 +8,18 @@ c918d2e572017619fb73529bf4c0c733c3e174f7 data/crystal_odyssey/tags/block/el_dora
 c0c0dcbfc1f07662688aed8325d0352801c090d7 data/crystal_odyssey/tags/block/el_dorado/iron.json
 2c08a8113718a0042e44d820f01673155edc8398 data/crystal_odyssey/tags/block/el_dorado/lapis_lazuli.json
 8d3ac1836a2b04612fca4ed56d8f5fa7b38c0e2f data/crystal_odyssey/tags/block/el_dorado/netherite.json
-533be923a819dffde6972c4b796c783c108808bd data/crystal_odyssey/tags/block/el_dorado/quartz.json
+9e239428a23326bc805f4d734da163e3d00a6d9b data/crystal_odyssey/tags/block/el_dorado/quartz.json
 f5d5ff9a0cc189b318ebee77cc74cbc8966eb944 data/crystal_odyssey/tags/block/el_dorado/redstone.json
+3da1ccee50d5a7b7ac393d70a64a959cd1298ce9 data/crystal_odyssey/tags/block/el_dorado/ruby.json
+ad23e88fff813a7e166ceb4f39a126f930929246 data/crystal_odyssey/tags/block/el_dorado/sapphire.json
 a3b2f74acb297a22e17f008ac44f7dab9c229d34 data/c/tags/block/ores.json
 820289ea8c7a250e64c797615e48c84535b19d25 data/c/tags/block/ores/ruby.json
 89379b6025f5688cc8d60e34cb66910a613ecc49 data/c/tags/block/ores/sapphire.json
+d2b1b71dc8dbf59ec962a06f3809a2fe2c783b20 data/c/tags/block/ores_in_ground/deepslate.json
+06ae8a4dcd62f6b7208f0a6843562524fb96e078 data/c/tags/block/ores_in_ground/stone.json
 8f1864f2c3ef2fd3d09f731c106d4f9a7e590b2c data/c/tags/block/storage_blocks.json
+dcfcde0b3716705215c339c3ed7bb1fe6da2cdb2 data/c/tags/block/storage_blocks/amethyst.json
+fbb0fe25e25b7fd86df64c2f168425efedf11710 data/c/tags/block/storage_blocks/quartz.json
 b28560918d822c80790cf2527cfb328c24c7000e data/c/tags/block/storage_blocks/ruby.json
 cc5bace2c9c4c5bb6a4786c9c12b4372b1fc61f7 data/c/tags/block/storage_blocks/sapphire.json
 69e8aeeacba5076fa231f7781fd299f7d8405f39 data/minecraft/tags/block/mineable/pickaxe.json

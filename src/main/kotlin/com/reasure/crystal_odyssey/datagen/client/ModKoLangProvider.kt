@@ -35,15 +35,16 @@ class ModKoLangProvider(output: PackOutput) : ModBaseLangProvider(output, "ko_kr
 
     override fun addItemSubtypeTranslations() {
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "coal", "엘도라도 지팡이 (석탄)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "copper", "엘도라도 지팡이 (구리)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "iron", "엘도라도 지팡이 (철)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "copper", "엘도라도 지팡이 (구리)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "gold", "엘도라도 지팡이 (금)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "diamond", "엘도라도 지팡이 (다이아몬드)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "netherite", "엘도라도 지팡이 (네더라이트)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "lapis_lazuli", "엘도라도 지팡이 (청금석)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "redstone", "엘도라도 지팡이 (레드스톤)")
-        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "quartz", "엘도라도 지팡이 (석영)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "emerald", "엘도라도 지팡이 (에메랄드)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "lapis", "엘도라도 지팡이 (청금석)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "diamond", "엘도라도 지팡이 (다이아몬드)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "quartz", "엘도라도 지팡이 (석영)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "netherite", "엘도라도 지팡이 (네더라이트)")
+        addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "amethyst", "엘도라도 지팡이 (자수정)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "sapphire", "엘도라도 지팡이 (사파이어)")
         addItemSubtype(ModItems.EL_DORADO_STAFF_ACTIVE, "ruby", "엘도라도 지팡이 (루비)")
     }

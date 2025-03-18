@@ -3,6 +3,7 @@ package com.reasure.crystal_odyssey.datagen.server
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.datagen.server.base.ModBaseRecipeProvider
+import com.reasure.crystal_odyssey.datagen.util.DatagenTags
 import com.reasure.crystal_odyssey.datagen.util.el_dorado_target.DefaultElDoradoTargets
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
@@ -442,44 +443,8 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(ModItems.SAPPHIRE),
-            targetKey = DefaultElDoradoTargets.SAPPHIRE_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(ModItems.RUBY),
-            targetKey = DefaultElDoradoTargets.RUBY_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(Tags.Items.GEMS_QUARTZ),
-            targetKey = DefaultElDoradoTargets.QUARTZ_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(Tags.Items.DUSTS_REDSTONE),
-            targetKey = DefaultElDoradoTargets.REDSTONE_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(Tags.Items.GEMS_LAPIS),
-            targetKey = DefaultElDoradoTargets.LAPIS_LAZULI_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
             inputGem = Ingredient.of(ItemTags.COALS),
             targetKey = DefaultElDoradoTargets.COAL_KEY
-        )
-
-        elDoradoStaff(
-            recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(Tags.Items.INGOTS_COPPER),
-            targetKey = DefaultElDoradoTargets.COPPER_KEY
         )
 
         elDoradoStaff(
@@ -490,8 +455,20 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.INGOTS_COPPER),
+            targetKey = DefaultElDoradoTargets.COPPER_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
             inputGem = Ingredient.of(Tags.Items.INGOTS_GOLD),
             targetKey = DefaultElDoradoTargets.GOLD_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.DUSTS_REDSTONE),
+            targetKey = DefaultElDoradoTargets.REDSTONE_KEY
         )
 
         elDoradoStaff(
@@ -502,14 +479,44 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_LAPIS),
+            targetKey = DefaultElDoradoTargets.LAPIS_LAZULI_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
             inputGem = Ingredient.of(Tags.Items.GEMS_DIAMOND),
             targetKey = DefaultElDoradoTargets.DIAMOND_KEY
         )
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_QUARTZ),
+            targetKey = DefaultElDoradoTargets.QUARTZ_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
             inputGem = Ingredient.of(Tags.Items.INGOTS_NETHERITE),
             targetKey = DefaultElDoradoTargets.NETHERITE_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(Tags.Items.GEMS_AMETHYST),
+            targetKey = DefaultElDoradoTargets.AMETHYST_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(DatagenTags.Items.GEMS_SAPPHIRE),
+            targetKey = DefaultElDoradoTargets.SAPPHIRE_KEY
+        )
+
+        elDoradoStaff(
+            recipeOutput = recipeOutput,
+            inputGem = Ingredient.of(DatagenTags.Items.GEMS_RUBY),
+            targetKey = DefaultElDoradoTargets.RUBY_KEY
         )
     }
 }

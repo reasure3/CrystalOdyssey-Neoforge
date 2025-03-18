@@ -1,7 +1,9 @@
-// 1.21.1	2025-01-25T22:51:59.694266	Tags for minecraft:item mod id crystal_odyssey
+// 1.21.1	2025-03-18T21:09:26.7421944	Tags for minecraft:item mod id crystal_odyssey
 fea46affbb8dcd4eb5de9dfa3de9dd669b004341 data/crystal_odyssey/tags/item/el_dorado_staff_repairable.json
 eaa38a2927b7ebe8eb16d31d8d3d96fd47eb2f31 data/crystal_odyssey/tags/item/light_staff_repairable.json
 20a2e42bc5df29cde183913bb3fed727271fd965 data/curios/tags/item/belt.json
+9a9ddd6da392f28f03884d993ce49504fff6ff2a data/c/tags/item/gems/ruby.json
+6e3cd7325c882b40226dccb13dc70a7d3a3f1000 data/c/tags/item/gems/sapphire.json
 a3b2f74acb297a22e17f008ac44f7dab9c229d34 data/c/tags/item/ores.json
 820289ea8c7a250e64c797615e48c84535b19d25 data/c/tags/item/ores/ruby.json
 89379b6025f5688cc8d60e34cb66910a613ecc49 data/c/tags/item/ores/sapphire.json

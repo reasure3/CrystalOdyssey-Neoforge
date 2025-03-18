@@ -133,12 +133,12 @@ class ManaAnvilMenu(containerId: Int, playerInventory: Inventory, pos: BlockPos)
             // source slot is inventory or hotbar
             else -> {
                 val recipes = level.recipeManager.getAllRecipesFor(ModRecipeTypes.MANA_ANVIL_RECIPE_TYPE)
-                if (recipes.any { it.value.getGem().test(copyOfSourceStack) }) {
+                if (recipes.any { it.value.getIngredientFirst().test(copyOfSourceStack) }) {
                     if (!moveItemStackTo(sourceStack, INPUT_GEM_SLOT_ID, INPUT_GEM_SLOT_ID + 1, false)
                         && !moveInInventory(index, sourceStack)
                     ) return ItemStack.EMPTY
                 } else if (recipes.any {
-                        it.value.getMaterial().test(copyOfSourceStack)
+                        it.value.getIngredientSecond().test(copyOfSourceStack)
                     }) {
                     if (!moveItemStackTo(sourceStack, INPUT_MATERIAL_SLOT_ID, INPUT_MATERIAL_SLOT_ID + 1, false)
                         && !moveInInventory(index, sourceStack)

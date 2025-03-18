@@ -10,11 +10,11 @@ import net.minecraft.world.level.Level
 
 interface ManaAnvilRecipe : Recipe<TupleRecipeInput> {
     fun getPriority(registries: HolderLookup.Provider): Int
-    fun getGem(): Ingredient
-    fun getMaterial(): Ingredient
+    fun getIngredientFirst(): Ingredient
+    fun getIngredientSecond(): Ingredient
 
     override fun matches(input: TupleRecipeInput, level: Level): Boolean {
-        return getGem().test(input.getItem(0)) && getMaterial().test(input.getItem(1))
+        return getIngredientFirst().test(input.getItem(0)) && getIngredientSecond().test(input.getItem(1))
     }
 
     override fun canCraftInDimensions(width: Int, height: Int): Boolean = true

@@ -1,10 +1,7 @@
 {
   "type": "crystal_odyssey:el_dorado",
   "el_dorado_target": "crystal_odyssey:sapphire",
-  "ingredient_gem": {
-    "item": "crystal_odyssey:sapphire"
-  },
-  "ingredient_material": {
-    "item": "crystal_odyssey:el_dorado_staff"
+  "ingredient": {
+    "tag": "c:gems/sapphire"
   }
 }

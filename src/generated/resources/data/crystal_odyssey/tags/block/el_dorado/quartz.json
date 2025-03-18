@@ -1,5 +1,6 @@
 {
   "values": [
-    "#c:ores/quartz"
+    "#c:ores/quartz",
+    "minecraft:quartz_block"
   ]
 }

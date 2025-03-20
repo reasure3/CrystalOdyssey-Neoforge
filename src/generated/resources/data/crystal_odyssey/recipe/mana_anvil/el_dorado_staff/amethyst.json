@@ -1,0 +1,7 @@
+{
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:amethyst",
+  "ingredient": {
+    "tag": "c:gems/amethyst"
+  }
+}

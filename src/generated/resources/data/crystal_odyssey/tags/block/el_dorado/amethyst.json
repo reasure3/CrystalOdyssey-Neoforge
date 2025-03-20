@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:budding_amethyst",
+    "minecraft:small_amethyst_bud",
+    "minecraft:medium_amethyst_bud",
+    "minecraft:large_amethyst_bud",
+    "minecraft:amethyst_cluster",
+    "#c:storage_blocks/amethyst"
+  ]
+}

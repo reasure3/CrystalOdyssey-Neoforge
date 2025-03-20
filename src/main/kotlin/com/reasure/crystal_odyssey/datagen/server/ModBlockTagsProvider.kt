@@ -113,7 +113,7 @@ class ModBlockTagsProvider(
 
         tag(DatagenTags.Blocks.EL_DORADO_QUARTZ)
             .addTag(Tags.Blocks.ORES_QUARTZ)
-            .add(Blocks.QUARTZ_BLOCK)
+            .addTag(DatagenTags.Blocks.STORAGE_BLOCKS_QUARTZ)
 
         tag(DatagenTags.Blocks.EL_DORADO_NETHERITE)
             .addTag(Tags.Blocks.ORES_NETHERITE_SCRAP)
@@ -125,7 +125,7 @@ class ModBlockTagsProvider(
             .add(Blocks.MEDIUM_AMETHYST_BUD)
             .add(Blocks.LARGE_AMETHYST_BUD)
             .add(Blocks.AMETHYST_CLUSTER)
-            .add(Blocks.AMETHYST_BLOCK)
+            .addTag(DatagenTags.Blocks.STORAGE_BLOCKS_AMETHYST)
 
         tag(DatagenTags.Blocks.EL_DORADO_SAPPHIRE)
             .addTag(DatagenTags.Blocks.ORES_SAPPHIRE)

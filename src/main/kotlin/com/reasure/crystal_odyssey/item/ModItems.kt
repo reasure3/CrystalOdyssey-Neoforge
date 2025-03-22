@@ -61,7 +61,7 @@ object ModItems {
     }
 
     val LIGHT_STAFF: LightStaffItem by ITEMS.registerItem("light_staff") { properties ->
-        LightStaffItem(ModBlocks.LIGHT_ORB_BLOCK, properties.durability(300))
+        LightStaffItem(ModBlocks.LIGHT_ORB_BLOCK, properties.durability(2048))
     }
 
     val EL_DORADO_STAFF: Item by ITEMS.registerItem("el_dorado_staff") { properties ->

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/prosperity",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/prosperity_shard",
+      "required": false
+    }
+  ]
+}

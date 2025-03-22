@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "railcraft:refined_firestone"
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:firestone",
+  "ingredient": {
+    "item": "railcraft:refined_firestone"
+  }
+}

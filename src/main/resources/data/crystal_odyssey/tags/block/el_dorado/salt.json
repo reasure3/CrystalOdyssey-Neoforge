@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/salt",
+      "required": false
+    },
+    {
+      "id": "mekanism:block_salt",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:salt_ore",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:deepslate_salt_ore",
+      "required": false
+    }
+  ]
+}

@@ -509,14 +509,14 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(DatagenTags.Items.GEMS_SAPPHIRE),
-            targetKey = DefaultElDoradoTargets.SAPPHIRE_KEY
+            inputGem = Ingredient.of(DatagenTags.Items.GEMS_RUBY),
+            targetKey = DefaultElDoradoTargets.RUBY_KEY
         )
 
         elDoradoStaff(
             recipeOutput = recipeOutput,
-            inputGem = Ingredient.of(DatagenTags.Items.GEMS_RUBY),
-            targetKey = DefaultElDoradoTargets.RUBY_KEY
+            inputGem = Ingredient.of(DatagenTags.Items.GEMS_SAPPHIRE),
+            targetKey = DefaultElDoradoTargets.SAPPHIRE_KEY
         )
     }
 }

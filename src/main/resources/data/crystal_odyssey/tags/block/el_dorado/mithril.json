@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/mithril",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_mithril",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/mithril",
+      "required": false
+    }
+  ]
+}

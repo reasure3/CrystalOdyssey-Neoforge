@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mysticalagriculture:prosperity_shard"
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:prosperity",
+  "ingredient": {
+    "item": "mysticalagriculture:prosperity_shard"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "find_blocks": {
+    "block_group_name": {
+      "translate": "item.crystal_odyssey.el_dorado_staff_active.cobalt"
+    },
+    "blocks": "#crystal_odyssey:el_dorado/cobalt",
+    "border_color": "#7D2576AB"
+  }
+}

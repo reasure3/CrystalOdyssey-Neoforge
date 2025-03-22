@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/silver"
+      }
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:silver",
+  "ingredient": {
+    "tag": "c:ingots/silver"
+  }
+}

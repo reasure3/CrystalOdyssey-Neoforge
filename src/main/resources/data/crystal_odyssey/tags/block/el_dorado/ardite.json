@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/ardite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_ardite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/ardite",
+      "required": false
+    },
+    {
+      "id": "#c:ores/adamantite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_adamantite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/adamantite",
+      "required": false
+    }
+  ]
+}

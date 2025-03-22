@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/bort",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/bort",
+      "required": false
+    }
+  ]
+}

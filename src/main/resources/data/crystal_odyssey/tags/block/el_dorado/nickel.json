@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/nickel",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_nickel",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/nickel",
+      "required": false
+    }
+  ]
+}

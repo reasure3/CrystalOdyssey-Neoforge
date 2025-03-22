@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/cobalt",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_cobalt",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/cobalt",
+      "required": false
+    }
+  ]
+}

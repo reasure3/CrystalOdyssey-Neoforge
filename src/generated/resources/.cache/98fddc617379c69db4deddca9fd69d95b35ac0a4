@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-18T23:37:50.1344424	Tags for minecraft:block mod id crystal_odyssey
+// 1.21.1	2025-03-20T21:15:28.1359287	Tags for minecraft:block mod id crystal_odyssey
 49e96bf94c45cccfd5812ec848d1d8f460fd173e data/crystal_odyssey/tags/block/el_dorado/amethyst.json
 f10207b1877b3fccf8b5110ae5c9e609666166db data/crystal_odyssey/tags/block/el_dorado/coal.json
 c01176ccd655ce9c587b30aec0e6cdc5101fff02 data/crystal_odyssey/tags/block/el_dorado/copper.json
@@ -6,7 +6,7 @@ c01176ccd655ce9c587b30aec0e6cdc5101fff02 data/crystal_odyssey/tags/block/el_dora
 935e5a07a1702405d1a359fff231185744360166 data/crystal_odyssey/tags/block/el_dorado/emerald.json
 c918d2e572017619fb73529bf4c0c733c3e174f7 data/crystal_odyssey/tags/block/el_dorado/gold.json
 c0c0dcbfc1f07662688aed8325d0352801c090d7 data/crystal_odyssey/tags/block/el_dorado/iron.json
-2c08a8113718a0042e44d820f01673155edc8398 data/crystal_odyssey/tags/block/el_dorado/lapis_lazuli.json
+2c08a8113718a0042e44d820f01673155edc8398 data/crystal_odyssey/tags/block/el_dorado/lapis.json
 8d3ac1836a2b04612fca4ed56d8f5fa7b38c0e2f data/crystal_odyssey/tags/block/el_dorado/netherite.json
 cc385b426f9a2f271d4b8c8de2398455fb72e151 data/crystal_odyssey/tags/block/el_dorado/quartz.json
 f5d5ff9a0cc189b318ebee77cc74cbc8966eb944 data/crystal_odyssey/tags/block/el_dorado/redstone.json

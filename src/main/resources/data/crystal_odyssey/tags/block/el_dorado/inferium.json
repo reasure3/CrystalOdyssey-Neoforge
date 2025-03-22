@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/inferium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/inferium_essence",
+      "required": false
+    }
+  ]
+}

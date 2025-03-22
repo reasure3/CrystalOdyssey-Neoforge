@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:and",
+        "values": [
+          {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/uranium"
+          },
+          {
+            "type": "neoforge:tag_empty",
+            "tag": "c:gems/uranium"
+          }
+        ]
+      }
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:uranium",
+  "ingredient": [
+    {
+      "tag": "c:ingots/uranium"
+    },
+    {
+      "tag": "c:gems/uranium"
+    }
+  ]
+}

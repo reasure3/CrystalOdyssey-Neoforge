@@ -12,6 +12,8 @@ abstract class ModBaseLangProvider(output: PackOutput, locale: String) :
 
     fun addCreativeModeTab(name: String) = add("itemGroup.${CrystalOdyssey.ID}", name)
 
+    fun addCreativeModeTab(key: String, name: String) = add("itemGroup.${CrystalOdyssey.ID}.$key", name)
+
     fun addItemSubtype(item: Item, key: String, name: String) = add("${item.descriptionId}.$key", name)
 
     fun <T : MobEffect> addTippedArrow(key: Supplier<T>, name: String) =

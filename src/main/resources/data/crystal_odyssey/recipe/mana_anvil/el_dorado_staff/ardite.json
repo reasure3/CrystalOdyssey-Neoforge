@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:and",
+        "values": [
+          {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/ardite"
+          },
+          {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/adamantite"
+          }
+        ]
+      }
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:ardite",
+  "ingredient": [
+    {
+      "tag": "c:ingots/ardite"
+    },
+    {
+      "tag": "c:ingots/adamantite"
+    }
+  ]
+}

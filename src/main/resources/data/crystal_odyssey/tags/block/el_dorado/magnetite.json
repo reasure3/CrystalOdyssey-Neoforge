@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/magnetite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_magnetite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/magnetite",
+      "required": false
+    },
+    {
+      "id": "create_new_age:magnetite_block",
+      "required": false
+    }
+  ]
+}

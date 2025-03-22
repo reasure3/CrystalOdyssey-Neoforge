@@ -25,7 +25,7 @@ object ModCreativeModTabs {
         CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.${CrystalOdyssey.ID}"))
             .icon { ItemStack(ModItems.GLOWSTONE_GEM) }
-            .displayItems { parameters, output ->
+            .displayItems { _, output ->
                 with(output) {
                     accept(ModItems.ENCHANTED_DIAMOND)
                     accept(ModItems.ENCHANTED_EMERALD)
@@ -51,7 +51,6 @@ object ModCreativeModTabs {
                     accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
                     accept(ModItems.LIGHT_STAFF)
                     accept(ModItems.EL_DORADO_STAFF)
-                    acceptAll(makeAllElDoradoStaff(parameters))
                     accept(ModItems.SAPPHIRE_BUCKET)
                     accept(ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
                         set(
@@ -68,6 +67,20 @@ object ModCreativeModTabs {
                         )
                     })
                     accept(ModItems.INFINITE_RUBY_BUCKET)
+                }
+            }
+            .build()
+    }
+
+    @Suppress("UNUSED")
+    val EL_DORADO_STAFF_TAB: CreativeModeTab by CREATIVE_MODE_TABS.register("${CrystalOdyssey.ID}.el_dorado_staff_tab") { ->
+        CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.${CrystalOdyssey.ID}.el_dorado_staff"))
+            .withTabsBefore(CrystalOdyssey.modLoc("${CrystalOdyssey.ID}_tab"))
+            .icon { ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE) }
+            .displayItems { parameters, output ->
+                with(output) {
+                    acceptAll(makeAllElDoradoStaff(parameters))
                 }
             }
             .build()

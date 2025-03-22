@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/soulium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/soulium_dust",
+      "required": false
+    }
+  ]
+}

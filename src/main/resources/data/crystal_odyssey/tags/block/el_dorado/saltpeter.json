@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/saltpeter",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/saltpeter",
+      "required": false
+    }
+  ]
+}

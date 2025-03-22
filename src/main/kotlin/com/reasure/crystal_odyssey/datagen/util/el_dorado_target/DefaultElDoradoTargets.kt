@@ -112,14 +112,6 @@ object DefaultElDoradoTargets {
             )
         ),
 
-        SAPPHIRE_KEY to ElDoradoTarget(
-            FindBlocks.of(
-                DatagenTags.Blocks.EL_DORADO_SAPPHIRE,
-                "item.${CrystalOdyssey.ID}.el_dorado_staff_active.sapphire",
-                0x7D5793E1
-            )
-        ),
-
         RUBY_KEY to ElDoradoTarget(
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_RUBY,
@@ -127,6 +119,14 @@ object DefaultElDoradoTargets {
                 0x7DBB4052
             )
         ),
+
+        SAPPHIRE_KEY to ElDoradoTarget(
+            FindBlocks.of(
+                DatagenTags.Blocks.EL_DORADO_SAPPHIRE,
+                "item.${CrystalOdyssey.ID}.el_dorado_staff_active.sapphire",
+                0x7D5793E1
+            )
+        )
     )
 
     fun bootstrap(context: BootstrapContext<ElDoradoTarget>) {

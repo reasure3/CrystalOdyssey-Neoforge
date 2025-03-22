@@ -43,7 +43,7 @@ class DatagenTags {
         val EL_DORADO_GOLD = modTag("el_dorado/gold")
         val EL_DORADO_REDSTONE = modTag("el_dorado/redstone")
         val EL_DORADO_EMERALD = modTag("el_dorado/emerald")
-        val EL_DORADO_LAPIS_LAZULI = modTag("el_dorado/lapis_lazuli")
+        val EL_DORADO_LAPIS_LAZULI = modTag("el_dorado/lapis")
         val EL_DORADO_DIAMOND = modTag("el_dorado/diamond")
         val EL_DORADO_QUARTZ = modTag("el_dorado/quartz")
         val EL_DORADO_NETHERITE = modTag("el_dorado/netherite")

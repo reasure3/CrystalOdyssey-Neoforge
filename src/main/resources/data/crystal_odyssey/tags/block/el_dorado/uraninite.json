@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/uraninite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/uraninite",
+      "required": false
+    }
+  ]
+}

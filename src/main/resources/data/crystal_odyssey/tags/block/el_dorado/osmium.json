@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/osmium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_osmium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/osmium",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/azure_silver",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_azure_silver",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/azure_silver",
+      "required": false
+    }
+  ]
+}

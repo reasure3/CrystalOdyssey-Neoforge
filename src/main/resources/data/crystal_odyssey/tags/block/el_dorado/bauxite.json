@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/bauxite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_bauxite",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/bauxite",
+      "required": false
+    }
+  ]
+}

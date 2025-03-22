@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/iridium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_iridium",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/iridium",
+      "required": false
+    }
+  ]
+}

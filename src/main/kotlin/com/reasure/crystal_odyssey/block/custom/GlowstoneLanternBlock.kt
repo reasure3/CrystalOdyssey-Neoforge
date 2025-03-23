@@ -52,7 +52,7 @@ class GlowstoneLanternBlock(properties: Properties) : Block(properties),
     }
 
     override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {
-        val lanternLevel = context.itemInHand.getOrDefault(ModDataComponents.LANTERN_LEVEL, 0)
+        val lanternLevel = context.itemInHand[ModDataComponents.LANTERN_LEVEL] ?: 0
         val face = if (context.clickedFace.axis == Direction.Axis.Y) context.clickedFace.opposite
         else context.clickedFace
         val fluidState = context.level.getFluidState(context.clickedPos)
@@ -124,7 +124,7 @@ class GlowstoneLanternBlock(properties: Properties) : Block(properties),
         player: Player
     ): ItemStack {
         return super.getCloneItemStack(state, target, level, pos, player).apply {
-            set(ModDataComponents.LANTERN_LEVEL, state.getValue(LANTERN_LEVEL))
+            this[ModDataComponents.LANTERN_LEVEL] = state.getValue(LANTERN_LEVEL)
         }
     }
 

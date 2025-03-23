@@ -59,7 +59,7 @@ class GlowstoneGemLanternItem(block: Block, properties: Properties) : BlockItem(
     }
 
     private fun getLanternLevel(lantern: ItemStack): Int {
-        return lantern.getOrDefault(ModDataComponents.LANTERN_LEVEL, 0)
+        return lantern[ModDataComponents.LANTERN_LEVEL] ?: 0
     }
 
     override fun appendHoverText(

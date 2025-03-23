@@ -3,7 +3,6 @@ package com.reasure.crystal_odyssey.item.custom
 import com.reasure.crystal_odyssey.client.util.BlockFinder
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
-import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import com.reasure.crystal_odyssey.util.ModTags
 import com.reasure.crystal_odyssey.util.TranslateHelper
 import com.reasure.crystal_odyssey.util.TranslateHelper.translateComponent
@@ -28,7 +27,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
     }
 
     override fun getName(stack: ItemStack): Component {
-        val findBlocks = stack.getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
+        val findBlocks = stack[ModDataComponents.FIND_BLOCKS] ?: return super.getName(stack)
         if (findBlocks.isNotEmpty()) {
             return findBlocks.blockGroupName
         }
@@ -38,11 +37,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
     override fun use(level: Level, player: Player, usedHand: InteractionHand): InteractionResultHolder<ItemStack> {
         player.cooldowns.addCooldown(this, 20)
         if (level.isClientSide) {
-            BlockFinder.startFind(
-                level,
-                player.onPos,
-                player.getItemInHand(usedHand).getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
-            )
+            BlockFinder.startFind(level, player.onPos, player.getItemInHand(usedHand))
         }
         if (!level.isClientSide && level is ServerLevel) {
             val staff = player.getItemInHand(usedHand).copy()
@@ -66,7 +61,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
         tooltipFlag: TooltipFlag
     ) {
         if (Screen.hasShiftDown()) {
-            val findBlocks = stack.getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
+            val findBlocks = stack[ModDataComponents.FIND_BLOCKS] ?: return
             if (findBlocks.isNotEmpty()) {
                 findBlocks.blocks.forEach {
                     tooltipComponents.add(it.value().name)

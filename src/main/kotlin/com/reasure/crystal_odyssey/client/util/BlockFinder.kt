@@ -1,9 +1,11 @@
 package com.reasure.crystal_odyssey.client.util
 
 import com.reasure.crystal_odyssey.CrystalOdysseyServerConfig
+import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
 import net.minecraft.client.Minecraft
 import net.minecraft.core.BlockPos
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 
 object BlockFinder {
@@ -18,7 +20,8 @@ object BlockFinder {
 
     var borderColor: Int = 0
 
-    fun startFind(level: Level, startPos: BlockPos, findBlocksData: FindBlocks) {
+    fun startFind(level: Level, startPos: BlockPos, staff: ItemStack) {
+        val findBlocksData = staff[ModDataComponents.FIND_BLOCKS] ?: return
         if (findBlocksData.isNotEmpty()) {
             synchronized(_foundBlocks) {
                 _foundBlocks.clear()

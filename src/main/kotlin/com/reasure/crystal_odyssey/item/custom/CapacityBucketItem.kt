@@ -19,7 +19,7 @@ class CapacityBucketItem(properties: Properties, private val capacity: Int, flui
         tooltipComponents: MutableList<Component>,
         tooltipFlag: TooltipFlag
     ) {
-        val amount = stack.get(ModDataComponents.FLUID)?.amount ?: 0
+        val amount = stack[ModDataComponents.FLUID]?.amount ?: 0
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.literal("${amount.format()} / ${capacity.format()} mB"))
         } else {

@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack
 
 class ElDoradoStaffSubtypeInterpreter : ISubtypeInterpreter<ItemStack> {
     override fun getSubtypeData(ingredient: ItemStack, context: UidContext): Any? {
-        val findBlocks: FindBlocks = ingredient.getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
+        val findBlocks = ingredient[ModDataComponents.FIND_BLOCKS] ?: FindBlocks.EMPTY
         return if (findBlocks.isNotEmpty()) {
             findBlocks.blockGroupName
         } else Component.empty()
@@ -17,7 +17,7 @@ class ElDoradoStaffSubtypeInterpreter : ISubtypeInterpreter<ItemStack> {
 
     @Deprecated("Deprecated in Java")
     override fun getLegacyStringSubtypeInfo(ingredient: ItemStack, context: UidContext): String {
-        val findBlocks: FindBlocks = ingredient.getOrDefault(ModDataComponents.FIND_BLOCKS, FindBlocks.EMPTY)
+        val findBlocks = ingredient[ModDataComponents.FIND_BLOCKS] ?: FindBlocks.EMPTY
         return if (findBlocks.isNotEmpty()) {
             findBlocks.blockGroupName.toString()
         } else ""

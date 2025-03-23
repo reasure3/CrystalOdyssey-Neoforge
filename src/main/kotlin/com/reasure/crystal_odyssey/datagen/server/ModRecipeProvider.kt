@@ -7,6 +7,9 @@ import com.reasure.crystal_odyssey.datagen.util.DatagenTags
 import com.reasure.crystal_odyssey.datagen.util.el_dorado_target.DefaultElDoradoTargets
 import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
+import com.reasure.crystal_odyssey.util.ItemStackHelper
+import com.reasure.crystal_odyssey.util.ItemStackHelper.with
+import com.reasure.crystal_odyssey.util.ItemStackHelper.withBucket
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.recipes.RecipeCategory
@@ -22,9 +25,6 @@ import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.material.Fluids
 import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient
-import net.neoforged.neoforge.fluids.FluidStack
-import net.neoforged.neoforge.fluids.FluidType
-import net.neoforged.neoforge.fluids.SimpleFluidContent
 import java.util.concurrent.CompletableFuture
 
 class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<HolderLookup.Provider>) :
@@ -85,7 +85,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
 
         ShapedRecipeBuilder.shaped(
             RecipeCategory.TOOLS,
-            ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) }
+            ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 0)
         ).unlockedBy('X', ModItems.GLOWSTONE_GEM)
             .unlockedBy('#', Tags.Items.NUGGETS_IRON)
             .pattern("###")
@@ -147,7 +147,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             input = DataComponentIngredient.of(
                 false, ModDataComponents.LANTERN_LEVEL, 0, ModItems.GLOWSTONE_GEM_LANTERN
             ),
-            output = ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) },
+            output = ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 1),
             requireLevel = 7,
             id = CrystalOdyssey.modLoc("glowstone_gem_lantern_level_2")
         )
@@ -156,7 +156,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             input = DataComponentIngredient.of(
                 false, ModDataComponents.LANTERN_LEVEL, 1, ModItems.GLOWSTONE_GEM_LANTERN
             ),
-            output = ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) },
+            output = ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 2),
             requireLevel = 14,
             id = CrystalOdyssey.modLoc("glowstone_gem_lantern_level_3")
         )
@@ -189,12 +189,8 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .requiredBy(ModItems.ENCHANTED_SAPPHIRE)
             .save(recipeOutput, CrystalOdyssey.modLoc("sapphire_bucket_from_bucket"))
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
-            set(
-                ModDataComponents.FLUID,
-                SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, FluidType.BUCKET_VOLUME))
-            )
-        }).requiredBy(Items.WATER_BUCKET)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.SAPPHIRE_BUCKET.withBucket(Fluids.WATER))
+            .requiredBy(Items.WATER_BUCKET)
             .requiredBy(ModItems.ENCHANTED_SAPPHIRE)
             .save(recipeOutput, CrystalOdyssey.modLoc("sapphire_bucket_from_water_bucket"))
 
@@ -210,12 +206,8 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             .requiredBy(ModItems.ENCHANTED_RUBY)
             .save(recipeOutput, CrystalOdyssey.modLoc("ruby_bucket_from_bucket"))
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemStack(ModItems.RUBY_BUCKET).apply {
-            set(
-                ModDataComponents.FLUID,
-                SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, FluidType.BUCKET_VOLUME))
-            )
-        }).requiredBy(Items.LAVA_BUCKET)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.RUBY_BUCKET.withBucket(Fluids.LAVA))
+            .requiredBy(Items.LAVA_BUCKET)
             .requiredBy(ModItems.ENCHANTED_RUBY)
             .save(recipeOutput, CrystalOdyssey.modLoc("ruby_bucket_from_lava_bucket"))
 
@@ -224,7 +216,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             input = DataComponentIngredient.of(
                 false,
                 ModDataComponents.FLUID,
-                SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, 30 * FluidType.BUCKET_VOLUME)),
+                ItemStackHelper.bucketContent(Fluids.WATER, 30),
                 ModItems.SAPPHIRE_BUCKET
             ),
             output = ItemStack(ModItems.INFINITE_SAPPHIRE_BUCKET),
@@ -237,7 +229,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
             input = DataComponentIngredient.of(
                 false,
                 ModDataComponents.FLUID,
-                SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, 30 * FluidType.BUCKET_VOLUME)),
+                ItemStackHelper.bucketContent(Fluids.LAVA, 30),
                 ModItems.RUBY_BUCKET
             ),
             output = ItemStack(ModItems.INFINITE_RUBY_BUCKET),

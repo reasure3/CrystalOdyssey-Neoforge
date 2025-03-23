@@ -5,14 +5,13 @@ import com.reasure.crystal_odyssey.block.ModBlocks
 import com.reasure.crystal_odyssey.item.components.ModDataComponents
 import com.reasure.crystal_odyssey.registry.ElDoradoTarget
 import com.reasure.crystal_odyssey.registry.ModRegistries
+import com.reasure.crystal_odyssey.util.ItemStackHelper.with
+import com.reasure.crystal_odyssey.util.ItemStackHelper.withBucket
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.material.Fluids
-import net.neoforged.neoforge.fluids.FluidStack
-import net.neoforged.neoforge.fluids.FluidType
-import net.neoforged.neoforge.fluids.SimpleFluidContent
 import net.neoforged.neoforge.registries.DeferredRegister
 import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 
@@ -46,26 +45,16 @@ object ModCreativeModTabs {
                     accept(ModBlocks.DEEPSLATE_RUBY_ORE)
                     accept(ModBlocks.MANA_INJECTOR)
                     accept(ModBlocks.MANA_ANVIL)
-                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 0) })
-                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 1) })
-                    accept(ItemStack(ModItems.GLOWSTONE_GEM_LANTERN).apply { set(ModDataComponents.LANTERN_LEVEL, 2) })
+                    accept(ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 0))
+                    accept(ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 1))
+                    accept(ModItems.GLOWSTONE_GEM_LANTERN.with(ModDataComponents.LANTERN_LEVEL, 2))
                     accept(ModItems.LIGHT_STAFF)
                     accept(ModItems.EL_DORADO_STAFF)
                     accept(ModItems.SAPPHIRE_BUCKET)
-                    accept(ItemStack(ModItems.SAPPHIRE_BUCKET).apply {
-                        set(
-                            ModDataComponents.FLUID,
-                            SimpleFluidContent.copyOf(FluidStack(Fluids.WATER, 30 * FluidType.BUCKET_VOLUME))
-                        )
-                    })
+                    accept(ModItems.SAPPHIRE_BUCKET.withBucket(Fluids.WATER, 30))
                     accept(ModItems.INFINITE_SAPPHIRE_BUCKET)
                     accept(ModItems.RUBY_BUCKET)
-                    accept(ItemStack(ModItems.RUBY_BUCKET).apply {
-                        set(
-                            ModDataComponents.FLUID,
-                            SimpleFluidContent.copyOf(FluidStack(Fluids.LAVA, 30 * FluidType.BUCKET_VOLUME))
-                        )
-                    })
+                    accept(ModItems.RUBY_BUCKET.withBucket(Fluids.LAVA, 30))
                     accept(ModItems.INFINITE_RUBY_BUCKET)
                 }
             }
@@ -79,9 +68,7 @@ object ModCreativeModTabs {
             .withTabsBefore(CrystalOdyssey.modLoc("${CrystalOdyssey.ID}_tab"))
             .icon { ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE) }
             .displayItems { parameters, output ->
-                with(output) {
-                    acceptAll(makeAllElDoradoStaff(parameters))
-                }
+                output.acceptAll(makeAllElDoradoStaff(parameters))
             }
             .build()
     }
@@ -92,10 +79,7 @@ object ModCreativeModTabs {
             .listElements()
             .map { it.value() }
             .sorted(compareBy<ElDoradoTarget> { it.priority })
-            .map {
-                ItemStack(ModItems.EL_DORADO_STAFF_ACTIVE).apply {
-                    set(ModDataComponents.FIND_BLOCKS, it.findBlocks)
-                }
-            }.toList()
+            .map { ModItems.EL_DORADO_STAFF_ACTIVE.with(ModDataComponents.FIND_BLOCKS, it.findBlocks) }
+            .toList()
     }
 }

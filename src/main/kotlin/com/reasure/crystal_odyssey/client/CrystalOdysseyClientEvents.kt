@@ -29,7 +29,7 @@ object ModClientEvents {
 
     @SubscribeEvent
     fun onRenderLevel(event: RenderLevelStageEvent) {
-        if (BlockFinder.renderBlock && event.stage == RenderLevelStageEvent.Stage.AFTER_LEVEL) {
+        if (BlockFinder.renderBlock && event.stage == RenderLevelStageEvent.Stage.AFTER_PARTICLES) {
             FoundBlockBorderRenderer.render(event.camera)
         }
     }

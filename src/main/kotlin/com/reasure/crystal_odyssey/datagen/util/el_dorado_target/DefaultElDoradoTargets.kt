@@ -28,7 +28,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_COAL,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.coal",
-                0xBE2E2E2E
+                0x7D2E2E2E
             )
         ),
 
@@ -36,7 +36,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_IRON,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.iron",
-                0x7DD8D8D8
+                0x32D8D8D8
             )
         ),
 
@@ -44,7 +44,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_COPPER,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.copper",
-                0x7DE77C56
+                0x32E77C56
             )
         ),
 
@@ -52,7 +52,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_GOLD,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.gold",
-                0x7DFDF55F
+                0x32FDF55F
             )
         ),
 
@@ -60,7 +60,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_REDSTONE,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.redstone",
-                0x7DAA0F01
+                0x32AA0F01
             )
         ),
 
@@ -68,7 +68,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_EMERALD,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.emerald",
-                0x7D17DD62
+                0x3217DD62
             )
         ),
 
@@ -76,7 +76,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_LAPIS_LAZULI,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.lapis",
-                0x7D1C53A8
+                0x321C53A8
             )
         ),
 
@@ -84,7 +84,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_DIAMOND,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.diamond",
-                0x7D20C5B5
+                0x3220C5B5
             )
         ),
 
@@ -92,7 +92,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_QUARTZ,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.quartz",
-                0x7DF7F5F2
+                0x32F7F5F2
             )
         ),
 
@@ -100,7 +100,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_NETHERITE,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.netherite",
-                0xBE654740
+                0x60654740
             )
         ),
 
@@ -108,7 +108,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_AMETHYST,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.amethyst",
-                0x7D8D6ACC
+                0x328D6ACC
             )
         ),
 
@@ -116,7 +116,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_RUBY,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.ruby",
-                0x7DBB4052
+                0x32BB4052
             )
         ),
 
@@ -124,7 +124,7 @@ object DefaultElDoradoTargets {
             FindBlocks.of(
                 DatagenTags.Blocks.EL_DORADO_SAPPHIRE,
                 "item.${CrystalOdyssey.ID}.el_dorado_staff_active.sapphire",
-                0x7D5793E1
+                0x325793E1
             )
         )
     )

@@ -1,5 +1,6 @@
 package com.reasure.crystal_odyssey.client.render
 
+import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.PoseStack
 import com.reasure.crystal_odyssey.client.util.BlockFinder
 import net.minecraft.client.Camera
@@ -24,6 +25,7 @@ object FoundBlockBorderRenderer {
         val blue = FastColor.ARGB32.blue(BlockFinder.borderColor)
         val green = FastColor.ARGB32.green(BlockFinder.borderColor)
 
+        RenderSystem.disableDepthTest()
         val quadBuilder = bufferSource.getBuffer(CustomRenderTypes.QUADS_NO_DEPTH)
         synchronized(BlockFinder.foundBlocks) {
             BlockFinder.foundBlocks.forEach { pos ->

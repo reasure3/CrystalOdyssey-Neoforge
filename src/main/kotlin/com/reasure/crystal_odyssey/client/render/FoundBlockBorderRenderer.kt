@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.client.render
 
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.PoseStack
+import com.mojang.math.Axis
 import com.reasure.crystal_odyssey.client.util.BlockFinder
 import net.minecraft.client.Camera
 import net.minecraft.client.Minecraft
@@ -15,6 +16,8 @@ object FoundBlockBorderRenderer {
         val level = minecraft.level ?: return
 
         poseStack.pushPose()
+        poseStack.mulPose(Axis.XP.rotationDegrees(camera.xRot))
+        poseStack.mulPose(Axis.YP.rotationDegrees(camera.yRot - 180f))
 
         poseStack.translate(-camera.position.x, -camera.position.y, -camera.position.z)
 

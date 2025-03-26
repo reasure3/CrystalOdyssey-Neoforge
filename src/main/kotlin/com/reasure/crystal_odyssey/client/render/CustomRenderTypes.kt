@@ -12,15 +12,14 @@ object CustomRenderTypes {
         "${CrystalOdyssey.ID}:quads_no_depth",
         DefaultVertexFormat.POSITION_COLOR,
         VertexFormat.Mode.QUADS,
-        256,
+        2048,
         false,
         true,
         RenderType.CompositeState.builder()
             .setShaderState(RenderStateShard.POSITION_COLOR_SHADER)
             .setTransparencyState(RenderStateShard.TRANSLUCENT_TRANSPARENCY)
             .setCullState(RenderStateShard.NO_CULL) // disable cull
-            .setLayeringState(RenderStateShard.VIEW_OFFSET_Z_LAYERING) // disable depth test
-            .setDepthTestState(RenderStateShard.NO_DEPTH_TEST)
+            .setDepthTestState(RenderStateShard.NO_DEPTH_TEST) // disable depth test
             .setWriteMaskState(RenderStateShard.COLOR_WRITE) // disable depth mask
             .createCompositeState(false)
     )

@@ -472,7 +472,7 @@ class ModRecipeProvider(output: PackOutput, registries: CompletableFuture<Holder
         elDoradoStaff(
             recipeOutput = recipeOutput,
             inputGem = Ingredient.of(Tags.Items.GEMS_LAPIS),
-            targetKey = DefaultElDoradoTargets.LAPIS_LAZULI_KEY
+            targetKey = DefaultElDoradoTargets.LAPIS_KEY
         )
 
         elDoradoStaff(

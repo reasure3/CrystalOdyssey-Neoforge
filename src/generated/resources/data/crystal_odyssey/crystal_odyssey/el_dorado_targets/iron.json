@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/iron",
     "border_color": "#32D8D8D8"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/iron"
+    }
   }
 }

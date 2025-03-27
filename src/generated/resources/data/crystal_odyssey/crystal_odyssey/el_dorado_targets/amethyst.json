@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/amethyst",
     "border_color": "#328D6ACC"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:gems/amethyst"
+    }
   }
 }

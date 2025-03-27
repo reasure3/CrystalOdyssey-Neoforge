@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/copper",
     "border_color": "#32E77C56"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/copper"
+    }
   }
 }

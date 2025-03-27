@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/coal",
     "border_color": "#7D2E2E2E"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "minecraft:coals"
+    }
   }
 }

@@ -15,6 +15,10 @@ object ItemStackHelper {
         set(componentType.get(), value)
     }
 
+    fun <T> ItemStack.with(componentType: Supplier<DataComponentType<T>>, value: T) = apply {
+        set(componentType.get(), value)
+    }
+
     fun Item.withBucket(fluid: Fluid, bucketAmount: Int = 1) = with(
         ModDataComponents.FLUID, bucketContent(fluid, bucketAmount)
     )

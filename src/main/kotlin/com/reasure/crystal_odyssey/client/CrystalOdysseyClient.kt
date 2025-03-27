@@ -4,9 +4,11 @@ import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.client.curios.CuriosClientInitializer
 import com.reasure.crystal_odyssey.client.item.properties.ModItemProperties
 import com.reasure.crystal_odyssey.client.particle.LightOrbParticle
+import com.reasure.crystal_odyssey.client.render.ElDoradoStaffDecorator
 import com.reasure.crystal_odyssey.client.screen.ManaAnvilScreen
 import com.reasure.crystal_odyssey.client.screen.ManaInjectorScreen
 import com.reasure.crystal_odyssey.inventory.menu.ModMenuTypes
+import com.reasure.crystal_odyssey.item.ModItems
 import com.reasure.crystal_odyssey.particle.ModParticleTypes
 import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
@@ -15,6 +17,7 @@ import net.neoforged.fml.ModList
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
+import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent
 import net.neoforged.neoforge.client.gui.ConfigurationScreen
@@ -54,6 +57,11 @@ class CrystalOdysseyClient(container: ModContainer) {
         @SubscribeEvent
         private fun registerParticleProvider(event: RegisterParticleProvidersEvent) {
             event.registerSpriteSet(ModParticleTypes.LIGHT_ORB, LightOrbParticle::Provider)
+        }
+
+        @SubscribeEvent
+        private fun registerItemDecorator(event: RegisterItemDecorationsEvent) {
+            event.register(ModItems.EL_DORADO_STAFF_ACTIVE, ElDoradoStaffDecorator)
         }
     }
 }

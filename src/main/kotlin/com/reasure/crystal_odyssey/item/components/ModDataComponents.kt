@@ -2,6 +2,7 @@ package com.reasure.crystal_odyssey.item.components
 
 import com.reasure.crystal_odyssey.CrystalOdyssey
 import com.reasure.crystal_odyssey.item.components.custom.FindBlocks
+import com.reasure.crystal_odyssey.item.components.custom.OverlayItems
 import net.minecraft.core.component.DataComponentType
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.codec.ByteBufCodecs
@@ -22,6 +23,11 @@ object ModDataComponents {
     val FIND_BLOCKS: Supplier<DataComponentType<FindBlocks>> =
         DATA_COMPONENTS.registerComponentType("find_blocks") { builder ->
             builder.persistent(FindBlocks.CODEC).networkSynchronized(FindBlocks.STEAM_CODEC)
+        }
+
+    val OVERLAY_ITEMS: Supplier<DataComponentType<OverlayItems>> =
+        DATA_COMPONENTS.registerComponentType("overlay_items") { builder ->
+            builder.persistent(OverlayItems.CODEC).networkSynchronized(OverlayItems.STREAM_CODEC)
         }
 
     val FLUID: Supplier<DataComponentType<SimpleFluidContent>> =

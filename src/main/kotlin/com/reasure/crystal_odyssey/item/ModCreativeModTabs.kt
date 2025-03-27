@@ -79,7 +79,10 @@ object ModCreativeModTabs {
             .listElements()
             .map { it.value() }
             .sorted(compareBy<ElDoradoTarget> { it.priority })
-            .map { ModItems.EL_DORADO_STAFF_ACTIVE.with(ModDataComponents.FIND_BLOCKS, it.findBlocks) }
+            .map {
+                ModItems.EL_DORADO_STAFF_ACTIVE.with(ModDataComponents.FIND_BLOCKS, it.findBlocks)
+                    .with(ModDataComponents.OVERLAY_ITEMS, it.overlayItems)
+            }
             .toList()
     }
 }

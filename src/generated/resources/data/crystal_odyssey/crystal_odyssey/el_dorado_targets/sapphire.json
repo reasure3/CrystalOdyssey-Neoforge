@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/sapphire",
     "border_color": "#325793E1"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:gems/sapphire"
+    }
   }
 }

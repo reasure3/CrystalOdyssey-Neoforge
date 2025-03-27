@@ -46,6 +46,7 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
                 if (!staff.isComponentsPatchEmpty) {
                     emptyStaff.applyComponents(staff.componentsPatch)
                     emptyStaff.remove(ModDataComponents.FIND_BLOCKS)
+                    emptyStaff.remove(ModDataComponents.OVERLAY_ITEMS)
                     emptyStaff.remove(DataComponents.DAMAGE)
                 }
                 player.setItemInHand(usedHand, emptyStaff)

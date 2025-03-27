@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/diamond",
     "border_color": "#3220C5B5"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:gems/diamond"
+    }
   }
 }

@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/netherite",
     "border_color": "#60654740"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/netherite"
+    }
   }
 }

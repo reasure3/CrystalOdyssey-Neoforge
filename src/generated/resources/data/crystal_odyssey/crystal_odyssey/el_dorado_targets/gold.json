@@ -5,5 +5,10 @@
     },
     "blocks": "#crystal_odyssey:el_dorado/gold",
     "border_color": "#32FDF55F"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/gold"
+    }
   }
 }

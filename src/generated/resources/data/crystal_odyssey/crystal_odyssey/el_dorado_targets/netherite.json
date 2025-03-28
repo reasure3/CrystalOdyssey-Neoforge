@@ -7,8 +7,8 @@
     "border_color": "#60654740"
   },
   "overlay_items": {
-    "items": {
-      "tag": "c:ingots/netherite"
-    }
+    "items": [
+      "#c:ingots/netherite"
+    ]
   }
 }

@@ -7,8 +7,8 @@
     "border_color": "#321C53A8"
   },
   "overlay_items": {
-    "items": {
-      "tag": "c:gems/lapis"
-    }
+    "items": [
+      "#c:gems/lapis"
+    ]
   }
 }

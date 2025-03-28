@@ -7,8 +7,8 @@
     "border_color": "#7D2E2E2E"
   },
   "overlay_items": {
-    "items": {
-      "tag": "minecraft:coals"
-    }
+    "items": [
+      "#minecraft:coals"
+    ]
   }
 }

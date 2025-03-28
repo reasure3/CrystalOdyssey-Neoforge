@@ -7,8 +7,8 @@
     "border_color": "#32AA0F01"
   },
   "overlay_items": {
-    "items": {
-      "tag": "c:dusts/redstone"
-    }
+    "items": [
+      "#c:dusts/redstone"
+    ]
   }
 }

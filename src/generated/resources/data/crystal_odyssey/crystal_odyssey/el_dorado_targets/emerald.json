@@ -7,8 +7,8 @@
     "border_color": "#3217DD62"
   },
   "overlay_items": {
-    "items": {
-      "tag": "c:gems/emerald"
-    }
+    "items": [
+      "#c:gems/emerald"
+    ]
   }
 }

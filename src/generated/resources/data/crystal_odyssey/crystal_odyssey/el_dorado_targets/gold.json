@@ -7,8 +7,8 @@
     "border_color": "#32FDF55F"
   },
   "overlay_items": {
-    "items": {
-      "tag": "c:ingots/gold"
-    }
+    "items": [
+      "#c:ingots/gold"
+    ]
   }
 }

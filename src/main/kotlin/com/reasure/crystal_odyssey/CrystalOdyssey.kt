@@ -17,6 +17,7 @@ import com.reasure.crystal_odyssey.recipe.ModRecipeSerializers
 import com.reasure.crystal_odyssey.recipe.ModRecipeTypes
 import com.reasure.crystal_odyssey.registry.ElDoradoTarget
 import com.reasure.crystal_odyssey.registry.ModRegistries
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.material.Fluids
 import net.neoforged.bus.api.SubscribeEvent
@@ -59,6 +60,12 @@ class CrystalOdyssey(container: ModContainer) {
         ModParticleTypes.PARTICLE_TYPES.register(MOD_BUS)
 
         container.registerConfig(ModConfig.Type.SERVER, CrystalOdysseyServerConfig.SPEC)
+
+        println("test")
+        println(BuiltInRegistries.ITEM.key())
+        println(BuiltInRegistries.ITEM.key().registry())
+        println(BuiltInRegistries.ITEM.key().registryKey())
+        println(BuiltInRegistries.ITEM.key().location())
     }
 
     @EventBusSubscriber(modid = ID, bus = EventBusSubscriber.Bus.MOD)

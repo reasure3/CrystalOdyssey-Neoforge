@@ -7,8 +7,8 @@
     "border_color": "#3220C5B5"
   },
   "overlay_items": {
-    "items": [
-      "#c:gems/diamond"
-    ]
+    "items": {
+      "tag": "c:gems/diamond"
+    }
   }
 }

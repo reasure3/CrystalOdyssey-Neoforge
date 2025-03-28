@@ -7,8 +7,8 @@
     "border_color": "#328D6ACC"
   },
   "overlay_items": {
-    "items": [
-      "#c:gems/amethyst"
-    ]
+    "items": {
+      "tag": "c:gems/amethyst"
+    }
   }
 }

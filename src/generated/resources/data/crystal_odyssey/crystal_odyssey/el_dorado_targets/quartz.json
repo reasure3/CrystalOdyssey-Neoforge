@@ -7,8 +7,8 @@
     "border_color": "#32F7F5F2"
   },
   "overlay_items": {
-    "items": [
-      "#c:gems/quartz"
-    ]
+    "items": {
+      "tag": "c:gems/quartz"
+    }
   }
 }

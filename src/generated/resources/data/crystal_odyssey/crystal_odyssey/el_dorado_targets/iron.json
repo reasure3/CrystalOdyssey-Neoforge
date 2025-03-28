@@ -7,8 +7,8 @@
     "border_color": "#32D8D8D8"
   },
   "overlay_items": {
-    "items": [
-      "#c:ingots/iron"
-    ]
+    "items": {
+      "tag": "c:ingots/iron"
+    }
   }
 }

@@ -7,8 +7,8 @@
     "border_color": "#325793E1"
   },
   "overlay_items": {
-    "items": [
-      "#c:gems/sapphire"
-    ]
+    "items": {
+      "tag": "c:gems/sapphire"
+    }
   }
 }

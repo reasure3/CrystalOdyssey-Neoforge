@@ -10,8 +10,6 @@ import net.minecraft.world.level.block.Block
 
 class DatagenTags {
     object Items {
-        val SLOT_BELT = curiosTag("belt")
-
         val GEMS_RUBY = forgeTag("gems/ruby")
         val GEMS_SAPPHIRE = forgeTag("gems/sapphire")
 
@@ -20,9 +18,6 @@ class DatagenTags {
 
         val ORES_RUBY = forgeTag("ores/ruby")
         val ORES_SAPPHIRE = forgeTag("ores/sapphire")
-
-        private fun curiosTag(name: String): TagKey<Item> =
-            ItemTags.create(ResourceLocation.fromNamespaceAndPath("curios", name))
 
         private fun forgeTag(name: String): TagKey<Item> =
             ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name))

@@ -11,6 +11,7 @@ import net.minecraft.tags.ItemTags
 import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.common.Tags
 import net.neoforged.neoforge.common.data.ExistingFileHelper
+import top.theillusivec4.curios.api.CuriosTags
 import java.util.concurrent.CompletableFuture
 
 class ModItemTagsProvider(
@@ -20,7 +21,7 @@ class ModItemTagsProvider(
     exFileHelper: ExistingFileHelper
 ) : ItemTagsProvider(output, registries, blockTags, CrystalOdyssey.ID, exFileHelper) {
     override fun addTags(provider: HolderLookup.Provider) {
-        tag(DatagenTags.Items.SLOT_BELT)
+        tag(CuriosTags.BELT)
             .add(ModItems.GLOWSTONE_GEM_LANTERN)
 
         tag(ModTags.Items.LIGHT_STAFF_REPAIRABLE)

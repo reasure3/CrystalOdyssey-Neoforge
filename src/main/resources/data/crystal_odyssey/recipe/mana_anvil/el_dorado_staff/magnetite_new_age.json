@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "create_new_age:magnetite_block"
+    }
+  ],
+  "type": "crystal_odyssey:el_dorado",
+  "el_dorado_target": "crystal_odyssey:magnetite",
+  "ingredient": {
+    "item": "create_new_age:magnetite_block"
+  }
+}

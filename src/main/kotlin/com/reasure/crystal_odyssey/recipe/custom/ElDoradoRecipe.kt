@@ -10,6 +10,7 @@ import com.reasure.crystal_odyssey.registry.ElDoradoTarget
 import com.reasure.crystal_odyssey.registry.ModRegistries
 import com.reasure.crystal_odyssey.util.ItemStackHelper.with
 import net.minecraft.core.HolderLookup
+import net.minecraft.core.component.DataComponents
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.codec.StreamCodec
 import net.minecraft.resources.ResourceKey
@@ -45,7 +46,11 @@ data class ElDoradoRecipe(
     }
 
     override fun getResultItem(registries: HolderLookup.Provider): ItemStack {
-        return ModItems.EL_DORADO_STAFF_ACTIVE.with(ModDataComponents.FIND_BLOCKS, getTarget(registries).findBlocks)
+        val target = getTarget(registries)
+        return ModItems.EL_DORADO_STAFF_ACTIVE
+            .with({DataComponents.ITEM_NAME}, target.staffName)
+            .with(ModDataComponents.FIND_BLOCKS, target.findBlocks)
+            .with(ModDataComponents.OVERLAY_ITEMS, target.overlayItems)
     }
 
     override fun getSerializer(): RecipeSerializer<ElDoradoRecipe> = ModRecipeSerializers.EL_DORADO_SERIALIZER

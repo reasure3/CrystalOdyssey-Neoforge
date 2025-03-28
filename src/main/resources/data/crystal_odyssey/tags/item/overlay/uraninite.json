@@ -1,15 +1,15 @@
 {
   "values": [
     {
-      "id": "#c:ores/bauxite",
+      "id": "powah:uraninite",
       "required": false
     },
     {
-      "id": "#c:storage_blocks/raw_bauxite",
+      "id": "#c:ingots/uraninite",
       "required": false
     },
     {
-      "id": "#c:storage_blocks/bauxite",
+      "id": "#c:gems/uraninite",
       "required": false
     }
   ]

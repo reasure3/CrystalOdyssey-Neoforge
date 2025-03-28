@@ -23,8 +23,8 @@ object ElDoradoStaffDecorator : IItemDecorator {
         if (overlayItems.hasNoItems()) return ItemStack.EMPTY
         val items = overlayItems.getItems()
         if (items.size == 1) return items[0]
-        val elapsedTimeSec = ((System.currentTimeMillis() - startTimeMills) / rotationTimeMills).toInt()
-        val index = elapsedTimeSec % items.size
+        val elapsedTime = ((System.currentTimeMillis() - startTimeMills) / rotationTimeMills).toInt()
+        val index = elapsedTime % items.size
         return items[index]
     }
 

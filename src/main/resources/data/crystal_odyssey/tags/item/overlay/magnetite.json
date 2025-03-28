@@ -1,15 +1,15 @@
 {
   "values": [
     {
-      "id": "#c:ores/aluminium",
+      "id": "#c:ingots/magnetite",
       "required": false
     },
     {
-      "id": "#c:storage_blocks/raw_aluminium",
+      "id": "#c:storage_blocks/magnetite",
       "required": false
     },
     {
-      "id": "#c:storage_blocks/aluminium",
+      "id": "create_new_age:magnetite_block",
       "required": false
     }
   ]

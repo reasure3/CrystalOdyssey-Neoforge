@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/aluminum",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/raw_aluminum",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/aluminum",
+      "required": false
+    }
+  ]
+}

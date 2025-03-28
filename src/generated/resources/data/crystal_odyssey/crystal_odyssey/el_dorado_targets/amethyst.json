@@ -1,8 +1,5 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.amethyst"
-    },
     "blocks": "#crystal_odyssey:el_dorado/amethyst",
     "border_color": "#328D6ACC"
   },
@@ -10,5 +7,8 @@
     "items": {
       "tag": "c:gems/amethyst"
     }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.amethyst"
   }
 }

@@ -7,6 +7,7 @@ import com.reasure.crystal_odyssey.registry.ElDoradoTarget
 import com.reasure.crystal_odyssey.registry.ModRegistries
 import com.reasure.crystal_odyssey.util.ItemStackHelper.with
 import com.reasure.crystal_odyssey.util.ItemStackHelper.withBucket
+import net.minecraft.core.component.DataComponents
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -80,7 +81,9 @@ object ModCreativeModTabs {
             .map { it.value() }
             .sorted(compareBy<ElDoradoTarget> { it.priority })
             .map {
-                ModItems.EL_DORADO_STAFF_ACTIVE.with(ModDataComponents.FIND_BLOCKS, it.findBlocks)
+                ModItems.EL_DORADO_STAFF_ACTIVE
+                    .with({ DataComponents.ITEM_NAME }, it.staffName)
+                    .with(ModDataComponents.FIND_BLOCKS, it.findBlocks)
                     .with(ModDataComponents.OVERLAY_ITEMS, it.overlayItems)
             }
             .toList()

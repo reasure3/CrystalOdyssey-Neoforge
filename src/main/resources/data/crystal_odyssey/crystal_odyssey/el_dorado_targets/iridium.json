@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.iridium"
-    },
     "blocks": "#crystal_odyssey:el_dorado/iridium",
     "border_color": "#32650FD6"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/iridium"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.iridium"
   }
 }

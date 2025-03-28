@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.certus_quartz"
-    },
     "blocks": "#crystal_odyssey:el_dorado/certus_quartz",
     "border_color": "#329CD3FF"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:gems/certus_quartz"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.certus_quartz"
   }
 }

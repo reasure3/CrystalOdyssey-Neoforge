@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.firestone"
-    },
     "blocks": "#crystal_odyssey:el_dorado/firestone",
     "border_color": "#32C41B00"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "crystal_odyssey:overlay/refined_firestone"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.firestone"
   }
 }

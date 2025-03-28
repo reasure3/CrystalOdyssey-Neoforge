@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.saltpeter"
-    },
     "blocks": "#crystal_odyssey:el_dorado/saltpeter",
     "border_color": "#32ECECEC"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:dusts/saltpeter"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.saltpeter"
   }
 }

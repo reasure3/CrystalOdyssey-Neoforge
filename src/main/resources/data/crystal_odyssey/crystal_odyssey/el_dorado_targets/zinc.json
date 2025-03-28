@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.zinc"
-    },
     "blocks": "#crystal_odyssey:el_dorado/zinc",
     "border_color": "#32B9E9C1"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/zinc"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.zinc"
   }
 }

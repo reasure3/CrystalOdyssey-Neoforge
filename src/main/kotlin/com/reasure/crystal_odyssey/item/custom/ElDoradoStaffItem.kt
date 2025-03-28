@@ -26,14 +26,6 @@ class ElDoradoStaffItem(properties: Properties) : Item(properties) {
         return stack.`is`(ModTags.Items.EL_DORADO_STAFF_REPAIRABLE)
     }
 
-    override fun getName(stack: ItemStack): Component {
-        val findBlocks = stack[ModDataComponents.FIND_BLOCKS] ?: return super.getName(stack)
-        if (findBlocks.isNotEmpty()) {
-            return findBlocks.blockGroupName
-        }
-        return super.getName(stack)
-    }
-
     override fun use(level: Level, player: Player, usedHand: InteractionHand): InteractionResultHolder<ItemStack> {
         player.cooldowns.addCooldown(this, 20)
         if (level.isClientSide) {

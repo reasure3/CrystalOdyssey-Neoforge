@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.crimson_iron"
-    },
     "blocks": "#crystal_odyssey:el_dorado/crimson_iron",
     "border_color": "#32F3476F"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/crimson_iron"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.crimson_iron"
   }
 }

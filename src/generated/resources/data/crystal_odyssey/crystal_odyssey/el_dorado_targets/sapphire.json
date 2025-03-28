@@ -1,8 +1,5 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.sapphire"
-    },
     "blocks": "#crystal_odyssey:el_dorado/sapphire",
     "border_color": "#325793E1"
   },
@@ -10,5 +7,8 @@
     "items": {
       "tag": "c:gems/sapphire"
     }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.sapphire"
   }
 }

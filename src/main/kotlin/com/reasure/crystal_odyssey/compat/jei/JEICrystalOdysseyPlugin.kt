@@ -91,6 +91,6 @@ class JEICrystalOdysseyPlugin : IModPlugin {
             ModItems.RUBY_BUCKET,
             CapacityBucketSubtypeInterpreter(30 * FluidType.BUCKET_VOLUME)
         )
-        registration.registerSubtypeInterpreter(ModItems.EL_DORADO_STAFF_ACTIVE, ElDoradoStaffSubtypeInterpreter())
+        registration.registerSubtypeInterpreter(ModItems.EL_DORADO_STAFF_ACTIVE, ItemNameInterpreter())
     }
 }

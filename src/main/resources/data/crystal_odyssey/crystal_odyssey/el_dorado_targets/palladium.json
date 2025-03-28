@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.palladium"
-    },
     "blocks": "#crystal_odyssey:el_dorado/palladium",
     "border_color": "#32E3340E"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/palladium"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.palladium"
   }
 }

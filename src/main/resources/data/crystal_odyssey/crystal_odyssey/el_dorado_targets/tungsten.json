@@ -1,9 +1,14 @@
 {
   "find_blocks": {
-    "block_group_name": {
-      "translate": "item.crystal_odyssey.el_dorado_staff_active.tungsten"
-    },
     "blocks": "#crystal_odyssey:el_dorado/tungsten",
     "border_color": "#32C0E0C5"
+  },
+  "overlay_items": {
+    "items": {
+      "tag": "c:ingots/tungsten"
+    }
+  },
+  "staff_name": {
+    "translate": "item.crystal_odyssey.el_dorado_staff_active.tungsten"
   }
 }
